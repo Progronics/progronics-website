@@ -1,9 +1,10 @@
 "use client"
-import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import StarBorder from './StarBorder';
+import React, { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { GlowingEffect } from './ui/glowing-effect';
 
 const useMedia = (queries: string[], values: number[], defaultValue: number): number => {
+  if( typeof window === 'undefined') return defaultValue
   const get = () => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
 
   const [value, setValue] = useState<number>(get);
@@ -239,6 +240,7 @@ const Masonry: React.FC<MasonryProps> = ({
   return (
     <div ref={containerRef} className="relative w-full h-full cursor-pointer">
       {grid.map(item => (
+        
         <div
           key={item.id}
           data-key={item.id}
@@ -249,7 +251,18 @@ const Masonry: React.FC<MasonryProps> = ({
           onMouseLeave={e => handleMouseLeave(item.id, e.currentTarget)}
         >
           {/* Gradient Border */}
-          <div className="relative w-full h-full rounded-[12px] overflow-hidden border-[3px] border-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-sky-500 group shadow-[0_10px_50px_-10px_rgba(0,0,0,0.2)]">
+       
+          <div className="rounded-2xl border p-2 md:rounded-3xl md:p-3 w-full h-full group">
+
+               <GlowingEffect
+          blur={0}
+          borderWidth={3}
+          spread={80}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+        />
             {/* Inner container */}
             <div className="relative w-full h-full rounded-[10px] overflow-hidden bg-gray-900">
               {/* Background Image */}

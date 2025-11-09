@@ -1,14 +1,14 @@
-import SplashCursor from "@/components/SplashCursor"
-import type { Metadata } from "next"
-import { Inter, Poppins } from "next/font/google"
-import type React from "react"
-import { Nunito } from "next/font/google";
+import type { Metadata } from "next";
+import { Inter, Poppins } from "next/font/google";
+import type React from "react";
 
 
-import "./globals.css"
+import { Footer } from "@/components/footer";
+import { Navigation } from "@/components/navigation";
+import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const poppins = Poppins({ weight: ['400','600','700'], subsets: ['latin'], variable: '--font-poppins' });
+const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'], variable: '--font-poppins' });
 
 
 export const metadata: Metadata = {
@@ -134,9 +134,10 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
+        <Navigation />
         {children}
-         <SplashCursor />
-        {/* <Analytics /> */}
+        <Footer />
+
       </body>
     </html>
   )

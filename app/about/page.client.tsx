@@ -1,14 +1,13 @@
 "use client"
 
-import { Footer } from "@/components/footer"
-import Stats from "@/components/landing/stats"
-import { Navigation } from "@/components/navigation"
-import { Button } from "@/components/ui/button"
-import { CheckCircle } from "lucide-react"
-import Link from "next/link"
+import World from "@/components/landing/world"
+import MainContainer from "@/components/main-container"
+import { TextEffect } from "@/components/ui/text-effect"
 
 export function AboutPageClient() {
   const values = [
+    { title: "Vision", description: "To become a global leader in digital innovation, empowering businesses worldwide to achieve their digital transformation goals through cutting-edge technology and world-class talent." },
+    { title: "Mission", description: "To simplify technology and make it a powerful tool for growth. We're committed to delivering exceptional solutions that drive real business value for our clients." },
     { title: "Integrity", description: "Honest and transparent in all our dealings." },
     { title: "Innovation", description: "Pushing boundaries and embracing new technologies." },
     { title: "Collaboration", description: "Working together with our clients as true partners." },
@@ -17,114 +16,53 @@ export function AboutPageClient() {
 
   return (
     <>
-      <Navigation />
-
-      {/* Hero Section */}
-      <div >
-        <section className="py-20 bg-gradient-to-b from-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center space-y-6">
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground">
-                Empowering Innovation Through Technology and Talent
-              </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Progronics is a forward-thinking IT company dedicated to helping businesses achieve digital excellence.
-              </p>
-            </div>
-          </div>
-        </section>
+      <div className="fixed top-[10vh] w-screen z-0 opacity-20">
+        <World />
       </div>
+      <MainContainer id="about" className="py-20 relative">
 
-      {/* Company Overview */}
-      <div >
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-foreground mb-6">Who We Are</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  With a diverse team of engineers, designers, and strategists, we bring ideas to life through
-                  cutting-edge solutions.
-                </p>
-                <p className="text-lg text-muted-foreground">
-                  Our mission is to simplify technology and make it a powerful tool for growth. We believe in building
-                  long-term partnerships with our clients, growing together as we help them succeed in the digital
-                  world.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-12 border border-border min-h-96 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-5xl font-bold text-primary mb-2">100+</div>
-                  <p className="text-muted-foreground">Projects Delivered</p>
-                </div>
-              </div>
-            </div>
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-16 ">
+
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">Empowering Innovation</h2>
+            <TextEffect per='word' as='h3' preset='blur' className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
+              Progronics is a forward-thinking IT company dedicated to helping businesses achieve digital excellence. We specialize in crafting innovative web, mobile, and enterprise solutions that empower organizations to scale and succeed in the digital era. With a commitment to quality, performance, and long-term partnerships, we turn technology into a catalyst for sustainable growth.
+            </TextEffect>
           </div>
-        </section>
-      </div>
 
-      {/* Vision and Values */}
-      <div >
-        <section className="py-20 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-4xl font-bold text-foreground mb-12 text-center">Our Vision & Values</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-              <div className="bg-card rounded-xl p-8 border border-border ">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
-                <p className="text-muted-foreground">
-                  To become a global leader in digital innovation, empowering businesses worldwide to achieve their
-                  digital transformation goals through cutting-edge technology and world-class talent.
-                </p>
+
+
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[60px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">Who We Are</h2>
+          <TextEffect per='word' as='h3' preset='blur' className="text-lg text-slate-300 leading-tight tracking-tight mb-6">
+            With a diverse team of engineers, designers, and strategists, we bring ideas to life through
+            cutting-edge solutions.
+          </TextEffect>
+          <TextEffect per='word' as='h3' preset='blur' className="text-lg text-slate-300 leading-tight tracking-tight mb-16">
+            Our mission is to simplify technology and make it a powerful tool for growth. We believe in building
+            long-term partnerships with our clients, growing together as we help them succeed in the digital
+            world.
+          </TextEffect>
+
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[60px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">Vision & Values</h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            {values.map((item, index) => (
+
+              <div key={index} className="space-y-2">
+
+                <h3 className="text-xl font-semibold text-white leading-h2 tracking-tighter">{item.title}</h3>
+                <TextEffect per='word' as='h3' preset='scale' className="text-[16px] text-slate-300 leading-tight tracking-tight">
+                  {item.description}
+                </TextEffect>
               </div>
-              <div className="bg-card rounded-xl p-8 border border-border ">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
-                <p className="text-muted-foreground">
-                  To simplify technology and make it a powerful tool for growth. We're committed to delivering
-                  exceptional solutions that drive real business value for our clients.
-                </p>
-              </div>
-            </div>
 
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">Core Values</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {values.map((value, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-xl p-6 border border-border hover:border-primary/50 "
-                
-                >
-                  <div className="mb-4 inline-flex p-2 bg-primary/10 rounded-lg">
-                    <CheckCircle className="w-5 h-5 text-primary" />
-                  </div>
-                  <h4 className="text-lg font-semibold text-foreground mb-2">{value.title}</h4>
-                  <p className="text-sm text-muted-foreground">{value.description}</p>
-                </div>
-              ))}
-            </div>
+
+            ))}
           </div>
-        </section>
-      </div>
 
-      {/* Stats Section */}
-     <Stats />
-
-      {/* CTA */}
-      <div >
-        <section className="py-20 bg-gradient-to-r from-primary/5 to-accent/5 border-y border-border">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Ready to Work Together?</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Let's discuss how Progronics can help your business thrive in the digital world.
-            </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-lg">
-              <Link href="/contact">Get In Touch</Link>
-            </Button>
-          </div>
-        </section>
-      </div>
-
-      <Footer />
+        </div>
+      </MainContainer>
     </>
   )
 }

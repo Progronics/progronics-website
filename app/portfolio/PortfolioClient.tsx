@@ -1,11 +1,9 @@
 "use client"
 
-import { Footer } from "@/components/footer"
+import CTA from "@/components/landing/cta"
+import MainContainer from "@/components/main-container"
 import Masonry from "@/components/Masonry"
-import { Navigation } from "@/components/navigation"
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
+import { TextEffect } from "@/components/ui/text-effect"
 
 export function PortfolioClient() {
 
@@ -72,8 +70,7 @@ export function PortfolioClient() {
     {
       id: "4",
       title: "SaaS Hospital Management System",
-      description:
-        "A scalable SaaS-based hospital management system that automates staff onboarding, patient management, appointments, and insurance workflows.",
+      description: "A scalable SaaS-based hospital management system that automates staff onboarding, patient management, appointments, and insurance workflows.",
       img: "/portfolio/hospital.png",
       height: 720,
       category: "Web Development",
@@ -87,14 +84,13 @@ export function PortfolioClient() {
         frontdesk: { email: "mistral@gmail.com", password: "1234qwer" },
       },
       features: [
-        "Hospital registration",
-        "Online & walk-in consultations",
-        "Patient records",
-        "Appointment scheduling",
-        "Automatic insurance documents",
+        "Consultations",
+        "Records",
+        "Scheduling",
+        "Insurance",
         "Role-based dashboards",
-        "AI voice-based diagnosis summary",
-        "Scalable SaaS architecture",
+        "AI",
+        "SaaS architecture",
       ],
     },
     {
@@ -213,54 +209,37 @@ export function PortfolioClient() {
   ];
 
   return (
-    <>
-      <Navigation />
 
-      {/* Hero Section */}
-      <div >
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center space-y-6 ">
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground">Our Recent Work</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Explore case studies of projects we've delivered across various industries.
-              </p>
-            </div>
-          </div>
-        </section>
+    <MainContainer id="portfolio" className="py-20 relative">
+
+       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 ">
+
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">Recent Projects</h2>
+          <TextEffect per='word' as='h3' preset='blur' className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
+            Explore case studies of projects we've delivered across various industries.
+            Discover how our innovative solutions have empowered businesses to overcome challenges, enhance efficiency, and achieve measurable results.
+
+          </TextEffect>
+        </div>
       </div>
 
-      {/* Portfolio Grid */}
-      <div className="h-[700px]">
-        <Masonry
-          items={projects}
-          ease="power3.out"
-          duration={0.6}
-          stagger={0.05}
-          animateFrom="bottom"
-          scaleOnHover={true}
-          hoverScale={0.95}
-          blurToFocus={true}
-          colorShiftOnHover={false}
-        />
-      </div>
 
-      {/* CTA */}
-      <div >
-        <section className="py-20 border-y border-border">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Ready to Create Your Success Story?</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Let's discuss how we can help achieve your business goals.
-            </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-lg">
-              <Link href="/contact">Start Your Project</Link>
-            </Button>
-          </div>
-        </section>
+      <div className="flex items-center justify-center w-[98vw]">
+        <div className="h-[1700px] sm:h-[700px] w-[90vw] self-center">
+          <Masonry
+            items={projects}
+            ease="power3.out"
+            duration={0.6}
+            stagger={0.05}
+            animateFrom="bottom"
+            scaleOnHover={true}
+            hoverScale={0.95}
+            blurToFocus={true}
+            colorShiftOnHover={false}
+          />
+        </div>
       </div>
-
-      <Footer />
-    </>
+    </MainContainer>
   )
 }

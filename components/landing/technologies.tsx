@@ -1,12 +1,11 @@
 import { FaAws } from "react-icons/fa6";
-import LogoLoop from "../LogoLoop"
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiVite, SiHtml5, SiCss3, SiNodedotjs, SiExpress, SiFirebase, SiSupabase, SiPostgresql, SiDocker, SiVercel, SiGithub } from 'react-icons/si';
-import MainContainer from "../main-container";
-import Stats from "./stats";
+import { SiCss3, SiDocker, SiExpress, SiFirebase, SiGithub, SiHtml5, SiNodedotjs, SiPostgresql, SiReact, SiSupabase, SiTailwindcss, SiTypescript, SiVercel, SiVite } from 'react-icons/si';
 import CountUp from "../CountUp";
+import LogoLoop from "../LogoLoop";
+import MainContainer from "../main-container";
 
 
-export default function Technologies() {
+export default function Technologies({ active = false }: { active: boolean }) {
 
     const techLogos = [
         // --- Frontend & Mobile ---
@@ -33,10 +32,12 @@ export default function Technologies() {
     ];
 
     return (
-        <MainContainer id="technologies" className="py-20 relative pt-0">
-            <div className="max-w-7xl mx-auto">
+        <MainContainer id="technologies" className="py-20 relative">
+            <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-16 ">
-                    <h2 className="text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter">Technologies & Statistics</h2>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">
+                        Technologies & Stats
+                    </h2>
 
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

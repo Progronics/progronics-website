@@ -1,9 +1,15 @@
 
-import { Brain, Cpu, Network, Rocket } from "lucide-react"
+import { useEffect, useState } from "react"
 import MagicBento from "../MagicBento"
 import MainContainer from "../main-container"
+import { TextEffect } from "../ui/text-effect"
 
-export default function Feature() {
+export default function Feature({active = false} : {active : boolean}) {
+
+   const [show, setShow] = useState(false)
+    useEffect(()=>{
+    if(!show && active) setShow(true)
+   },[active])
   const features = [
     {
       color: '#060010',
@@ -52,12 +58,12 @@ export default function Feature() {
 
   return (
     <MainContainer id="features" className="py-20 relative bg-[#f6f6f6]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 ">
-          <h2 className="text-[80px] font-bold text-black mb-4 leading-h2 tracking-tighter ">AI-Powered Capabilities</h2>
-          <p className="text-[20px] text-slate-700 leading-tight tracking-tight max-w-4xl">
-            Next-generation features for modern enterprises, designed to accelerate productivity, streamline operations, and drive innovation across teams and departments.
-          </p>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-black mb-4 leading-h2 tracking-tighter break-words">AI-Powered Capabilities</h2>
+          <TextEffect trigger={show} per='word' as='h3' preset='blur' className="text-[18px] text-slate-700 leading-tight tracking-tight max-w-4xl">
+            Next-generation features for modern enterprises, designed to accelerate productivity, streamline operations, and drive innovation across teams and departments. Built for scalability and reliability, our solutions evolve with your business needs and future growth.
+          </TextEffect>
         </div>
         <div className="w-full flex items-center justify-center">
 

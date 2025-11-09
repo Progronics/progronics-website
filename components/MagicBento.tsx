@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 export interface BentoCardProps {
   color?: string;
@@ -679,7 +679,7 @@ const MagicBento: React.FC<BentoProps> = ({
                     />}
 
                   <div className={`card__header flex justify-between gap-3 relative text-white `}>
-                    <span className="card__label text-lg font-semibold gradient-text bg-linear-to-r from-primary via-accent to-secondary animate-gradient-flow">{card.label}</span>
+                    <span className="card__label text-lg font-semibold leading-tight tracking-tight">{card.label}</span>
                   </div>
                   <div className="card__content flex flex-col relative text-white">
                     <h3 className={`card__title text-base m-0 mb-1 ${textAutoHide ? 'text-clamp-1' : ''}`}>

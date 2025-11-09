@@ -1,19 +1,19 @@
 "use client"
 
 import Aurora from "@/components/Aurora"
-import { Footer } from "@/components/footer"
 import CTA from "@/components/landing/cta"
 import Feature from "@/components/landing/feature"
 import Hero from "@/components/landing/hero"
 import Process from "@/components/landing/process"
 import Services from "@/components/landing/services"
-import Stats from "@/components/landing/stats"
 import Technologies from "@/components/landing/technologies"
-import Testimonials from "@/components/landing/testimonials"
 import Why from "@/components/landing/why"
-import { Navigation } from "@/components/navigation"
+import useScrollSpy from "@/lib/useScrollSpy"
 
 export default function Home() {
+
+  const sectionIds = ["hero", "services", "features", "why", "process", "technologies", "cta"];
+  const activeSection = useScrollSpy(sectionIds, 100);
 
   return (
     <>
@@ -27,21 +27,15 @@ export default function Home() {
         />
 
       </div>
-
-      <Navigation />
       <Hero />
-      <Services />
-       <Feature />
-      <Why />
-       <Process />
-        <Technologies />
-       <Stats />
-     
-     
-      {/* <Testimonials /> */}
+      <Services active={activeSection === "services"}/>
+      <Feature active={activeSection === "features"}/>
+      <Why active={activeSection === "why"}/>
+      <Process active={activeSection === "process"}/>
+      <Technologies active={activeSection === "technologies"}/> 
       <CTA />
-      <Footer />
-     
+      
+
     </>
   )
 }

@@ -21,6 +21,7 @@ export function Navigation() {
     { name: "About", href: "/about" },
     { name: "Portfolio", href: "/portfolio" },
     { name: "Contact", href: "/contact" },
+    {name : "Services", href : "/services"}
   ]
 
   return (
@@ -48,24 +49,7 @@ export function Navigation() {
               </Link>
             ))}
 
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="text-sm font-medium text-foreground hover:text-primary transition-colors flex items-center gap-1">
-                Services
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-              </button>
-              <div className="absolute left-0 mt-2 w-56 glass-morphic rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2 animate-scale-in">
-                {services.map((service) => (
-                  <Link
-                    key={service.href}
-                    href={service.href}
-                    className="block px-4 py-3 text-sm text-foreground hover:bg-primary/10 hover:text-primary transition-all duration-200 hover:pl-6 first:rounded-t-xl last:rounded-b-xl"
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -92,35 +76,7 @@ export function Navigation() {
               </Link>
             ))}
 
-            {/* Mobile Services */}
-            <div>
-              <button
-                onClick={() => setOpenDropdown(openDropdown === "services" ? null : "services")}
-                className="w-full text-left px-4 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors flex items-center justify-between"
-              >
-                Services
-                <ChevronDown
-                  className={cn(
-                    "w-4 h-4 transition-transform duration-300",
-                    openDropdown === "services" && "rotate-180",
-                  )}
-                />
-              </button>
-              {openDropdown === "services" && (
-                <div className="pl-4 space-y-1 animate-scale-in">
-                  {services.map((service) => (
-                    <Link
-                      key={service.href}
-                      href={service.href}
-                      className="block px-4 py-2 text-sm text-foreground hover:bg-muted rounded-lg transition-colors"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
+
           </div>
         )}
       </div>

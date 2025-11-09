@@ -1,70 +1,79 @@
-import MainContainer from "../main-container"
-import Noise from "../Noise";
-import SpotlightCard from "../SpotlightCard"
+import { FaUsers } from "react-icons/fa6";
+import MainContainer from "../main-container";
+import { useEffect, useState } from "react";
+import { FaBrain, FaCogs, FaProjectDiagram, FaShieldAlt, FaTrophy } from 'react-icons/fa';
+import { TextEffect } from "../ui/text-effect";
 
-import { FaBrain, FaCogs, FaProjectDiagram, FaTrophy } from 'react-icons/fa';
 
+export default function Why({active = false} : {active : boolean}) {
 
-export default function Why() {
+     const [show, setShow] = useState(false)
+      useEffect(()=>{
+      if(!show && active) setShow(true)
+     },[active])
 
     const whyChoose = [
         {
             icon: <FaBrain />,
             title: "Cutting-edge Expertise",
-            description: "Masters of modern tech stacks and AI/ML architectures.",
+            description:
+                "Our team excels in leveraging modern technologies, AI, and machine learning to deliver innovative and scalable digital solutions that set your business apart.",
         },
         {
             icon: <FaCogs />,
             title: "Customized Solutions",
-            description: "Tailored approaches for unique business challenges.",
+            description:
+                "We design and build fully tailored solutions based on your unique business needs, ensuring flexibility, performance, and long-term sustainability.",
         },
         {
             icon: <FaProjectDiagram />,
             title: "End-to-End Services",
-            description: "From concept through deployment and beyond.",
+            description:
+                "From initial concept to full deployment and post-launch support, we manage every stage of the process to ensure seamless execution and exceptional results.",
         },
         {
             icon: <FaTrophy />,
             title: "Proven Track Record",
-            description: "Delivered 100+ projects successfully.",
+            description:
+                "With over 100 successful projects delivered globally, our consistent results speak to our reliability, efficiency, and commitment to client satisfaction.",
+        },
+        {
+            icon: <FaUsers />,
+            title: "Collaborative Partnership",
+            description:
+                "We work closely with our clients as strategic partners, maintaining transparency and continuous communication throughout every phase of the project.",
+        },
+        {
+            icon: <FaShieldAlt />,
+            title: "Security & Reliability",
+            description:
+                "Our solutions are built with industry-leading security practices, ensuring your data, systems, and users are protected at all times with robust performance guarantees.",
         },
     ];
 
+
     return (
-        <MainContainer id="why" className="py-20 relative bg-[#f6f6f6] pt-0">
-            <div className="max-w-7xl mx-auto">
+        <MainContainer id="why" className="py-20 relative bg-[#f6f6f6] ">
+          <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-16 ">
-                    <h2 className="text-[80px] font-bold text-black mb-4 leading-h2 tracking-tighter">Why Progronics</h2>
-                    <p className="text-[20px] text-slate-700 leading-tight tracking-tight max-w-4xl">
-                        Partner with AI innovation leaders to transform your business, automate workflows, and unlock new opportunities for growth and efficiency.
-                    </p>
+                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-black mb-4 leading-h2 tracking-tighter break-words">Why Progronics</h2>
+                    <TextEffect trigger={show} per='word' as='h3' preset='blur' className="text-[18px] text-slate-700 leading-tight tracking-tight max-w-4xl">
+                        Partner with industry-leading developers to build scalable, high-performance digital solutions that empower your business to grow. Our expertise spans web, mobile, and enterprise software tailored to your unique goals. From concept to launch, we ensure reliability, innovation, and lasting value in every project.
+                    </TextEffect>
 
                 </div>
 
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
                     {whyChoose.map((item, index) => (
-                        <SpotlightCard
-                            key={index}
-                            spotlightColor="rgba(255, 94, 87, 0.2)"
-                            className="card-spotlight"
-                        >
-
-                            <div className="mb-4 text-2xl text-[#f6f6f6]">
+                        <div key={index} className="space-y-2">
+                            <div className="text-2xl text-black">
                                 {item.icon}
                             </div>
-
-                            <h3 className="text-xl font-semibold text-[#f6f6f6] leading-h2 tracking-tighter mb-2">{item.title}</h3>
-
-                            <p className="text-slate-300 leading-tight tracking-tight">{item.description}</p>
-                            <Noise
-                                patternSize={250}
-                                patternScaleX={1}
-                                patternScaleY={1}
-                                patternRefreshInterval={2}
-                                patternAlpha={15}
-                            />
-                        </SpotlightCard>
+                            <h3 className="text-xl font-semibold text-slate-700 leading-h2 tracking-tighter">{item.title}</h3>
+                            <p className="text-muted-foreground leading-tight tracking-tight">{item.description}</p>
+                        </div>
+                       
                     ))}
                 </div>
             </div>

@@ -1,46 +1,13 @@
 "use client"
 
-import { Footer } from "@/components/footer"
-import { Navigation } from "@/components/navigation"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, ChevronDown, Code2, Palette, Users, Zap } from "lucide-react"
-import Link from "next/link"
+import MainContainer from "@/components/main-container"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { TextEffect } from "@/components/ui/text-effect"
+import { Timeline } from "@/components/ui/timeline"
+import { ChevronRight } from "lucide-react"
 
 export function ServicesClient() {
-  const departments = [
-    {
-      icon: Code2,
-      title: "Application Development",
-      description: "Transforming ideas into high-performance applications.",
-      subtext: "From robust software systems to AI-driven platforms, we craft solutions that empower your business.",
-      href: "/services/app-dev",
-      color: "from-primary",
-    },
-    {
-      icon: Users,
-      title: "Staff Augmentation",
-      description: "Scale your team with top-tier IT professionals.",
-      subtext: "Flexible staffing solutions to boost productivity and accelerate delivery.",
-      href: "/services/staff-augmentation",
-      color: "from-accent",
-    },
-    {
-      icon: Palette,
-      title: "Branding & Design",
-      description: "Creating brands that inspire trust and connection.",
-      subtext: "Design and marketing strategies that make your business stand out.",
-      href: "/services/branding-design",
-      color: "from-secondary",
-    },
-    {
-      icon: Zap,
-      title: "Optimization & Support",
-      description: "Ensuring your systems run flawlessly — all the time.",
-      subtext: "Continuous optimization, quality assurance, and technical support.",
-      href: "/services/optimization-support",
-      color: "from-primary/80",
-    },
-  ]
+
 
   const faqs = [
     {
@@ -75,159 +42,207 @@ export function ServicesClient() {
     },
   ]
 
-  const benefits = [
+
+  const data = [
     {
-      title: "Expert Team",
-      description:
-        "Access to experienced professionals with deep technical expertise across multiple domains and technologies.",
+      title: "Software Consultancy",
+      content: (
+        <div>
+          <p className="mb-4 text-md font-normal text-neutral-200 ">
+            At Progronics, our software consultancy services help businesses navigate the
+            complex world of technology with clarity and confidence. We begin by thoroughly
+            assessing your existing systems, workflows, and objectives to identify
+            opportunities for improvement. Our team provides actionable insights and
+            strategic roadmaps to ensure your digital transformation aligns with your
+            business goals.
+          </p>
+          <p className="text-md font-normal text-neutral-200">
+            Whether you’re modernizing legacy systems, adopting cloud technologies, or
+            implementing new development practices, we partner with you at every step.
+            From architecture design to project execution, we ensure your solutions are
+            scalable, cost-effective, and future-ready — giving your business a true
+            competitive advantage.
+          </p>
+        </div>
+      ),
     },
     {
-      title: "Flexible Engagement",
-      description: "Choose from various engagement models including fixed-price, time & materials, or dedicated teams.",
+      title: "Web Development",
+      content: (
+        <div>
+          <p className="mb-4 text-md font-normal text-neutral-200">
+            Our web development services focus on creating high-performing, visually
+            stunning websites and applications that drive results. We combine cutting-edge
+            technologies with user-centered design to deliver responsive, secure, and
+            scalable digital solutions tailored to your audience. Every project we build
+            is optimized for speed, usability, and long-term maintainability.
+          </p>
+          <p className="text-md font-normal text-neutral-200">
+            From dynamic corporate websites to complex enterprise platforms, our developers
+            ensure that every line of code contributes to performance and efficiency. We
+            take pride in delivering seamless digital experiences that not only look great
+            but also convert visitors into loyal customers — helping your business grow in
+            the competitive online landscape.
+          </p>
+        </div>
+      ),
     },
     {
-      title: "Proven Track Record",
-      description: "500+ successful projects delivered to clients across various industries globally.",
+      title: "Mobile App Development",
+      content: (
+        <div>
+          <p className="mb-4 text-md font-normal text-neutral-200">
+            In today’s mobile-first world, a strong app presence is vital. Our mobile app
+            development team specializes in crafting high-quality native and cross-platform
+            applications that combine elegant design with powerful functionality. We
+            prioritize user experience, ensuring your app not only performs flawlessly but
+            also provides a seamless journey from start to finish.
+          </p>
+          <p className="text-md font-normal text-neutral-200">
+            Whether it’s Android, iOS, or a hybrid platform, our approach centers around
+            scalability, performance, and intuitive usability. We handle everything from
+            concept and wireframing to deployment and post-launch support — ensuring your
+            app evolves as your business grows and customer expectations change.
+          </p>
+        </div>
+      ),
     },
     {
-      title: "Agile Process",
-      description: "Fast-paced development with iterative cycles, regular updates, and responsive to changes.",
+      title: "Staff Augmentation",
+      content: (
+        <div>
+          <p className="mb-4 text-md font-normal text-neutral-200">
+            Our staff augmentation services enable you to extend your team with top-tier
+            professionals without the complexities of traditional hiring. Whether you need
+            a single developer or a dedicated team, we provide experts who integrate
+            seamlessly into your workflows and deliver results from day one.
+          </p>
+          <p className="text-md font-normal text-neutral-200">
+            We focus on flexibility, scalability, and efficiency — helping you meet
+            deadlines, scale operations, and access specialized skill sets when you need
+            them most. With Progronics, you get the perfect balance between in-house
+            collaboration and outsourced expertise, ensuring consistent productivity and
+            high-quality output.
+          </p>
+        </div>
+      ),
     },
     {
-      title: "Quality Assurance",
-      description: "Rigorous QA processes ensuring bug-free, scalable, and maintainable solutions.",
+      title: "Branding & Design",
+      content: (
+        <div>
+          <p className="mb-4 text-md font-normal text-neutral-200">
+            Great design goes beyond aesthetics — it tells your story and shapes your
+            brand’s identity. Our creative team at Progronics crafts visually stunning and
+            meaningful designs that resonate with your audience. From logo design and brand
+            identity to complete UI/UX strategies, we ensure every detail reflects your
+            company’s vision and values.
+          </p>
+          <p className="text-md font-normal text-neutral-200">
+            We believe that branding is about connection. That’s why we blend creativity
+            with strategy, ensuring your visuals not only look exceptional but also build
+            trust and recognition. Our goal is to help your business stand out in a crowded
+            digital space through consistent, purposeful, and timeless design.
+          </p>
+        </div>
+      ),
     },
     {
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and maintenance to keep your systems running smoothly.",
+      title: "Optimization & Support",
+      content: (
+        <div>
+          <p className="mb-4 text-md font-normal text-neutral-200">
+            Technology doesn’t end at deployment — it requires constant care and
+            optimization. Our ongoing optimization and support services ensure your digital
+            assets remain efficient, secure, and up to date. We proactively monitor
+            performance, identify bottlenecks, and implement improvements to keep your
+            systems running at their best.
+          </p>
+          <p className="text-md font-normal text-neutral-200">
+            From server maintenance and bug fixes to feature enhancements and performance
+            tuning, our dedicated team is always ready to help. We aim to create long-term
+            partnerships, ensuring that your applications and systems continue to deliver
+            maximum value and reliability as your business grows.
+          </p>
+        </div>
+      ),
     },
-  ]
+  ];
+
+
+
 
   return (
-    <>
-      <Navigation />
 
-      {/* Hero Section */}
-      <div >
-        <section className="py-20 bg-gradient-to-b from-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center space-y-6 mb-12 ">
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground">A Complete Spectrum of IT Services</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                From building modern applications to scaling your brand — Progronics covers every aspect of digital
-                transformation.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
+    <MainContainer id="service" className="py-20 relative">
 
-      {/* Services Grid */}
-      <div >
-        <section className="py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {departments.map((dept, index) => {
-                const Icon = dept.icon
-                return (
-                  <Link key={index} href={dept.href}>
-                    <div
-                      className="group bg-card rounded-2xl p-8 border border-border hover:border-primary hover:shadow-xl  h-full cursor-pointer "
-                     
-                    >
-                      <div
-                        className={`mb-6 inline-flex p-4 bg-gradient-to-br ${dept.color} to-accent/20 rounded-xl group-hover:scale-110 transition-transform`}
-                      >
-                        <Icon className="w-8 h-8 text-white" />
+     <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 ">
+
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">A Complete Spectrum of IT Services</h2>
+          <TextEffect per='word' as='h3' preset='blur' className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
+            From building modern applications to scaling your brand — Progronics covers every aspect of digital transformation. Our expert teams blend creativity, strategy, and technology to deliver solutions that drive measurable impact. Whether you’re a startup or an enterprise, we help you innovate faster, operate smarter, and stay ahead in a competitive digital world.
+          </TextEffect>
+        </div>
+
+
+        <div className="relative w-full overflow-clip">
+          <Timeline data={data} />
+        </div>
+
+
+        <div >
+          <section className="py-20">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-16 ">
+                <h2 className="text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
+                <p className="text-lg text-muted-foreground">Everything you need to know about our services</p>
+              </div>
+
+              <Accordion
+                className='flex w-full flex-col'
+                transition={{ type: 'spring', stiffness: 120, damping: 20 }}
+                variants={{
+                  expanded: {
+                    opacity: 1,
+                    scale: 1,
+                  },
+                  collapsed: {
+                    opacity: 0,
+                    scale: 0.7,
+                  },
+                }}
+              >
+
+                {faqs.map((item, i) => (
+                  <AccordionItem key={i} value={item.question} className='py-2'>
+                    <AccordionTrigger className='w-full py-0.5 text-left text-zinc-950 dark:text-zinc-50'>
+                      <div className='flex items-center'>
+                        <ChevronRight className='h-4 w-4 text-zinc-950 transition-transform duration-200 group-data-expanded:rotate-90 dark:text-zinc-50' />
+                        <div className='ml-2 text-zinc-950 dark:text-zinc-50'>
+                         {item.question}
+                        </div>
                       </div>
-
-                      <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {dept.title}
-                      </h3>
-                      <p className="text-primary font-semibold mb-4 group-hover:text-accent transition-colors">
-                        {dept.description}
+                    </AccordionTrigger>
+                    <AccordionContent className='origin-left'>
+                      <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
+                       {item.answer}
                       </p>
-                      <p className="text-muted-foreground mb-6">{dept.subtext}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
 
-                      <div className="flex items-center text-primary group-hover:text-accent transition-colors font-semibold gap-2">
-                        Learn More
-                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </div>
-                    </div>
-                  </Link>
-                )
-              })}
+              
+              </Accordion>
+
+            
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
+
+
       </div>
+    </MainContainer>
 
-      <div >
-        <section className="py-20 bg-muted/30">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 ">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Why Partner With Progronics</h2>
-              <p className="text-lg text-muted-foreground">Six key advantages for your business growth</p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="bg-card rounded-xl p-8 border border-border hover:shadow-lg "
-                >
-                  <div className="w-12 h-12 bg-linear-to-br from-primary to-accent rounded-lg mb-4" />
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <div >
-        <section className="py-20">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16 ">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
-              <p className="text-lg text-muted-foreground">Everything you need to know about our services</p>
-            </div>
-
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <details
-                  key={index}
-                  className="group bg-card rounded-xl border border-border overflow-hidden hover:border-primary/50  "
-                >
-                  <summary className="flex items-center justify-between p-6 cursor-pointer hover:bg-muted/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-foreground pr-4">{faq.question}</h3>
-                    <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
-                  </summary>
-                  <div className="px-6 pb-6 text-muted-foreground border-t border-border pt-4">{faq.answer}</div>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* CTA Section */}
-      <div >
-        <section className="py-20 bg-gradient-to-r from-primary/5 to-accent/5 border-y border-border">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center ">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Ready to Get Started?</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Choose a service and let's discuss how we can help your business thrive.
-            </p>
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-lg">
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </div>
-        </section>
-      </div>
-
-      <Footer />
-    </>
   )
 }
