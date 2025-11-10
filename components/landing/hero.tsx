@@ -5,6 +5,7 @@ import Link from "next/link";
 import DecryptedText from "../DecryptedText";
 import StarBorder from "../StarBorder";
 import MainContainer from "../main-container";
+import GradientBorderButton from "../gradient-border-button";
 
 
 export default function Hero() {
@@ -42,21 +43,12 @@ export default function Hero() {
           >
             <Link href="/services" className="flex items-center gap-2">
               Explore Services
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              
             </Link>
           </Button>
 
-          <Link href="/contact">
-            <StarBorder
-              as="button"
-              color="cyan"
-              speed="3s"
-              thickness={2}
-            >
-              <div className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-10 rounded-md px-6 has-[>svg]:px-4">
-                <span>Get Started</span>
-              </div>
-            </StarBorder>
+          <Link href="/contact" className="cursor-pointer">
+           <GradientBorderButton text="Get In Touch"/>
           </Link>
         </div>
       </div>

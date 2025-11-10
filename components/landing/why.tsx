@@ -71,7 +71,7 @@ export default function Why({active = false} : {active : boolean}) {
                                 {item.icon}
                             </div>
                             <h3 className="text-xl font-semibold text-slate-700 leading-h2 tracking-tighter">{item.title}</h3>
-                            <p className="text-muted-foreground leading-tight tracking-tight">{item.description}</p>
+                            <p className="text-muted-foreground leading-tight tracking-tight text-justify">{item.description}</p>
                         </div>
                        
                     ))}

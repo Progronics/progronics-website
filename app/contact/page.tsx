@@ -1,38 +1,14 @@
 "use client"
 
-import MainContainer from "@/components/main-container"
-import ContactForm from "@/components/contact-form"
-import { TextEffect } from "@/components/ui/text-effect"
-import { Mail, MapPin, Phone } from "lucide-react"
-import type React from "react"
-import { useState } from "react"
-import { Send } from "@/components/animate-ui/icons/send"
-import { PhoneCall } from "@/components/animate-ui/icons/phone-call"
 import { MapPinIcon } from "@/components/animate-ui/icons/map-pin"
+import { PhoneCall } from "@/components/animate-ui/icons/phone-call"
+import { Send } from "@/components/animate-ui/icons/send"
+import ContactForm from "@/components/contact-form"
+import MainContainer from "@/components/main-container"
+import { TextEffect } from "@/components/ui/text-effect"
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Simulate form submission
-    console.log("Form submitted:", formData)
-    setSubmitted(true)
-    setFormData({ name: "", email: "", company: "", message: "" })
-    setTimeout(() => setSubmitted(false), 3000)
-  }
-
+ 
   return (
     
       <MainContainer id="contact" className="py-20 relative">

@@ -225,7 +225,7 @@ export function ServicesClient() {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className='origin-left'>
-                      <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400'>
+                      <p className='pl-6 pr-2 text-zinc-500 dark:text-zinc-400 text-justify'>
                        {item.answer}
                       </p>
                     </AccordionContent>

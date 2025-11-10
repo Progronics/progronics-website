@@ -3,16 +3,10 @@
 import World from "@/components/landing/world"
 import MainContainer from "@/components/main-container"
 import { TextEffect } from "@/components/ui/text-effect"
+import { values } from "@/data/constants"
 
 export function AboutPageClient() {
-  const values = [
-    { title: "Vision", description: "To become a global leader in digital innovation, empowering businesses worldwide to achieve their digital transformation goals through cutting-edge technology and world-class talent." },
-    { title: "Mission", description: "To simplify technology and make it a powerful tool for growth. We're committed to delivering exceptional solutions that drive real business value for our clients." },
-    { title: "Integrity", description: "Honest and transparent in all our dealings." },
-    { title: "Innovation", description: "Pushing boundaries and embracing new technologies." },
-    { title: "Collaboration", description: "Working together with our clients as true partners." },
-    { title: "Excellence", description: "Delivering exceptional results every single time." },
-  ]
+ 
 
   return (
     <>
