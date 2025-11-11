@@ -7,6 +7,7 @@ import ContactForm from "@/components/contact-form"
 import MainContainer from "@/components/main-container"
 import { TextEffect } from "@/components/ui/text-effect"
 
+
 export default function ContactPage() {
  
   return (
