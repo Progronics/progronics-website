@@ -65,6 +65,8 @@ export default function Feature({active = false} : {active : boolean}) {
             Next-generation features for modern enterprises, designed to accelerate productivity, streamline operations, and drive innovation across teams and departments. Built for scalability and reliability, our solutions evolve with your business needs and future growth.
           </TextEffect>
         </div>
+
+       
         <div className="w-full flex items-center justify-center">
 
           <MagicBento

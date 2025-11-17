@@ -1,82 +1,138 @@
+'use client';
 
-import { services } from "@/data/constants";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import MainContainer from "../main-container";
-import { CardSpotlight } from "../ui/card-spotlight";
-import { TextEffect } from "../ui/text-effect";
-import GradientBorderButton from "../gradient-border-button";
-export default function Services({ active = false }: { active: boolean }) {
+import { ReactLenis } from 'lenis/react';
+import { motion, MotionValue, useScroll, useTransform } from 'motion/react';
+import Link from 'next/link';
+import { useRef } from 'react';
+import GradientBorderButton from '../gradient-border-button';
+import { services } from '@/data/constants';
 
-  const [show, setShow] = useState(false)
-  useEffect(() => {
-    if (!show && active) setShow(true)
-  }, [active])
+export default function Page() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ['start start', 'end end'],
+  });
 
+  const step = 1 / services.length;
 
+  return (
+    <ReactLenis root>
+      <main ref={container}>
+        <section className='text-white   w-full  '>
+          {services.map((project, i) => {
+            const targetScale = 1 - (services.length - i) * 0.02;
+            const isDark = i % 2 !== 0;
+            return (
+              <Card
+                key={`p_${i}`}
+                i={i}
+                title={project?.title}
+                content={project.content}
+                color={isDark ? "dark" : "light"}
+                description={project?.description}
+                progress={scrollYProgress}
+                range={[i * step, (i + 1) * step]}
+                targetScale={targetScale}
+                points={project.points}
+              />
+            );
+          })}
+        </section>
+
+      </main>
+    </ReactLenis>
+  );
+}
+interface CardProps {
+  i: number;
+  title: string;
+  description: string;
+  color: string;
+  progress: MotionValue<number>;
+  range: [number, number];
+  targetScale: number;
+  content: string;
+  points: string[]
+}
+const Card: React.FC<CardProps> = ({
+  i,
+  title,
+  description,
+  color,
+  progress,
+  range,
+  targetScale,
+  content,
+  points
+}) => {
+  const container = useRef(null);
+  const scale = useTransform(progress, range, [1, targetScale]);
+  const isDark = color === "dark";
+  const bgColor = isDark ? "#0f0f0f" : "#ffffff";
+  const textColor = isDark ? "#f5f5f5" : "#111111";
+  const subTextColor = isDark ? "#d4d4d4" : "#444444";
 
 
 
   return (
-    <MainContainer id="services" className="py-20 relative">
-      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-16 ">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">Key Services</h2>
-          <TextEffect trigger={show} per='word' as='h3' preset='blur' className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
-            Comprehensive, customized solutions for every industry, designed to streamline operations, enhance productivity, and drive innovation with cutting-edge technology and AI-powered insights. Our dedicated team ensures seamless integration, continuous improvement, and measurable results for your business success.
-          </TextEffect>
+    <div
+      ref={container}
+      className='h-screen flex items-center justify-center sticky top-0'
+    >
+     
+      <motion.div
+        style={{
+          backgroundColor: bgColor,
+          color: textColor,
+          scale,
+          top: `calc(-5vh + ${i * 25}px)`,
+        }}
+        className={`flex flex-col relative -top-[25%] h-auto lg:h-[450px] overflow-hidden w-[90%]  origin-top rounded-2xl p-6 shadow-xl border border-neutral-700/20`}
+        
+      > 
+        <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10'>
+          <div>
+            <p className={`text-3xl font-bold relative z-20 mt-2`}>
+              {title}
+            </p>
+
+
+            <div
+              className="relative z-20 text-[16px] leading-tight tracking-tight my-4"
+              style={{ color: subTextColor }}
+            >
+              {description}
+
+              <ul className="list-none mt-4 text-sm space-y-1">
+                {points.map((eachStep: string, ind: number) => (
+                  <Step key={ind} title={eachStep} subTextColor={subTextColor} />
+                ))}
+              </ul>
+            </div>
+
+            <Link href={"/services"}>
+              <GradientBorderButton text="Learn more" />
+            </Link>
+          </div>
+
+          <video
+            loop
+            muted
+            autoPlay
+            playsInline
+            src={content} className="h-[400px] hidden lg:block"  />
         </div>
+      </motion.div>
+    </div>
+  );
+};
 
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-
-          {services.map((item, i) => (
-
-
-
-            <CardSpotlight key={i} className="w-96 flex flex-col gap-4 justify-between">
-              <div>
-                <p className="text-2xl font-bold relative z-20 mt-2 text-white">
-                  {item.title}
-                </p>
-                <div className="text-neutral-200 mt-4 relative z-20 text-[16px] leading-tight tracking-tight">
-                  {item.description}
-                  <ul className="list-none mt-4 leading-tight tracking-tight text-sm">
-                    {item.steps.map((eachStep: string, ind: number) => (
-                      <Step key={ind} title={eachStep} />
-                    ))}
-
-                  </ul>
-
-                </div>
-              </div>
-
-              <Link href={"/services"}>
-
-               <GradientBorderButton text="Learn more"/>
-
-              </Link>
-
-
-            </CardSpotlight>
-
-          ))}
-
-        </div>
-
-
-      </div>
-
-    </MainContainer>
-  )
-}
-
-
-const Step = ({ title }: { title: string }) => {
+const Step = ({ title, subTextColor }: { title: string, subTextColor?: string }) => {
   return (
     <li className="flex gap-2 items-start">
       <CheckIcon />
-      <p className="text-white mt-1">{title}</p>
+      <p style={{ color: subTextColor }} className="text-white mt-1">{title}</p>
     </li>
   );
 };

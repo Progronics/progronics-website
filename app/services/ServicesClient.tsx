@@ -43,131 +43,126 @@ export function ServicesClient() {
   ]
 
 
-  const data = [
-    {
-      title: "Software Consultancy",
-      content: (
-        <div>
-          <p className="mb-4 text-md font-normal text-neutral-200 ">
-            At Progronics, our software consultancy services help businesses navigate the
-            complex world of technology with clarity and confidence. We begin by thoroughly
-            assessing your existing systems, workflows, and objectives to identify
-            opportunities for improvement. Our team provides actionable insights and
-            strategic roadmaps to ensure your digital transformation aligns with your
-            business goals.
-          </p>
-          <p className="text-md font-normal text-neutral-200">
-            Whether you’re modernizing legacy systems, adopting cloud technologies, or
-            implementing new development practices, we partner with you at every step.
-            From architecture design to project execution, we ensure your solutions are
-            scalable, cost-effective, and future-ready — giving your business a true
-            competitive advantage.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Web Development",
-      content: (
-        <div>
-          <p className="mb-4 text-md font-normal text-neutral-200">
-            Our web development services focus on creating high-performing, visually
-            stunning websites and applications that drive results. We combine cutting-edge
-            technologies with user-centered design to deliver responsive, secure, and
-            scalable digital solutions tailored to your audience. Every project we build
-            is optimized for speed, usability, and long-term maintainability.
-          </p>
-          <p className="text-md font-normal text-neutral-200">
-            From dynamic corporate websites to complex enterprise platforms, our developers
-            ensure that every line of code contributes to performance and efficiency. We
-            take pride in delivering seamless digital experiences that not only look great
-            but also convert visitors into loyal customers — helping your business grow in
-            the competitive online landscape.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Mobile App Development",
-      content: (
-        <div>
-          <p className="mb-4 text-md font-normal text-neutral-200">
-            In today’s mobile-first world, a strong app presence is vital. Our mobile app
-            development team specializes in crafting high-quality native and cross-platform
-            applications that combine elegant design with powerful functionality. We
-            prioritize user experience, ensuring your app not only performs flawlessly but
-            also provides a seamless journey from start to finish.
-          </p>
-          <p className="text-md font-normal text-neutral-200">
-            Whether it’s Android, iOS, or a hybrid platform, our approach centers around
-            scalability, performance, and intuitive usability. We handle everything from
-            concept and wireframing to deployment and post-launch support — ensuring your
-            app evolves as your business grows and customer expectations change.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Staff Augmentation",
-      content: (
-        <div>
-          <p className="mb-4 text-md font-normal text-neutral-200">
-            Our staff augmentation services enable you to extend your team with top-tier
-            professionals without the complexities of traditional hiring. Whether you need
-            a single developer or a dedicated team, we provide experts who integrate
-            seamlessly into your workflows and deliver results from day one.
-          </p>
-          <p className="text-md font-normal text-neutral-200">
-            We focus on flexibility, scalability, and efficiency — helping you meet
-            deadlines, scale operations, and access specialized skill sets when you need
-            them most. With Progronics, you get the perfect balance between in-house
-            collaboration and outsourced expertise, ensuring consistent productivity and
-            high-quality output.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Branding & Design",
-      content: (
-        <div>
-          <p className="mb-4 text-md font-normal text-neutral-200">
-            Great design goes beyond aesthetics — it tells your story and shapes your
-            brand’s identity. Our creative team at Progronics crafts visually stunning and
-            meaningful designs that resonate with your audience. From logo design and brand
-            identity to complete UI/UX strategies, we ensure every detail reflects your
-            company’s vision and values.
-          </p>
-          <p className="text-md font-normal text-neutral-200">
-            We believe that branding is about connection. That’s why we blend creativity
-            with strategy, ensuring your visuals not only look exceptional but also build
-            trust and recognition. Our goal is to help your business stand out in a crowded
-            digital space through consistent, purposeful, and timeless design.
-          </p>
-        </div>
-      ),
-    },
-    {
-      title: "Optimization & Support",
-      content: (
-        <div>
-          <p className="mb-4 text-md font-normal text-neutral-200">
-            Technology doesn’t end at deployment — it requires constant care and
-            optimization. Our ongoing optimization and support services ensure your digital
-            assets remain efficient, secure, and up to date. We proactively monitor
-            performance, identify bottlenecks, and implement improvements to keep your
-            systems running at their best.
-          </p>
-          <p className="text-md font-normal text-neutral-200">
-            From server maintenance and bug fixes to feature enhancements and performance
-            tuning, our dedicated team is always ready to help. We aim to create long-term
-            partnerships, ensuring that your applications and systems continue to deliver
-            maximum value and reliability as your business grows.
-          </p>
-        </div>
-      ),
-    },
-  ];
+ const data = [
+  {
+    title: "Digital Product Development",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Our digital product development service helps you transform ideas into fully functional, scalable, and market-ready digital solutions. We begin by understanding your business goals, user needs, and technical constraints, ensuring every feature aligns with long-term growth. From MVPs to enterprise-level platforms, our team builds reliable products with clean architecture and future-ready ecosystems.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          Whether launching a new startup product or modernizing an existing digital system, we handle everything—from UI/UX design and system planning to development, testing, and post-launch iterations. We ensure your product is secure, optimized, and built with the technologies best suited for long-term success.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Enterprise Web Applications",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          We develop powerful, enterprise-grade web applications tailored for scalability, performance, and security. Our approach focuses on crafting robust backend architectures, intuitive frontends, and workflows that support large organizations with complex operational needs. 
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          From dashboards and internal tools to multi-tenant systems and cloud-native platforms, we ensure your application remains stable under heavy usage. Every solution is optimized for long-term growth, seamless user experience, and efficient maintenance.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Mobile App Engineering",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Our mobile app engineering team builds high-quality Android, iOS, and cross-platform applications with exceptional performance and user experience. We focus on clean code, optimized architectures, and smooth interactions that keep users engaged.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          From prototype to deployment, we handle UI/UX design, feature development, API integration, security, testing, and publishing. Your mobile app is delivered fully optimized, scalable, and ready for continuous evolution as your business grows.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Staff Augmentation & Dedicated Teams",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Scale your development capacity instantly with our staff augmentation services. We provide highly skilled developers, designers, QA engineers, project managers, and technical experts who integrate seamlessly with your existing teams.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          Whether you need short-term support or a long-term dedicated team, we ensure reliable talent, smooth onboarding, flexible engagement, and consistent delivery. Get the benefits of an expanded team without the overhead of traditional hiring.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "UI/UX & Creative Design",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Design is the heart of every successful digital experience. Our UI/UX team creates intuitive, user-friendly, and visually engaging interfaces that elevate your brand and enhance usability. From wireframes and prototypes to complete design systems, we ensure every interaction feels natural and purposeful.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          Alongside UI/UX, our creative designers craft brand identities, logos, and visual assets that communicate your story and captivate your audience. We blend creativity with strategy to deliver designs that are timeless, unique, and perfectly aligned with your business goals.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "DevOps & Cloud Infrastructure",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Our DevOps and cloud engineering services ensure your applications run smoothly, securely, and efficiently in the cloud. We implement CI/CD pipelines, automate deployments, and manage scalable infrastructures across AWS, Azure, GCP, and DigitalOcean.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          From optimizing server performance to enhancing security, monitoring uptime, and reducing cloud costs, we ensure your systems stay reliable 24/7. Our DevOps approach improves delivery speed, reduces downtime, and guarantees operational excellence.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "AI Automation & Custom AI Agents",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Harness the power of AI with intelligent automation solutions tailored to your business. We build custom AI agents for customer support, sales, analytics, internal operations, and workflow automation using OpenAI, Gemini, and local LLMs.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          Our AI team develops chatbots, RPA systems, NLP models, and data-driven solutions that eliminate repetitive work and enhance decision-making. We integrate AI seamlessly into your existing systems, giving your business a competitive edge through innovation.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Digital Marketing & Social Media Growth",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Our digital marketing services help your brand grow online through targeted strategies and high-impact content. We manage social media, ads, SEO, and content campaigns that boost visibility and engagement.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          Whether you're aiming for brand awareness, lead generation, or performance marketing, we build tailored campaigns backed by analytics and consistent optimization to deliver measurable results.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "IoT, Embedded Systems & R&D",
+    content: (
+      <div>
+        <p className="mb-4 text-md font-normal text-neutral-200">
+          Our embedded systems and IoT services bring hardware and software together to create intelligent, connected solutions. We work with microcontrollers like ESP32, STM32, Raspberry Pi, and more to develop firmware and hardware prototypes.
+        </p>
+        <p className="text-md font-normal text-neutral-200">
+          From sensor integration and PCB design to cloud connectivity and industrial automation, we support businesses looking to innovate with next-generation hardware technology. Our R&D team builds custom solutions tailored for real-world applications.
+        </p>
+      </div>
+    ),
+  }
+];
+
 
 
 

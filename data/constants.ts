@@ -201,85 +201,97 @@ export const projects = [
 ];
 
 export const services = [
-    {
-        title: "Software Consultancy",
-        link: "/services",
-        description:
-            "We provide expert guidance to help businesses make informed technology decisions and build scalable digital solutions.",
-        steps: [
-            "Understand business objectives",
-            "Analyze current systems and workflows",
-            "Recommend optimal technologies",
-            "Create a digital transformation roadmap",
-            "Provide ongoing technical support",
-        ],
-    },
-    {
-        title: "Web Development",
-        link: "/services",
-        description:
-            "We design and develop fast, responsive, and secure websites tailored to your brand and business needs.",
-        steps: [
-            "Gather requirements and plan architecture",
-            "Design user-friendly interfaces",
-            "Develop and integrate backend systems",
-            "Test and optimize for performance",
-            "Deploy and maintain your website",
-        ],
-    },
-    {
-        title: "Mobile App Development",
-        link: "/services",
-        description:
-            "From concept to launch, we create high-performance mobile apps for iOS and Android platforms.",
-        steps: [
-            "Define app goals and target audience",
-            "Design intuitive UI/UX",
-            "Develop with modern frameworks",
-            "Test across devices and platforms",
-            "Publish and support post-launch",
-        ],
-    },
-    {
-        title: "Staff Augmentation",
-        link: "/services",
-        description:
-            "We provide skilled developers and dedicated teams to seamlessly integrate with your in-house workforce.",
-        steps: [
-            "Identify resource requirements",
-            "Shortlist qualified professionals",
-            "Conduct interviews and onboarding",
-            "Integrate with existing teams",
-            "Monitor performance and productivity",
-        ],
-    },
-    {
-        title: "Branding & Design",
-        link: "/services",
-        description:
-            "Our creative team helps you craft a strong brand identity through impactful visuals and design strategy.",
-        steps: [
-            "Research brand vision and audience",
-            "Design logo and brand assets",
-            "Develop color palette and typography",
-            "Create marketing materials",
-            "Deliver brand style guidelines",
-        ],
-    },
-    {
-        title: "Optimization & Support",
-        link: "/services",
-        description:
-            "We enhance system performance, improve SEO, and ensure continuous support to keep your business running smoothly.",
-        steps: [
-            "Audit system performance",
-            "Identify optimization areas",
-            "Implement code and server improvements",
-            "Monitor performance metrics",
-            "Provide 24/7 maintenance support",
-        ],
-    },
+  {
+    title: "Digital Product Development",
+    description:
+      "We build complete digital products from concept to launch. From MVPs to full-scale platforms, our team ensures your product is secure, scalable, and ready for market impact.",
+    link: "/services",
+    points: [
+      "End-to-end product development for web and mobile",
+      "Build MVPs with rapid iteration cycles",
+      "High-performance, secure app architecture",
+      "Third-party API, cloud, and payment integrations",
+      "Continuous improvements based on user feedback"
+    ],
+    content: "/videos/product_vid.mp4"
+  },
+
+  {
+    title: "Enterprise Software & Web Applications",
+    description:
+      "Powerful enterprise-grade web systems built for large-scale operations, performance, and security. We streamline workflows and enable data-driven decision-making.",
+    link: "/services",
+    points: [
+      "Enterprise dashboards, portals, and internal systems",
+      "Scalable backend architectures & database optimization",
+      "Advanced access control and security layers",
+      "Cloud deployment and infrastructure optimization",
+      "Long-term maintenance and performance monitoring"
+    ],
+    content: "/videos/web_vid.mp4"
+  },
+
+  {
+    title: "Mobile App Engineering",
+    description:
+      "High-quality Android and iOS applications that deliver fast performance and intuitive user experiences across all devices.",
+    link: "/services",
+    points: [
+      "Cross-platform development (React Native / Flutter)",
+      "Native module development",
+      "Push notifications & real-time features",
+      "Performance tuning & UX optimization",
+      "App Store / Play Store deployment support"
+    ],
+    content: "/videos/mob_vid.mp4"
+  },
+
+  {
+    title: "AI Automation & Strategy Consulting",
+    description:
+      "AI-driven automation and expert technology consulting to help you choose the right systems, optimize workflows, and build future-ready digital solutions.",
+    link: "/services",
+    points: [
+      "Custom AI chatbots and business AI agents",
+      "Process automation using LLMs and RPA",
+      "Tech stack & architecture consulting",
+      "System audits, blueprints, and roadmaps",
+      "NLP, vision, and recommendation model integration"
+    ],
+    content: "/videos/ai_vid.mp4"
+  },
+
+  {
+    title: "UI/UX, Branding & Creative Design",
+    description:
+      "Beautiful, user-focused designs that strengthen your brand identity and provide seamless digital experiences across all platforms.",
+    link: "/services",
+    points: [
+      "UI/UX design for apps and web platforms",
+      "Complete brand identity systems",
+      "Prototyping and interactive mockups",
+      "Marketing visuals and creatives",
+      "Consistent design language across all assets"
+    ],
+    content: "/videos/ui_vid.mp4"
+  },
+
+  {
+    title: "Dedicated Teams, DevOps & IoT Engineering",
+    description:
+      "Scalable development teams, modern DevOps pipelines, and hardware/IoT engineering for advanced software-hardware ecosystems.",
+    link: "/services",
+    points: [
+      "Skilled remote developers, designers & QA engineers",
+      "CI/CD pipelines and cloud deployments",
+      "Monitoring, backups & server optimization",
+      "Firmware development (ESP32, STM32, Arduino)",
+      "IoT systems with sensors, PCB design, and automation"
+    ],
+    content: "/videos/staff_vid.mp4"
+  }
 ];
+
 
 export const values = [
   {

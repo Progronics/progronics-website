@@ -1,6 +1,7 @@
 "use client"
 
 import Aurora from "@/components/Aurora"
+import FloatingLines from "@/components/FloatingLines"
 import CTA from "@/components/landing/cta"
 import Feature from "@/components/landing/feature"
 import Hero from "@/components/landing/hero"
@@ -16,19 +17,28 @@ export default function Home() {
   const activeSection = useScrollSpy(sectionIds, 100);
 
   return (
+
+  
     <>
 
       <div className="h-screen absolute w-full">
-        <Aurora
-          colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
-        />
+         <FloatingLines 
+    enabledWaves={['top', 'middle', 'bottom']}
+    // Array - specify line count per wave; Number - same count for all waves
+    lineCount={[5, 5, 5]}
+    // Array - specify line distance per wave; Number - same distance for all waves
+    lineDistance={[8, 6, 4]}
+    bendRadius={5.0}
+    bendStrength={-0.5}
+    interactive={true}
+    parallax={true}
+  />
 
       </div>
       <Hero />
-      <Services active={activeSection === "services"}/>
+      <Services 
+      // active={activeSection === "services"}
+      />
       <Feature active={activeSection === "features"}/>
       <Why active={activeSection === "why"}/>
       <Process active={activeSection === "process"}/>

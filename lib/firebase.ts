@@ -5,14 +5,16 @@ import { getFirestore, } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB6-ksPOA7Bei5gm4_mHTTLOmxZiM9WQ8M",
-    authDomain: "adcrm-a0bf3.firebaseapp.com",
-    projectId: "adcrm-a0bf3",
-    storageBucket: "adcrm-a0bf3.appspot.com",
-    messagingSenderId: "719101108135",
-    appId: "1:719101108135:web:ece59bc56406ee6f7ca082",
-    measurementId: "G-2LRNDSCHK5"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
+
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
@@ -20,3 +22,7 @@ const storage = getStorage(app)
 const db = getFirestore()
 
 export { auth, db, storage };
+
+
+
+
