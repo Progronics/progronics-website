@@ -5,7 +5,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   return [
-    // Main pages
     {
       url: baseUrl,
       lastModified,
@@ -42,30 +41,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
-    // Service pages
-    {
-      url: `${baseUrl}/services/app-dev`,
+     {
+      url: `${baseUrl}/privacy`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/services/staff-augmentation`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/services/branding-design`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${baseUrl}/services/optimization-support`,
-      lastModified,
-      changeFrequency: "monthly",
-      priority: 0.85,
+      priority: 0.8,
     },
   ]
 }

@@ -70,7 +70,7 @@ export function Navigation() {
           <nav className="flex items-center justify-between">
             <div className="flex gap-10 items-center">
               <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                <div className="w-10 h-10 bg-linear-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
                   <span className="text-white font-bold">Ⓟ</span>
                 </div>
                 <span className="font-bold text-lg hidden sm:inline text-foreground">Progronics</span>
@@ -114,17 +114,17 @@ export function Navigation() {
                     } as React.CSSProperties
                   }
                 >
-                  <div className="bg-gradient-to-t from-black via-neutral-800 to-neutral-950 border border-neutral-700 text-white p-2 h-full w-full grow flex flex-col rounded-[16px]">
+                  <div className="bg-linear-to-t from-black via-neutral-800 to-neutral-950 border border-neutral-700 text-white p-2 h-full w-full grow flex flex-col rounded-[16px]">
                     <div className="w-full flex justify-between">
-                      <div className="flex gap-2 px-4 flex-shrink-0 items-center text-2xl font-semibold  ">
+                      <div className="flex gap-2 px-4 shrink-0 items-center text-2xl font-semibold  ">
                         <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                          <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
+                          <div className="w-10 h-10 bg-linear-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
                             <span className="text-white font-bold">Ⓟ</span>
                           </div>
                         </Link>
                       </div>
                       <button
-                        className="rounded-md w-fit bg-neutral-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
+                        className="rounded-md w-fit bg-neutral-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
                         onClick={() => setIsOpen(false)}
                       >
                         <X />
@@ -163,7 +163,7 @@ export function Navigation() {
     //     <div className="flex justify-between items-center h-16">
     //       {/* Logo */}
     //       <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-    //         <div className="w-10 h-10 bg-gradient-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
+    //         <div className="w-10 h-10 bg-linear-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
     //           <span className="text-white font-bold">Ⓟ</span>
     //         </div>
     //         <span className="font-bold text-lg hidden sm:inline text-foreground">Progronics</span>
@@ -178,7 +178,7 @@ export function Navigation() {
     //             className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 relative group"
     //           >
     //             {link.name}
-    //             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
+    //             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
     //           </Link>
     //         ))}
 

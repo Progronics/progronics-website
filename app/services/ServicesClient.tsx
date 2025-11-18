@@ -4,43 +4,23 @@ import MainContainer from "@/components/main-container"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { TextEffect } from "@/components/ui/text-effect"
 import { Timeline } from "@/components/ui/timeline"
+import { faqs } from "@/data/constants"
 import { ChevronRight } from "lucide-react"
+import {
+  SiReact, SiNextdotjs, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql,
+  SiTypescript, SiJavascript, SiTailwindcss, SiHtml5, SiCss3,
+  SiAmazon, SiGooglecloud, SiDocker, SiKubernetes,
+  SiPython, SiTensorflow, SiPytorch, SiOpenai,
+  SiFigma, SiAdobexd,
+  SiRaspberrypi, SiArduino, SiFirebase, SiGit, SiGithub,
+  SiFlutter, SiDjango, SiFastapi
+} from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
 
 export function ServicesClient() {
 
 
-  const faqs = [
-    {
-      question: "What types of applications do you develop?",
-      answer:
-        "We develop a wide range of applications including web applications, mobile apps (iOS & Android), enterprise software, AI/ML solutions, and cloud-based platforms. Our expertise spans various industries and tech stacks.",
-    },
-    {
-      question: "How long does a typical project take?",
-      answer:
-        "Project timelines vary based on complexity and scope. Simple projects may take 2-3 months, while complex enterprise solutions can take 6-12 months or more. We provide detailed timelines during the discovery phase.",
-    },
-    {
-      question: "Do you offer post-launch support?",
-      answer:
-        "We provide comprehensive post-launch support including maintenance, bug fixes, performance optimization, feature updates, and technical assistance to ensure your application runs smoothly.",
-    },
-    {
-      question: "Can you integrate with existing systems?",
-      answer:
-        "Yes, we specialize in integrating new solutions with your existing systems and tech stack. Our team handles API development, data migration, and ensures seamless integration with minimal disruption.",
-    },
-    {
-      question: "What is your approach to project management?",
-      answer:
-        "We use Agile methodology with regular sprint cycles, transparent communication, and frequent progress updates. You'll have a dedicated project manager and clear visibility into development progress.",
-    },
-    {
-      question: "How do you ensure code quality?",
-      answer:
-        "We implement rigorous quality assurance processes including code reviews, automated testing, continuous integration, and comprehensive testing phases before deployment to ensure production-ready code.",
-    },
-  ]
+
 
 
  const data = [
@@ -56,6 +36,17 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+    tags: [
+      { node: <SiReact />, title: "React", href: "https://react.dev" },
+      { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+      { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+      { node: <SiExpress />, title: "Express", href: "https://expressjs.com" },
+      { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+      { node: <SiTailwindcss />, title: "Tailwind CSS", href: "https://tailwindcss.com" },
+      { node: <SiMongodb />, title: "MongoDB", href: "https://mongodb.com" },
+      { node: <SiPostgresql />, title: "PostgreSQL", href: "https://postgresql.org" },
+      { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
+    ],
   },
   {
     title: "Enterprise Web Applications",
@@ -69,6 +60,18 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+    tags: [
+      { node: <SiReact />, title: "React", href: "https://react.dev" },
+      { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+      { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+      { node: <SiExpress />, title: "Express", href: "https://expressjs.com" },
+      { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+      { node: <VscAzure />, title: "Azure", href: "https://azure.microsoft.com" },
+      { node: <SiAmazon />, title: "AWS", href: "https://aws.amazon.com" },
+      { node: <SiGooglecloud />, title: "GCP", href: "https://cloud.google.com" },
+      { node: <SiDocker />, title: "Docker", href: "https://docker.com" },
+      { node: <SiKubernetes />, title: "Kubernetes", href: "https://kubernetes.io" },
+    ],
   },
   {
     title: "Mobile App Engineering",
@@ -82,6 +85,13 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+    tags: [
+      { node: <SiReact />, title: "React Native", href: "https://reactnative.dev" },
+      { node: <SiFlutter />, title: "Flutter", href: "https://flutter.dev" },
+      { node: <SiTypescript />, title: "TypeScript", href: "https://www.typescriptlang.org" },
+      { node: <SiFirebase />, title: "Firebase", href: "https://firebase.google.com" },
+      { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+    ],
   },
   {
     title: "Staff Augmentation & Dedicated Teams",
@@ -95,6 +105,14 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+    tags: [
+      { node: <SiReact />, title: "React", href: "https://react.dev" },
+      { node: <SiNextdotjs />, title: "Next.js", href: "https://nextjs.org" },
+      { node: <SiPython />, title: "Python", href: "https://python.org" },
+      { node: <SiDjango />, title: "Django", href: "https://djangoproject.com" },
+      { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+      { node: <SiGit />, title: "Git", href: "https://git-scm.com" },
+    ],
   },
   {
     title: "UI/UX & Creative Design",
@@ -108,6 +126,13 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+     tags: [
+      { node: <SiFigma />, title: "Figma", href: "https://figma.com" },
+      { node: <SiAdobexd />, title: "Adobe XD", href: "https://adobe.com/products/xd" },
+      { node: <SiTailwindcss />, title: "Tailwind", href: "https://tailwindcss.com" },
+      { node: <SiHtml5 />, title: "HTML5", href: "https://developer.mozilla.org" },
+      { node: <SiCss3 />, title: "CSS3", href: "https://developer.mozilla.org" },
+    ],
   },
   {
     title: "DevOps & Cloud Infrastructure",
@@ -121,6 +146,14 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+    tags: [
+      { node: <SiDocker />, title: "Docker", href: "https://docker.com" },
+      { node: <SiKubernetes />, title: "Kubernetes", href: "https://kubernetes.io" },
+      { node: <SiAmazon />, title: "AWS", href: "https://aws.amazon.com" },
+      { node: <SiGooglecloud />, title: "GCP", href: "https://cloud.google.com" },
+      { node: <VscAzure />, title: "Azure", href: "https://azure.microsoft.com" },
+      { node: <SiGithub />, title: "GitHub Actions", href: "https://github.com" },
+    ],
   },
   {
     title: "AI Automation & Custom AI Agents",
@@ -134,6 +167,13 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+    tags: [
+      { node: <SiOpenai />, title: "OpenAI", href: "https://openai.com" },
+      { node: <SiPython />, title: "Python", href: "https://python.org" },
+      { node: <SiTensorflow />, title: "TensorFlow", href: "https://tensorflow.org" },
+      { node: <SiPytorch />, title: "PyTorch", href: "https://pytorch.org" },
+      { node: <SiFastapi />, title: "FastAPI", href: "https://fastapi.tiangolo.com" },
+    ],
   },
   {
     title: "Digital Marketing & Social Media Growth",
@@ -147,6 +187,13 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+    tags: [
+      { node: <SiHtml5 />, title: "HTML", href: "https://developer.mozilla.org" },
+      { node: <SiCss3 />, title: "CSS", href: "https://developer.mozilla.org" },
+      { node: <SiJavascript />, title: "JavaScript", href: "https://javascript.com" },
+      { node: <SiReact />, title: "React", href: "https://react.dev" },
+      { node: <SiGooglecloud />, title: "Google Analytics", href: "https://analytics.google.com" },
+    ],
   },
   {
     title: "IoT, Embedded Systems & R&D",
@@ -160,6 +207,13 @@ export function ServicesClient() {
         </p>
       </div>
     ),
+      tags: [
+      { node: <SiRaspberrypi />, title: "Raspberry Pi", href: "https://raspberrypi.org" },
+      { node: <SiArduino />, title: "Arduino", href: "https://arduino.cc" },
+      { node: <SiPython />, title: "Python", href: "https://python.org" },
+      { node: <SiNodedotjs />, title: "Node.js", href: "https://nodejs.org" },
+      { node: <SiMongodb />, title: "MongoDB", href: "https://mongodb.com" },
+    ],
   }
 ];
 
@@ -181,7 +235,7 @@ export function ServicesClient() {
         </div>
 
 
-        <div className="relative w-full overflow-clip">
+        <div className="flex flex-1">
           <Timeline data={data} />
         </div>
 

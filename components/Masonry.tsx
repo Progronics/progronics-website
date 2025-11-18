@@ -281,7 +281,7 @@ const Masonry: React.FC<MasonryProps> = ({
                   {item?.features?.map((feature, idx) => (
                     <span
                       key={idx}
-                      className="text-xs bg-gradient-to-r from-purple-400 via-pink-500 to-red-400 text-white px-2 py-1 rounded-full"
+                      className="text-xs bg-linear-to-r from-purple-400 via-pink-500 to-red-400 text-white px-2 py-1 rounded-full"
                     >
                       {feature}
                     </span>

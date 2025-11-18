@@ -5,7 +5,7 @@ import LogoLoop from "../LogoLoop";
 import MainContainer from "../main-container";
 
 
-export default function Technologies({ active = false }: { active: boolean }) {
+export default function Technologies() {
 
     const techLogos = [
         // --- Frontend & Mobile ---

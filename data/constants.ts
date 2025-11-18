@@ -336,3 +336,36 @@ export const mainLinks = [
     { label: "Contact", link: "/contact", ariaLabel: "Go to contact page" },
 
   ]
+
+  export   const faqs = [
+    {
+      question: "What types of applications do you develop?",
+      answer:
+        "We develop a wide range of applications including web applications, mobile apps (iOS & Android), enterprise software, AI/ML solutions, and cloud-based platforms. Our expertise spans various industries and tech stacks.",
+    },
+    {
+      question: "How long does a typical project take?",
+      answer:
+        "Project timelines vary based on complexity and scope. Simple projects may take 2-3 months, while complex enterprise solutions can take 6-12 months or more. We provide detailed timelines during the discovery phase.",
+    },
+    {
+      question: "Do you offer post-launch support?",
+      answer:
+        "We provide comprehensive post-launch support including maintenance, bug fixes, performance optimization, feature updates, and technical assistance to ensure your application runs smoothly.",
+    },
+    {
+      question: "Can you integrate with existing systems?",
+      answer:
+        "Yes, we specialize in integrating new solutions with your existing systems and tech stack. Our team handles API development, data migration, and ensures seamless integration with minimal disruption.",
+    },
+    {
+      question: "What is your approach to project management?",
+      answer:
+        "We use Agile methodology with regular sprint cycles, transparent communication, and frequent progress updates. You'll have a dedicated project manager and clear visibility into development progress.",
+    },
+    {
+      question: "How do you ensure code quality?",
+      answer:
+        "We implement rigorous quality assurance processes including code reviews, automated testing, continuous integration, and comprehensive testing phases before deployment to ensure production-ready code.",
+    },
+  ]

@@ -42,7 +42,7 @@ export default function Home() {
       <Feature active={activeSection === "features"}/>
       <Why active={activeSection === "why"}/>
       <Process active={activeSection === "process"}/>
-      <Technologies active={activeSection === "technologies"}/> 
+      <Technologies /> 
       <CTA />
       
 

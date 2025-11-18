@@ -5,6 +5,7 @@ import type React from "react";
 
 import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
+import HolyLoader from "holy-loader";
 import "./globals.css";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
@@ -84,56 +85,83 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": ["Organization", "LocalBusiness"],
               name: "Progronics",
               url: "https://progronics.com",
-              logo: "https://progronics.com/logo.png",
+              logo: "Progronics",
               description:
-                "Enterprise IT solutions provider specializing in software development, staff augmentation, branding & design, and optimization services.",
-              sameAs: [
-                "https://www.linkedin.com/company/progronics",
-                "https://twitter.com/progronics",
-                "https://www.facebook.com/progronics",
-              ],
-              contact: {
-                "@type": "ContactPoint",
-                contactType: "Customer Service",
-                email: "info@progronics.com",
-                telephone: "+1-800-PROGRONICS",
-              },
-              address: {
-                "@type": "PostalAddress",
-                streetAddress: "123 Innovation Drive",
-                addressLocality: "Tech Valley",
-                addressRegion: "CA",
-                postalCode: "94000",
-                addressCountry: "US",
-              },
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "Progronics",
-              image: "https://progronics.com/logo.png",
-              description: "Professional IT solutions and software development services",
-              telephone: "+1-800-PROGRONICS",
+                "Progronics is a professional IT services company delivering end-to-end digital solutions including web and mobile app development, custom software engineering, UI/UX design, branding, embedded systems, and staff augmentation. We help businesses innovate, scale, and transform through modern technology.",
               email: "info@progronics.com",
-              url: "https://progronics.com",
+              telephone: "+92-310-4735145",
               priceRange: "$$",
-              serviceArea: {
-                "@type": "Country",
-                name: "US",
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "IT Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Web Development",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Mobile App Development",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Custom Software Development",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Software Consultancy",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "UI/UX Design",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Staff Augmentation",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Embedded Systems Development",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Branding and Marketing",
+                    },
+                  },
+                ],
               },
             }),
           }}
         />
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
+        <HolyLoader />
         <Navigation />
         {children}
         <Footer />

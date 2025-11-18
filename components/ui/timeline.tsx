@@ -5,11 +5,19 @@ import {
   useTransform,
   motion,
 } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
+import LogoLoop from "../LogoLoop";
+
+interface TagProp {
+  node: ReactNode;
+  title: string;
+  href: string;
+}
 
 interface TimelineEntry {
   title: string;
-  content: React.ReactNode;
+  content: ReactNode;
+  tags: TagProp[];
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -34,14 +42,14 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="relative bg-white dark:bg-neutral-950 font-sans "
       ref={containerRef}
     >
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative pb-20">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-10 md:gap-10"
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
@@ -56,7 +64,21 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
-               {item.content}
+              {item.content}
+
+              <div className="mt-10 w-[calc(100dvw-120px)] sm:w-[320px] md:w-[480px] lg:w-[640px] xl:w-[768px] 2xl:w-[900px]">
+                <LogoLoop
+                 logos={[...item.tags].sort(() => Math.random() - 0.5)}
+                  speed={120}
+                  direction="left"
+                  logoHeight={48}
+                  gap={100}
+                  pauseOnHover
+                  scaleOnHover
+                  fadeOut
+                  ariaLabel="Technology partners"
+                />
+              </div>
             </div>
           </div>
         ))}
@@ -71,7 +93,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-linear-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

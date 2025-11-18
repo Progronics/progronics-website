@@ -28,7 +28,7 @@ export default function CTA() {
               </p>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-primary to-accent hover:shadow-2xl text-white rounded-xl font-semibold"
+                className="bg-linear-to-r from-primary to-accent hover:shadow-2xl text-white rounded-xl font-semibold"
               >
                 <Link href="/contact" className="flex items-center gap-2">
                   Launch Your Project
