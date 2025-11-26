@@ -80,7 +80,7 @@ const Card: React.FC<CardProps> = ({
       ref={container}
       className='h-screen flex items-center justify-center sticky top-0'
     >
-     
+
       <motion.div
         style={{
           backgroundColor: bgColor,
@@ -88,23 +88,23 @@ const Card: React.FC<CardProps> = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className={`flex flex-col relative -top-[25%] h-auto lg:h-[450px] overflow-hidden w-[90%]  origin-top rounded-2xl p-6 shadow-xl border border-neutral-700/20`}
-        
-      > 
+        className={`flex flex-col relative -top-[25%] h-auto lg:h-[500px] overflow-hidden w-[90%]  origin-top rounded-2xl p-6 shadow-xl border border-neutral-700/20`}
+
+      >
         <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10'>
           <div>
-            <p className={`text-3xl font-bold relative z-20 mt-2`}>
+            <p className={`text-3xl lg:text-4xl xl:text-5xl font-bold relative z-20 mt-2`}>
               {title}
             </p>
 
 
             <div
-              className="relative z-20 text-[16px] leading-tight tracking-tight my-4"
+              className="relative z-20 text-base lg:text-lg xl:text-xl leading-tight tracking-tight my-4"
               style={{ color: subTextColor }}
             >
               {description}
 
-              <ul className="list-none mt-4 text-sm space-y-1">
+              <ul className="list-none mt-4 text-sm lg:text-base xl:text-lg space-y-1">
                 {points.map((eachStep: string, ind: number) => (
                   <Step key={ind} title={eachStep} subTextColor={subTextColor} />
                 ))}
@@ -121,7 +121,7 @@ const Card: React.FC<CardProps> = ({
             muted
             autoPlay
             playsInline
-            src={content} className="h-[400px] hidden lg:block"  />
+            src={content} className="h-[400px] hidden lg:block" />
         </div>
       </motion.div>
     </div>
@@ -132,7 +132,7 @@ const Step = ({ title, subTextColor }: { title: string, subTextColor?: string })
   return (
     <li className="flex gap-2 items-start">
       <CheckIcon />
-      <p style={{ color: subTextColor }} className="text-white mt-1">{title}</p>
+      <p style={{ color: subTextColor }} className="text-white">{title}</p>
     </li>
   );
 };
@@ -145,7 +145,7 @@ const CheckIcon = () => {
       height="24"
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="h-4 w-4 text-blue-500 mt-1 shrink-0"
+      className="h-4 w-4 text-primary mt-1 shrink-0"
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path

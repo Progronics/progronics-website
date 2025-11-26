@@ -12,15 +12,15 @@ export default function ContactPage() {
  
   return (
     
-      <MainContainer id="contact" className="py-20 relative">
+      <MainContainer id="contact" className="py-20 relative min-h-screen">
 
-        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="mb-16 ">
 
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">Let's Talk</h2>
-            <TextEffect per='word' as='h3' preset='blur' className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
+            <div className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
               Get in touch with our team and let's explore how we can help transform your vision into reality.
-            </TextEffect>
+            </div>
           </div>
 
 

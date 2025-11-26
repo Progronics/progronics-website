@@ -337,6 +337,16 @@ export const mainLinks = [
 
   ]
 
+  export  const processSteps = [
+        { link: '#', text: "Discovery", description: "Understanding requirements and project scope" },
+        { link: '#', text: "Planning", description: "Defining architecture, tech stack, and timelines" },
+        { link: '#', text: "Design", description: "Creating UI/UX and system design prototypes" },
+        { link: '#', text: "Development", description: "Coding and implementing features iteratively" },
+        { link: '#', text: "Testing", description: "Quality assurance, bug fixing, and optimization" },
+        { link: '#', text: "Deployment", description: "Launching the product to production" },
+        { link: '#', text: "Maintenance", description: "Ongoing support, updates, and performance monitoring" },
+    ];
+
   export   const faqs = [
     {
       question: "What types of applications do you develop?",
@@ -369,3 +379,8 @@ export const mainLinks = [
         "We implement rigorous quality assurance processes including code reviews, automated testing, continuous integration, and comprehensive testing phases before deployment to ensure production-ready code.",
     },
   ]
+
+  export const THEME = {
+    color_primary : "#2c9aaa",
+    color_secondary : "#1b2f44"
+  }

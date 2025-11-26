@@ -47,9 +47,9 @@
   --card-foreground: #f0f4f9;
   --popover: #1a2342;
   --popover-foreground: #f0f4f9;
-  --primary: #00a8ff;
+  --primary: #2c9aaa; 
   --primary-foreground: #0f1729;
-  --secondary: #00d9d0;
+  --secondary: #1b2f44;
   --secondary-foreground: #0f1729;
   --muted: #2d3e5f;
   --muted-foreground: #9ca3af;
@@ -114,6 +114,24 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
 }
 
 @layer base {
@@ -413,4 +431,3 @@
     background-size: 50px 50px;
   }
 }
-

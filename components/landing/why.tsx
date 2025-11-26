@@ -1,17 +1,11 @@
+import { FaBrain, FaCogs, FaProjectDiagram, FaShieldAlt, FaTrophy } from 'react-icons/fa';
 import { FaUsers } from "react-icons/fa6";
 import MainContainer from "../main-container";
-import { useEffect, useState } from "react";
-import { FaBrain, FaCogs, FaProjectDiagram, FaShieldAlt, FaTrophy } from 'react-icons/fa';
-import { TextEffect } from "../ui/text-effect";
 
 
-export default function Why({active = false} : {active : boolean}) {
+export default function Why() {
 
-     const [show, setShow] = useState(false)
-      useEffect(()=>{
-      if(!show && active) setShow(true)
-     },[active])
-
+    
     const whyChoose = [
         {
             icon: <FaBrain />,
@@ -57,9 +51,9 @@ export default function Why({active = false} : {active : boolean}) {
           <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-16 ">
                      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-black mb-4 leading-h2 tracking-tighter break-words">Why Progronics</h2>
-                    <TextEffect trigger={show} per='word' as='h3' preset='blur' className="text-[18px] text-slate-700 leading-tight tracking-tight max-w-4xl">
+                    <div className="text-[18px] text-slate-700 leading-tight tracking-tight max-w-4xl">
                         Partner with industry-leading developers to build scalable, high-performance digital solutions that empower your business to grow. Our expertise spans web, mobile, and enterprise software tailored to your unique goals. From concept to launch, we ensure reliability, innovation, and lasting value in every project.
-                    </TextEffect>
+                    </div>
 
                 </div>
 

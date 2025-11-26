@@ -118,21 +118,18 @@ export default function Page() {
 
   return (
     <MainContainer id="careers" className="py-20 relative min-h-screen">
-      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">
             Careers
           </h2>
-          <TextEffect
-            per="word"
-            as="h3"
-            preset="blur"
-            className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl"
+          <div 
+          className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl"
           >
             Join our passionate team of innovators shaping the future of
             technology. We value creativity, dedication, and the drive to make
             an impact through meaningful digital experiences.
-          </TextEffect>
+          </div>
         </div>
 
         <form className="my-8 space-y-4" onSubmit={handleSubmit}>

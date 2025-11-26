@@ -24,10 +24,7 @@ export function AboutPageClient() {
               Empowering Innovation
             </h2>
 
-            <TextEffect
-              per="word"
-              as="h3"
-              preset="blur"
+            <div
               className="text-[18px] sm:text-[20px] text-slate-300 leading-relaxed tracking-tight max-w-4xl"
             >
               Progronics is a forward-thinking IT company dedicated to helping businesses achieve
@@ -35,7 +32,7 @@ export function AboutPageClient() {
               solutions that empower organizations to scale and succeed in the digital era. With a
               commitment to quality, performance, and long-term partnerships, we turn technology into
               a catalyst for sustainable growth.
-            </TextEffect>
+            </div>
           </div>
 
           {/* Who We Are Section */}
@@ -44,26 +41,20 @@ export function AboutPageClient() {
             Who We Are
           </h2>
 
-          <TextEffect
-            per="word"
-            as="h3"
-            preset="blur"
+          <div
             className="text-lg sm:text-xl text-slate-300 leading-relaxed tracking-tight mb-4 max-w-3xl"
           >
             With a diverse team of engineers, designers, and strategists, we bring ideas to life through
             cutting-edge solutions.
-          </TextEffect>
+          </div>
 
-          <TextEffect
-            per="word"
-            as="h3"
-            preset="blur"
+          <div
             className="text-lg sm:text-xl text-slate-300 leading-relaxed tracking-tight mb-20 max-w-3xl"
           >
             Our mission is to simplify technology and make it a powerful tool for growth. We believe
             in building long-term partnerships with our clients, growing together as we help them
             succeed in the digital world.
-          </TextEffect>
+          </div>
 
           {/* Vision & Values */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[60px] font-bold 
@@ -82,14 +73,11 @@ export function AboutPageClient() {
                   {item.title}
                 </h3>
 
-                <TextEffect
-                  per="word"
-                  as="h3"
-                  preset="scale"
+                <div
                   className="text-[16px] sm:text-[17px] text-slate-300 leading-relaxed tracking-tight"
                 >
                   {item.description}
-                </TextEffect>
+                </div>
               </div>
             ))}
           </div>

@@ -82,7 +82,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
           <Button
             size="lg"
-            className="bg-linear-to-r from-primary to-accent hover:shadow-2xl hover:scale-105 transition-all text-white rounded-xl font-semibold group"
+            className="hover:shadow-2xl hover:scale-105 transition-all text-white rounded-xl font-semibold group"
           >
             <Link href="/services" className="flex items-center gap-2">
               Explore Services

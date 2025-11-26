@@ -12,6 +12,7 @@ import { Send } from "lucide-react";
 import { AlignJustify, } from "lucide-react";
 import { Drawer } from "vaul";
 import GradientBorderButton from "./gradient-border-button"
+import Image from "next/image"
 
 export function Navigation() {
   const isMobile = useMediaQuery("(max-width: 992px)");
@@ -70,11 +71,8 @@ export function Navigation() {
           <nav className="flex items-center justify-between">
             <div className="flex gap-10 items-center">
               <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <div className="w-10 h-10 bg-linear-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold">Ⓟ</span>
-                </div>
-                <span className="font-bold text-lg hidden sm:inline text-foreground">Progronics</span>
-              </Link>
+                  <Image src={"/logo.png"} height={60} width={60} alt="Progronics Logo"/>
+               </Link>
               <div className="hidden md:flex items-center space-x-8">
                 {mainLinks.map((item, i) => (
                   <a

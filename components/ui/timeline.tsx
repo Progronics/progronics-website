@@ -66,7 +66,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </h3>
               {item.content}
 
-              <div className="mt-10 w-[calc(100dvw-120px)] sm:w-[320px] md:w-[480px] lg:w-[640px] xl:w-[768px] 2xl:w-[900px]">
+              {/* <div className="mt-10 w-[calc(100dvw-120px)] sm:w-[320px] md:w-[480px] lg:w-[640px] xl:w-[768px] 2xl:w-[900px]">
                 <LogoLoop
                  logos={[...item.tags].sort(() => Math.random() - 0.5)}
                   speed={120}
@@ -78,7 +78,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                   fadeOut
                   ariaLabel="Technology partners"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
@@ -93,7 +93,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-linear-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-linear-to-t from-primary via-secondary to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>
