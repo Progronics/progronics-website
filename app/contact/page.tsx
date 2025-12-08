@@ -47,7 +47,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-foreground mb-1">Address</h4>
                     <p className="text-muted-foreground">
-                      Lahore, Pakistan
+                      Room LG-05 Basement Floor, 156, m block, Main Blvd, near khokhar Chowk, Block M Phase 2 Johar Town, Lahore, 54000, Pakistan
                     </p>
                   </div>
                 </div>
