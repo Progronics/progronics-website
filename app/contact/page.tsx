@@ -5,13 +5,10 @@ import { PhoneCall } from "@/components/animate-ui/icons/phone-call"
 import { Send } from "@/components/animate-ui/icons/send"
 import ContactForm from "@/components/contact-form"
 import MainContainer from "@/components/main-container"
-import { TextEffect } from "@/components/ui/text-effect"
-
 
 export default function ContactPage() {
  
   return (
-    
       <MainContainer id="contact" className="py-20 relative min-h-screen">
 
         <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">

@@ -2,14 +2,12 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
-import ElectricBorder from "../ElectricBorder"
 import MainContainer from "../main-container"
-import { CardSpotlight } from "../ui/card-spotlight"
 import { DottedGlowBackground } from "../ui/dotted-glow-background"
 export default function CTA() {
 
   return (
-    <MainContainer id="cta" className="py-20 relative">
+    <MainContainer id="cta" className="pb-20 relative">
 
       <div className="flex max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 items-center justify-center">
         <div className="relative flex w-full max-w-2xl items-center justify-center rounded-md rounded-tl-3xl rounded-br-3xl rounded-bl-3xl border px-4 shadow ring-1 shadow-black/10 ring-black/5 dark:shadow-white/10 dark:ring-white/5">

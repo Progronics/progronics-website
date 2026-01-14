@@ -2,7 +2,6 @@
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { sendSingleEmail } from "@/lib/notification-service";
-import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import BottomGradient from "./bottom-gradient";
 import LabelInputContainer from "./label-input-container";
@@ -31,7 +30,6 @@ export default function ContactForm() {
       message: formData.get("message")?.toString() || "",
     };
 
-    console.log(data); // Check the data
     setLoading(true);
     try {
       await sendSingleEmail(data);

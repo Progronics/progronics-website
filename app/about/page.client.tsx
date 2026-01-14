@@ -10,7 +10,7 @@ export function AboutPageClient() {
 
   return (
     <>
-      <div className="fixed top-[10vh] w-screen z-0 opacity-20">
+      <div className="fixed top-[10vh] w-screen -z-1 opacity-20">
         <World />
       </div>
       <MainContainer id="about" className="py-20 relative">
