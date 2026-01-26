@@ -1,6 +1,9 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Globe, MapPin, Save } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -75,29 +78,29 @@ END:VCARD
 
       {/* Buttons */}
       {search &&
-        <div className="w-full max-w-xs space-y-4">
-          <a
-            href="https://progronics.com"
-            target="_blank"
-            className="text-white block w-full py-3 bg-blue-600 rounded-xl font-semibold hover:bg-blue-700"
-          >
-            🌐 Visit Website
-          </a>
+        <div className="w-full flex flex-col max-w-[200px] space-y-4">
+          <Link href="https://progronics.com"
+            target="_blank">
+            <Button className="text-white bg-black w-full rounded-full">
+              <Globe /> Visit Website
+            </Button>
+          </Link>
 
-          <a
+          <Link
             href="https://maps.app.goo.gl/5uVgGr9xmdLVqnwc7"
-            target="_blank"
-            className="text-white block w-full py-3 bg-green-600 rounded-xl font-semibold hover:bg-green-700"
-          >
-            📍 Location
-          </a>
+            target="_blank">
+            <Button variant={"destructive"} className="text-white w-full rounded-full">
+              <MapPin /> Location
+            </Button>
+          </Link>
 
-          <button
-            onClick={handleSaveContact}
-            className="text-white w-full py-3 bg-yellow-500 text-black rounded-xl font-semibold hover:bg-yellow-600"
-          >
-            📇 Save Contact
-          </button>
+
+
+          <Button className="text-white rounded-full" onClick={handleSaveContact}>
+            <Save /> Save Contact
+          </Button>
+
+
         </div>
       }
     </div>
