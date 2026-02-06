@@ -64,7 +64,7 @@ export function Navigation() {
           <nav className="flex items-center justify-between">
             <div className="flex gap-10 items-center">
               <Link href={`/${lang}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <Image src={"/logo.png"} height={55} width={55} alt="Progronics Logo" />
+                <Image src={"/images/logo.png"} height={55} width={55} alt="Progronics Logo" />
               </Link>
               <div className="hidden md:flex items-center space-x-8">
                 {mainLinks.map((item, i) => (
@@ -110,7 +110,7 @@ export function Navigation() {
                     <div className="w-full flex justify-between">
                       <div className="flex gap-2 px-4 shrink-0 items-center text-2xl font-semibold  ">
                         <Link href={`/${lang}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                          <Image src={"/logo.png"} height={55} width={55} alt="Progronics Logo" />
+                          <Image src={"/images/logo.png"} height={55} width={55} alt="Progronics Logo" />
                         </Link>
                       </div>
                       <button

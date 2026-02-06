@@ -69,7 +69,7 @@ END:VCARD
     <div className="min-h-screen flex flex-col items-center justify-center bg-white text-black px-6 text-center">
       {/* Logo */}
       <Image
-        src="/combined.png"
+        src="/images/combined.png"
         alt="Progronics Logo"
         className="mb-6"
         width={200}
