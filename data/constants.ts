@@ -6,7 +6,7 @@ export const projects = [
         title: "SENFENG Pakistan CRM",
         description:
             "A full-stack business management web app streamlining team management, customer handling, payments, and task tracking in one platform.",
-        img: "/portfolio/senfeng_web.png",
+        img: "/images/portfolio/senfeng_web.png",
         height: 650,
         category: "Web Development",
         year: "2025",
@@ -31,7 +31,7 @@ export const projects = [
         title: "SENFENG Mobile",
         description:
             "Manage customers, complaints, commissions, team messaging, site visits, attendance and live location — all in one powerful mobile app.",
-        img: "/portfolio/senfeng_mobile.png",
+        img: "/images/portfolio/senfeng_mobile.png",
         height: 580,
         category: "Mobile App Development",
         year: "2025",
@@ -48,7 +48,7 @@ export const projects = [
         title: "TMS Blink Sales",
         description:
             "A web platform tailored for immigration consultants to manage leads, assign tasks, send emails, and track business operations efficiently.",
-        img: "/portfolio/tms.png",
+        img: "/images/portfolio/tms.png",
         height: 500,
         category: "Web Development",
         year: "2024",
@@ -63,7 +63,7 @@ export const projects = [
         id: "4",
         title: "SaaS Hospital Management System",
         description: "A scalable SaaS-based hospital management system that automates staff onboarding, patient management, appointments, and insurance workflows.",
-        img: "/portfolio/hospital.png",
+        img: "/images/portfolio/hospital.png",
         height: 720,
         category: "Web Development",
         year: "2024",
@@ -90,7 +90,7 @@ export const projects = [
         title: "Quiz Master",
         description:
             "A thrilling trivia game featuring multiple-choice quizzes, image puzzles, and a spin wheel of fortune — making learning fun and rewarding.",
-        img: "/portfolio/quiz.png",
+        img: "/images/portfolio/quiz.png",
         height: 560,
         category: "Mobile App Development",
         year: "2024",
@@ -106,7 +106,7 @@ export const projects = [
         title: "Chess Game",
         description:
             "A real-time online multiplayer chess game powered by Firebase and Socket.io, designed for competitive and fun play.",
-        img: "/portfolio/chess.png",
+        img: "/images/portfolio/chess.png",
         height: 600,
         category: "Game Development",
         year: "2024",
@@ -127,7 +127,7 @@ export const projects = [
         title: "UNO Game",
         description:
             "An online multiplayer UNO card game built using HTML5 and Socket.io, allowing real-time 2–4 player gameplay with modern animations.",
-        img: "/portfolio/uno.png",
+        img: "/images/portfolio/uno.png",
         height: 580,
         category: "Game Development",
         year: "2024",
@@ -148,7 +148,7 @@ export const projects = [
         title: "Sathee",
         description:
             "Sathee is a compassionate platform designed for elderly care, offering video and chat-based companionship, reminders, and real-time alerts for caregivers.",
-        img: "/portfolio/sathee.png",
+        img: "/images/portfolio/sathee.png",
         height: 520,
         category: "Web Development",
         year: "2023",
@@ -165,7 +165,7 @@ export const projects = [
         title: "Soccer Game",
         description:
             "A fast-paced online multiplayer soccer game powered by Socket.io, featuring smooth animations and responsive real-time controls.",
-        img: "/portfolio/soccer.png",
+        img: "/images/portfolio/soccer.png",
         height: 600,
         category: "Game Development",
         year: "2023",
@@ -186,7 +186,7 @@ export const projects = [
         title: "Soccer Head Game",
         description:
             "An entertaining online multiplayer soccer head game built in Construct 3D with Socket.io integration for real-time sessions.",
-        img: "/portfolio/soccer_head.png",
+        img: "/images/portfolio/soccer_head.png",
         height: 560,
         category: "Game Development",
         year: "2023",
@@ -293,38 +293,7 @@ export const services = [
 ];
 
 
-export const values = [
-  {
-    title: "Vision",
-    description:
-      "To become a global leader in digital innovation, empowering businesses worldwide to achieve their digital transformation goals through cutting-edge technology and world-class talent.",
-  },
-  {
-    title: "Mission",
-    description:
-      "To simplify technology and make it a powerful tool for growth. We're committed to delivering exceptional solutions that drive real business value for our clients.",
-  },
-  {
-    title: "Integrity",
-    description:
-      "We uphold the highest ethical standards in every action and decision. Transparency, honesty, and accountability form the foundation of our relationships with clients, partners, and team members.",
-  },
-  {
-    title: "Innovation",
-    description:
-      "We continuously challenge the status quo, embracing emerging technologies and creative thinking to craft smarter, faster, and more efficient solutions for tomorrow’s challenges.",
-  },
-  {
-    title: "Collaboration",
-    description:
-      "We believe success is built through teamwork. By working hand-in-hand with our clients, we create lasting partnerships that foster trust, communication, and mutual growth.",
-  },
-  {
-    title: "Excellence",
-    description:
-      "We strive for perfection in every project. Our dedication to quality and continuous improvement ensures that we deliver outstanding results that exceed expectations every time.",
-  },
-];
+
 
 
 export const mainLinks = [
@@ -336,16 +305,6 @@ export const mainLinks = [
     { label: "Contact", link: "/contact", ariaLabel: "Go to contact page" },
 
   ]
-
-  export  const processSteps = [
-        { link: '#', text: "Discovery", description: "Understanding requirements and project scope" },
-        { link: '#', text: "Planning", description: "Defining architecture, tech stack, and timelines" },
-        { link: '#', text: "Design", description: "Creating UI/UX and system design prototypes" },
-        { link: '#', text: "Development", description: "Coding and implementing features iteratively" },
-        { link: '#', text: "Testing", description: "Quality assurance, bug fixing, and optimization" },
-        { link: '#', text: "Deployment", description: "Launching the product to production" },
-        { link: '#', text: "Maintenance", description: "Ongoing support, updates, and performance monitoring" },
-    ];
 
   export   const faqs = [
     {

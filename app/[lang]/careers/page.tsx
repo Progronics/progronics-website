@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { TextEffect } from "@/components/ui/text-effect";
 import { db, storage } from "@/lib/firebase";
+import { useLocale } from "@/store/LocaleContext";
 import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytesResumable } from "firebase/storage";
 import { useState } from "react";
@@ -24,6 +25,7 @@ const SUPPORTED_EXTENSIONS = ["pdf", "doc", "docx"];
 const MAX_FILE_SIZE_MB = 5;
 
 export default function Page() {
+  const {dict} = useLocale()
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<DataProps>({
     fullname: "",
@@ -116,29 +118,31 @@ export default function Page() {
     setFormData((prev) => ({ ...prev, [key]: e.target.value }));
   };
 
+  if(!dict){
+    return (<div>Loading...</div>)
+  }
+
   return (
     <MainContainer id="careers" className="py-20 relative min-h-screen">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-16">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">
-            Careers
+            {dict.careersDict.section.title}
           </h2>
           <div 
           className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl"
           >
-            Join our passionate team of innovators shaping the future of
-            technology. We value creativity, dedication, and the drive to make
-            an impact through meaningful digital experiences.
+            {dict.careersDict.section.description}
           </div>
         </div>
 
         <form className="my-8 space-y-4" onSubmit={handleSubmit}>
           <LabelInputContainer>
-            <Label htmlFor="fullname">Full name</Label>
+            <Label htmlFor="fullname">{dict.careersDict.form.fullname.label}</Label>
             <Input
               required
               id="fullname"
-              placeholder="Tyler"
+              placeholder={dict.careersDict.form.fullname.placeholder}
               type="text"
               value={formData.fullname}
               onChange={(e) => handleInputChange(e, "fullname")}
@@ -146,11 +150,11 @@ export default function Page() {
           </LabelInputContainer>
 
           <LabelInputContainer>
-            <Label htmlFor="designation">Designation</Label>
+            <Label htmlFor="designation">{dict.careersDict.form.designation.label}</Label>
             <Input
               required
               id="designation"
-              placeholder="Software Engineer"
+              placeholder={dict.careersDict.form.designation.placeholder}
               type="text"
               value={formData.designation}
               onChange={(e) => handleInputChange(e, "designation")}
@@ -158,11 +162,11 @@ export default function Page() {
           </LabelInputContainer>
 
           <LabelInputContainer>
-            <Label htmlFor="email">Email Address</Label>
+            <Label htmlFor="email">{dict.careersDict.form.email.label}</Label>
             <Input
               required
               id="email"
-              placeholder="you@example.com"
+              placeholder={dict.careersDict.form.email.placeholder}
               type="email"
               value={formData.email}
               onChange={(e) => handleInputChange(e, "email")}
@@ -170,11 +174,11 @@ export default function Page() {
           </LabelInputContainer>
 
           <LabelInputContainer>
-            <Label htmlFor="number">Number</Label>
+            <Label htmlFor="number">{dict.careersDict.form.number.label}</Label>
             <Input
               required
               id="number"
-              placeholder="+1234567890"
+              placeholder={dict.careersDict.form.number.placeholder}
               type="text"
               value={formData.number}
               onChange={(e) => handleInputChange(e, "number")}
@@ -182,7 +186,7 @@ export default function Page() {
           </LabelInputContainer>
 
           <LabelInputContainer>
-            <Label htmlFor="resume">Resume</Label>
+            <Label htmlFor="resume">{dict.careersDict.form.resume.label}</Label>
             <Input
               required
               id="resume"
@@ -194,7 +198,7 @@ export default function Page() {
 
           {fileError && <p className="text-xs text-red-500 mt-1">{fileError}</p>}
           <p className="text-xs text-muted-foreground mt-1">
-            Supported formats: PDF, DOC, DOCX. Max size: {MAX_FILE_SIZE_MB}MB.
+            {dict.careersDict.form.resume.fileNote} {MAX_FILE_SIZE_MB}MB.
           </p>
 
           <button
@@ -202,7 +206,7 @@ export default function Page() {
             className="group/btn relative block h-10 w-full rounded-md bg-linear-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
             type="submit"
           >
-            {loading ? "Submitting..." : "Submit"}
+            {loading ? dict.careersDict.form.submitButton.submitting : dict.careersDict.form.submitButton.idle}
             <BottomGradient />
           </button>
         </form>

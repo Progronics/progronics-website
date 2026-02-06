@@ -1,13 +1,18 @@
 'use client';
 
+import { services } from '@/data/constants';
+import { useLocale } from '@/store/LocaleContext';
+import { DictionatiesTypes } from '@/types/types';
 import { ReactLenis } from 'lenis/react';
 import { motion, MotionValue, useScroll, useTransform } from 'motion/react';
 import Link from 'next/link';
 import { useRef } from 'react';
 import GradientBorderButton from '../gradient-border-button';
-import { services } from '@/data/constants';
 
 export default function Page() {
+
+  const { dict } = useLocale()
+
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -16,19 +21,36 @@ export default function Page() {
 
   const step = 1 / services.length;
 
+  const list = [
+    "videos/product_vid.mp4",
+    "videos/web_vid.mp4",
+    "videos/mob_vid.mp4",
+    "videos/ai_vid.mp4",
+    "videos/ui_vid.mp4",
+    "videos/staff_vid.mp4"
+
+  ]
+
+   if (!dict) {
+    return (
+      <div>Loading...</div>
+    )
+  }
+
   return (
     <ReactLenis root>
       <main ref={container}>
         <section className='text-white   w-full  '>
-          {services.map((project, i) => {
+          {dict.services_section.cards.map((project, i) => {
             const targetScale = 1 - (services.length - i) * 0.02;
             const isDark = i % 2 !== 0;
             return (
               <Card
                 key={`p_${i}`}
+                dict={dict}
                 i={i}
                 title={project?.title}
-                content={project.content}
+                content={list[i]}
                 color={isDark ? "dark" : "light"}
                 description={project?.description}
                 progress={scrollYProgress}
@@ -54,6 +76,7 @@ interface CardProps {
   targetScale: number;
   content: string;
   points: string[]
+  dict : DictionatiesTypes
 }
 const Card: React.FC<CardProps> = ({
   i,
@@ -64,7 +87,8 @@ const Card: React.FC<CardProps> = ({
   range,
   targetScale,
   content,
-  points
+  points,
+  dict
 }) => {
   const container = useRef(null);
   const scale = useTransform(progress, range, [1, targetScale]);
@@ -112,7 +136,7 @@ const Card: React.FC<CardProps> = ({
             </div>
 
             <Link href={"/services"}>
-              <GradientBorderButton text="Learn more" />
+              <GradientBorderButton text={dict.learn_more} />
             </Link>
           </div>
 
@@ -121,7 +145,7 @@ const Card: React.FC<CardProps> = ({
             muted
             autoPlay
             playsInline
-            src={content} className="h-[400px] hidden lg:block" />
+            src={`/${content}`} className="h-[400px] hidden lg:block" />
         </div>
       </motion.div>
     </div>

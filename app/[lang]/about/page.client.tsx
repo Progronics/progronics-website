@@ -1,13 +1,15 @@
 "use client"
 
-import World from "@/components/landing/world"
-import MainContainer from "@/components/main-container"
-import { TextEffect } from "@/components/ui/text-effect"
-import { values } from "@/data/constants"
+import World from "@/components/landing/world";
+import MainContainer from "@/components/main-container";
+import { useLocale } from "@/store/LocaleContext";
 
 export function AboutPageClient() {
 
-
+  const { dict } = useLocale();
+  if(!dict) return (
+    <div>Loading...</div>
+  )
   return (
     <>
       <div className="fixed top-[10vh] w-screen -z-1 opacity-20">
@@ -21,49 +23,42 @@ export function AboutPageClient() {
           <div className="mb-20">
             <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold 
       text-white mb-6 leading-[1.1] tracking-tight break-words">
-              Empowering Innovation
+             {dict.about_section.title}
             </h2>
 
             <div
               className="text-[18px] sm:text-[20px] text-slate-300 leading-relaxed tracking-tight max-w-4xl"
             >
-              Progronics is a forward-thinking IT company dedicated to helping businesses achieve
-              digital excellence. We specialize in crafting innovative web, mobile, and enterprise
-              solutions that empower organizations to scale and succeed in the digital era. With a
-              commitment to quality, performance, and long-term partnerships, we turn technology into
-              a catalyst for sustainable growth.
+             {dict.about_section.description}
             </div>
           </div>
 
           {/* Who We Are Section */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[60px] font-bold 
     text-white mb-6 leading-[1.1] tracking-tight break-words">
-            Who We Are
+            {dict.about_section.who}
           </h2>
 
           <div
             className="text-lg sm:text-xl text-slate-300 leading-relaxed tracking-tight mb-4 max-w-3xl"
           >
-            With a diverse team of engineers, designers, and strategists, we bring ideas to life through
-            cutting-edge solutions.
+           {dict.about_section.who_title}
           </div>
 
           <div
             className="text-lg sm:text-xl text-slate-300 leading-relaxed tracking-tight mb-20 max-w-3xl"
           >
-            Our mission is to simplify technology and make it a powerful tool for growth. We believe
-            in building long-term partnerships with our clients, growing together as we help them
-            succeed in the digital world.
+             {dict.about_section.who_description}
           </div>
 
           {/* Vision & Values */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[60px] font-bold 
     text-white mb-10 leading-[1.1] tracking-tight break-words">
-            Vision & Values
+             {dict.about_section.who_vision}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-            {values.map((item, index) => (
+            {dict.about_values.map((item, index) => (
               <div
                 key={index}
                 className="space-y-3 p-5 rounded-xl border border-white/5 bg-white/5 backdrop-blur-sm

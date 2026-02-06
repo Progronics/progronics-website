@@ -1,3 +1,4 @@
+import { getDictionary } from "../dictionaries"
 import { AboutPageClient } from "./page.client"
 
 export const metadata = {
@@ -5,6 +6,8 @@ export const metadata = {
   description: "Learn about Progronics, our mission, values, and the team behind our success.",
 }
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: PageProps<'/[lang]'>) {
+
+  
   return <AboutPageClient />
 }

@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { useLocale } from "@/store/LocaleContext";
 import { Brain } from "lucide-react";
 import Link from "next/link";
 import DecryptedText from "../DecryptedText";
@@ -9,13 +10,20 @@ import { TextLoop } from "../ui/text-loop";
 
 export default function Hero() {
 
+  const { dict } = useLocale()
   const variable = [
-    "Intelligent Apps",
-    "Modern Interfaces",
-    "Smart Businesses",
-    "Automated Systems",
-    "Data-driven Solutions",
+    dict.Intelligent_Apps,
+    dict.Modern_Interfaces,
+    dict.Smart_Businesses,
+    dict.Automated_Systems,
+    dict.Data_driven_Solutions,
   ];
+
+  if (!dict) {
+    return (
+      <div>Loading...</div>
+    )
+  }
 
   return (
     <MainContainer id="hero" className="relative w-full h-screen px-4 sm:px-6 lg:px-8 flex items-center justify-center">
@@ -24,7 +32,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/30 rounded-full glass-morphic w-fit mx-auto">
           <Brain className="w-4 h-4 text-primary" />
           <span className="text-sm font-semibold text-primary">
-            Next-gen solutions for{" "}
+            {dict?.next_gen_solutions}{" "}
             <TextLoop
               className='overflow-y-clip'
               transition={{
@@ -65,7 +73,7 @@ export default function Hero() {
 
         <div className="space-y-4">
           <DecryptedText
-            text="Transform Your Enterprise"
+            text={dict?.hero_header}
             animateOn="view"
             revealDirection="center"
             className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground"
@@ -75,7 +83,7 @@ export default function Hero() {
           />
 
           <p className="text-lg sm:text-xl text-white leading-relaxed">
-            Leverage intelligent AI and machine learning to automate, optimize, and innovate your business operations.
+            {dict?.hero_description}
           </p>
         </div>
 
@@ -85,7 +93,7 @@ export default function Hero() {
             className="hover:shadow-2xl hover:scale-105 transition-all text-white rounded-xl font-semibold group"
           >
             <Link href="/services" className="flex items-center gap-2">
-              Explore Services
+              {dict?.explore_services}
 
             </Link>
           </Button>

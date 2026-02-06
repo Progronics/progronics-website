@@ -1,0 +1,521 @@
+{
+  "nav_bar": {
+    "home": "首页",
+    "about": "关于我们",
+    "portfolio": "作品集",
+    "services": "服务",
+    "careers": "招聘"
+  },
+  "more_links": {
+    "contact": "联系我们",
+    "careers": "招聘",
+    "privacy policy": "隐私政策"
+  },
+  "quick_links": "快速链接",
+  "more": "更多",
+  "all_rights_reserved": "Progronics Solutions LLP. 版权所有。",
+  "get_in_touch": "联系我们",
+  "next_gen_solutions": "下一代解决方案",
+  "hero_header": "变革您的企业",
+  "hero_description": "利用智能人工智能和机器学习实现业务运营的自动化、优化与创新。",
+  "explore_services": "探索服务",
+  "digital_product_dev": "数字产品开发",
+  "digital_product_description": "我们提供从概念到上线的完整数字产品开发服务。从MVP到完整平台，我们的团队确保您的产品安全、可扩展，并具备市场竞争力。",
+  "digital_products_list": [
+    { "end": "面向网页和移动端的端到端产品开发" },
+    { "build": "通过快速迭代周期构建MVP" },
+    { "high": "高性能且安全的应用架构" },
+    { "third": "第三方API、云服务及支付集成" },
+    { "continous": "基于用户反馈的持续优化" }
+  ],
+  "Intelligent_Apps": "智能应用",
+  "Modern_Interfaces": "现代界面",
+  "Smart_Businesses": "智慧企业",
+  "Automated_Systems": "自动化系统",
+  "Data_driven_Solutions": "数据驱动解决方案",
+  "features_section": {
+    "title": "人工智能驱动的功能",
+    "description": "面向现代企业的下一代功能，旨在加速生产力、优化流程，并推动跨团队和部门的创新。我们的解决方案具备可扩展性和可靠性，能够随着您的业务需求和未来增长不断演进。"
+  },
+  "performance_files": [
+    {
+      "name": "极速体验",
+      "body": "体验超快的加载时间和平滑的交互，为您的网页和移动应用提供极致体验。"
+    },
+    {
+      "name": "优化渲染",
+      "body": "高效渲染确保即使在复杂的 UI 和大规模数据集下也能保持最小延迟。"
+    },
+    {
+      "name": "可扩展架构",
+      "body": "我们的系统可以同时处理成千上万的用户而不影响性能。"
+    },
+    {
+      "name": "低延迟",
+      "body": "优化后端和网络通信，实现实时响应。"
+    },
+    {
+      "name": "资源高效",
+      "body": "高性能运行且不会过度占用内存或 CPU，确保跨设备稳定性。"
+    }
+  ],
+  "features_cards": {
+    "ai_powered": {
+      "name": "人工智能驱动",
+      "description": "机器学习贯穿每个解决方案的核心——实现更智能的决策、预测分析和自适应系统，这些系统能够不断学习和优化。"
+    },
+    "high_performance": {
+      "name": "高性能",
+      "description": "通过优化算法进行极速处理，高效应对复杂计算，确保用户体验流畅，并在任何负载下保持最低延迟。"
+    },
+    "automation": {
+      "name": "自动化",
+      "description": "通过人工智能驱动的逻辑和流程编排，简化复杂工作流程，减少人工操作，并提升生产力。"
+    },
+    "scalable": {
+      "name": "可扩展",
+      "description": "设计以伴随业务增长——轻松应对增加的流量、数据和用户，而不会影响可靠性或性能，得益于我们的模块化架构。"
+    }
+  },
+  "why_section": {
+    "title": "为什么选择 Progronics",
+    "description": "与行业领先的开发者合作，构建可扩展、高性能的数字解决方案，助力您的业务增长。我们的专业领域涵盖网页、移动端及企业软件，完全契合您的独特目标。从概念到发布，我们确保每个项目的可靠性、创新性和长期价值。"
+  },
+  "why_cards": [
+    {
+      "title": "前沿专业知识",
+      "description": "我们的团队擅长利用现代技术、人工智能和机器学习，提供创新且可扩展的数字解决方案，让您的业务脱颖而出。"
+    },
+    {
+      "title": "定制化解决方案",
+      "description": "我们根据您的独特业务需求设计并构建完全定制的解决方案，确保灵活性、性能和长期可持续性。"
+    },
+    {
+      "title": "端到端服务",
+      "description": "从初始概念到完整部署及发布后的支持，我们管理每一个阶段，确保顺利执行并取得卓越成果。"
+    },
+    {
+      "title": "卓越业绩记录",
+      "description": "全球成功交付超过100个项目，我们持续的成果体现了我们的可靠性、高效性及对客户满意度的承诺。"
+    },
+    {
+      "title": "协作伙伴关系",
+      "description": "我们与客户紧密合作，作为战略伙伴，在项目每个阶段保持透明和持续沟通。"
+    },
+    {
+      "title": "安全与可靠",
+      "description": "我们的解决方案遵循行业领先的安全实践，确保您的数据、系统和用户始终受到保护，并提供稳健的性能保障。"
+    }
+  ],
+  "process_section": {
+    "title": "开发流程",
+    "description": "从概念到部署，我们提供端到端的解决方案，将想法转化为功能完善、可扩展且创新的数字产品，量身定制以满足您的业务需求。我们的敏捷方法确保按时交付、流畅的用户体验以及为您的组织带来长期价值。"
+  },
+  "process_steps": [
+    { "text": "发现", "description": "了解需求和项目范围" },
+    { "text": "规划", "description": "定义架构、技术栈和时间表" },
+    { "text": "设计", "description": "创建UI/UX和系统设计原型" },
+    { "text": "开发", "description": "迭代编码和功能实现" },
+    { "text": "测试", "description": "质量保证、错误修复和优化" },
+    { "text": "部署", "description": "将产品发布到生产环境" },
+    { "text": "维护", "description": "持续支持、更新和性能监控" }
+  ],
+  "technologies_section": {
+    "title": "技术与统计"
+  },
+  "technologies_stats": [
+    { "number": 100, "label": "AI项目", "additional": "+" },
+    { "number": 50, "label": "企业客户", "additional": "+" },
+    { "number": 100, "label": "正常运行时间", "additional": "%" },
+    { "number": 24, "label": "支持", "additional": "/7" }
+  ],
+  "cta_section": {
+    "title": "准备好变革了吗？",
+    "description": "与我们的专家一起开启您的旅程",
+    "button_text": "启动您的项目"
+  },
+  "services_section": {
+    "cards": [
+      {
+        "title": "数字产品开发",
+        "description": "我们从概念到发布构建完整的数字产品。从MVP到全规模平台，我们的团队确保您的产品安全、可扩展并能在市场上产生影响。",
+        "points": [
+          "端到端的Web和移动产品开发",
+          "通过快速迭代周期构建MVP",
+          "高性能、安全的应用架构",
+          "第三方API、云和支付集成",
+          "基于用户反馈的持续改进"
+        ],
+        "content": "/videos/product_vid.mp4"
+      },
+      {
+        "title": "企业软件与Web应用",
+        "description": "强大的企业级Web系统，专为大规模操作、性能和安全而设计。我们简化工作流程，支持数据驱动决策。",
+        "points": [
+          "企业仪表盘、门户和内部系统",
+          "可扩展的后端架构和数据库优化",
+          "高级访问控制和安全层",
+          "云部署和基础设施优化",
+          "长期维护和性能监控"
+        ],
+        "content": "/videos/web_vid.mp4"
+      },
+      {
+        "title": "移动应用开发",
+        "description": "高质量的Android和iOS应用，在所有设备上提供快速性能和直观的用户体验。",
+        "points": [
+          "跨平台开发（React Native / Flutter）",
+          "原生模块开发",
+          "推送通知与实时功能",
+          "性能调优和UX优化",
+          "App Store / Play Store发布支持"
+        ],
+        "content": "/videos/mob_vid.mp4"
+      },
+      {
+        "title": "AI自动化与战略咨询",
+        "description": "AI驱动的自动化和专业技术咨询，帮助您选择合适的系统、优化工作流程，并构建面向未来的数字解决方案。",
+        "points": [
+          "定制AI聊天机器人和业务AI代理",
+          "使用LLM和RPA进行流程自动化",
+          "技术栈与架构咨询",
+          "系统审计、蓝图与路线图",
+          "NLP、视觉和推荐模型集成"
+        ],
+        "content": "/videos/ai_vid.mp4"
+      },
+      {
+        "title": "UI/UX、品牌与创意设计",
+        "description": "美观且以用户为中心的设计，加强品牌识别并在所有平台提供无缝数字体验。",
+        "points": [
+          "应用和Web平台的UI/UX设计",
+          "完整的品牌识别系统",
+          "原型和交互式模型",
+          "营销视觉和创意内容",
+          "在所有资产中保持一致的设计语言"
+        ],
+        "content": "/videos/ui_vid.mp4"
+      },
+      {
+        "title": "专属团队、DevOps与物联网工程",
+        "description": "可扩展的开发团队、现代DevOps管道，以及先进的软件-硬件物联网生态系统工程。",
+        "points": [
+          "熟练的远程开发人员、设计师和QA工程师",
+          "CI/CD管道和云部署",
+          "监控、备份和服务器优化",
+          "固件开发（ESP32, STM32, Arduino）",
+          "带传感器、PCB设计及自动化的物联网系统"
+        ],
+        "content": "/videos/staff_vid.mp4"
+      }
+    ]
+  },
+  "learn_more": "了解更多",
+  "about_section": {
+    "title": "赋能创新",
+    "description": "Progronics是一家前瞻性的IT公司，致力于帮助企业实现数字卓越。我们专注于打造创新的Web、移动和企业解决方案，使组织能够在数字时代扩展和成功。我们承诺质量、性能和长期合作，将技术转化为可持续增长的催化剂。",
+    "who": "我们是谁",
+    "who_title": "凭借由工程师、设计师和战略家组成的多元团队，我们通过尖端解决方案将想法变为现实。",
+    "who_description": "我们的使命是简化技术，使其成为强大的增长工具。我们相信与客户建立长期合作关系，在帮助他们在数字世界中成功的同时共同成长。",
+    "who_vision": "愿景与价值观"
+  },
+  "about_values": [
+    {
+      "title": "愿景",
+      "description": "成为全球数字创新的领导者，通过尖端技术和世界级人才，使企业实现数字化转型目标。"
+    },
+    {
+      "title": "使命",
+      "description": "简化技术，使其成为强大的增长工具。我们致力于提供卓越的解决方案，为客户创造实际业务价值。"
+    },
+    {
+      "title": "诚信",
+      "description": "我们在每一个行动和决策中都秉持最高的道德标准。透明、诚实和问责是我们与客户、合作伙伴和团队成员关系的基础。"
+    },
+    {
+      "title": "创新",
+      "description": "我们不断挑战现状，拥抱新兴技术和创新思维，为未来的挑战打造更智能、更快速、更高效的解决方案。"
+    },
+    {
+      "title": "协作",
+      "description": "我们相信成功源于团队合作。通过与客户紧密合作，我们建立持久的伙伴关系，促进信任、沟通和共同成长。"
+    },
+    {
+      "title": "卓越",
+      "description": "我们在每个项目中追求完美。我们对质量和持续改进的承诺确保每次都能交付超出预期的卓越成果。"
+    }
+  ],
+
+  "portfolio_section": {
+    "title": "近期项目",
+    "description": "探索我们在各个行业交付的项目案例研究。了解我们的创新解决方案如何帮助企业克服挑战、提高效率并实现可衡量的成果。"
+  },
+  "projects": {
+    "1": {
+      "title": "SENFENG 巴基斯坦 CRM",
+      "description": "一个全栈业务管理 Web 应用，将团队管理、客户处理、支付和任务跟踪整合到一个平台。",
+      "features": [
+        "Google 登录",
+        "Firebase 认证",
+        "Google 地图",
+        "团队跟踪",
+        "客户与支付",
+        "实时进度",
+        "基于角色的仪表板"
+      ]
+    },
+    "2": {
+      "title": "SENFENG 移动端",
+      "description": "管理客户、投诉、佣金、团队消息、现场访问、考勤和实时位置——在一个强大的移动应用中完成。",
+      "features": [
+        "考勤",
+        "实时位置",
+        "Google 登录",
+        "实时消息",
+        "现场访问",
+        "投诉"
+      ]
+    },
+    "3": {
+      "title": "TMS Blink Sales",
+      "description": "为移民顾问量身打造的 Web 平台，用于管理潜在客户、分配任务、发送邮件，并高效跟踪业务运营。",
+      "features": [
+        "CRM",
+        "移民服务",
+        "潜在客户管理",
+        "Facebook 潜在客户",
+        "支付跟踪"
+      ]
+    },
+    "4": {
+      "title": "SaaS 医院管理系统",
+      "description": "一个可扩展的 SaaS 医院管理系统，可自动化员工入职、患者管理、预约和保险流程。",
+      "features": [
+        "咨询",
+        "记录",
+        "日程安排",
+        "保险",
+        "基于角色的仪表板",
+        "人工智能",
+        "SaaS 架构"
+      ]
+    },
+    "5": {
+      "title": "Quiz Master",
+      "description": "一款刺激的问答游戏，包含多选题、图片谜题和幸运轮——让学习变得有趣且有回报。",
+      "features": [
+        "测验",
+        "问答",
+        "每日奖励",
+        "Google 广告",
+        "幸运轮",
+        "图片匹配谜题"
+      ]
+    },
+    "6": {
+      "title": "国际象棋游戏",
+      "description": "一个实时在线多人国际象棋游戏，由 Firebase 和 Socket.io 提供支持，旨在提供竞争性和趣味性的玩法。",
+      "features": ["国际象棋", "多人游戏", "现代条纹", "动画"]
+    },
+    "7": {
+      "title": "UNO 游戏",
+      "description": "一个在线多人 UNO 卡牌游戏，使用 HTML5 和 Socket.io 构建，允许 2–4 名玩家实时游戏，并具有现代动画效果。",
+      "features": ["UNO 游戏", "多人游戏", "现代界面", "动画", "2–4 名玩家"]
+    },
+    "8": {
+      "title": "Sathee",
+      "description": "一个关怀老年人的平台，提供视频和聊天陪伴、提醒以及护理人员实时警报。",
+      "features": ["健康护理", "病历记录", "提醒", "实时通知", "紧急警报系统"]
+    },
+    "9": {
+      "title": "足球游戏",
+      "description": "一个快节奏的在线多人足球游戏，由 Socket.io 提供支持，具有流畅动画和实时控制。",
+      "features": ["足球游戏", "多人游戏", "流畅动画", "实时游戏"]
+    },
+    "10": {
+      "title": "足球头球游戏",
+      "description": "一个在线多人足球头球游戏，使用 Construct 3D 构建，并集成 Socket.io 进行实时游戏。",
+      "features": ["足球头球游戏", "多人游戏", "Construct 3D 物理"]
+    }
+  },
+
+  "careersDict": {
+    "section": {
+      "title": "招聘",
+      "description": "加入我们充满激情的创新团队，共同塑造科技的未来。我们重视创造力、责任感以及通过有意义的数字体验产生影响的动力。"
+    },
+    "form": {
+      "fullname": {
+        "label": "全名",
+        "placeholder": "Tyler"
+      },
+      "designation": {
+        "label": "职位",
+        "placeholder": "软件工程师"
+      },
+      "email": {
+        "label": "电子邮箱",
+        "placeholder": "you@example.com"
+      },
+      "number": {
+        "label": "电话号码",
+        "placeholder": "+1234567890"
+      },
+      "resume": {
+        "label": "简历",
+        "acceptFormats": ".pdf,.doc,.docx",
+        "fileNote": "支持格式：PDF、DOC、DOCX。最大大小：5MB。"
+      },
+      "submitButton": {
+        "submitting": "提交中...",
+        "idle": "提交"
+      }
+    }
+  },
+  "services_page": {
+    "title": "全面的IT服务解决方案",
+    "description": "从构建现代应用到扩展您的品牌 —— Progronics 覆盖数字化转型的各个方面。我们的专家团队将创意、战略和技术相结合，提供能够带来实际成果的解决方案。",
+    "cards": [
+      {
+        "title": "数字产品开发",
+        "paragraphs": [
+          "我们的数字产品开发服务帮助您将想法转化为完整、可扩展且适合市场的数字解决方案。",
+          "无论是推出新产品还是升级现有系统，我们都负责从UI/UX设计到开发、测试以及上线后的优化。"
+        ]
+      },
+      {
+        "title": "企业级Web应用",
+        "paragraphs": [
+          "我们开发高性能、安全且可扩展的企业级Web应用。",
+          "从仪表盘到云原生平台，我们确保系统稳定并具备长期发展能力。"
+        ]
+      },
+      {
+        "title": "移动应用开发",
+        "paragraphs": [
+          "我们开发高质量的Android、iOS及跨平台应用，提供卓越性能和用户体验。",
+          "我们负责设计、开发、测试和发布，确保应用可扩展并支持业务增长。"
+        ]
+      },
+      {
+        "title": "技术人员扩展与专属团队",
+        "paragraphs": [
+          "通过我们的团队扩展服务，快速提升开发能力。",
+          "我们提供专业开发人员并无缝融入您的现有团队。"
+        ]
+      },
+      {
+        "title": "UI/UX 与创意设计",
+        "paragraphs": [
+          "设计是成功数字体验的核心。我们创建直观且吸引人的界面设计。",
+          "我们还提供品牌视觉设计、Logo设计及创意资产制作。"
+        ]
+      },
+      {
+        "title": "DevOps 与云基础设施",
+        "paragraphs": [
+          "我们的DevOps服务确保您的应用在云环境中安全稳定运行。",
+          "我们自动化部署、优化性能并降低云成本。"
+        ]
+      },
+      {
+        "title": "AI自动化与定制AI代理",
+        "paragraphs": [
+          "利用AI自动化解决方案提升业务效率。",
+          "我们开发聊天机器人、数据分析系统及智能自动化工具。"
+        ]
+      },
+      {
+        "title": "数字营销与社交媒体增长",
+        "paragraphs": [
+          "我们的数字营销服务通过精准策略帮助品牌在线增长。",
+          "我们创建数据驱动的营销活动以获得可衡量成果。"
+        ]
+      },
+      {
+        "title": "物联网、嵌入式系统与研发",
+        "paragraphs": [
+          "我们将硬件与软件结合，构建智能互联解决方案。",
+          "我们支持PCB设计、云连接和工业自动化创新。"
+        ]
+      }
+    ]
+  },
+  "faq_section": {
+    "title": "常见问题",
+    "description": "关于我们服务的所有信息",
+    "cards": [
+      {
+        "question": "你们开发哪些类型的应用？",
+        "answer": "我们开发Web应用、移动应用、企业软件、AI解决方案和云平台。"
+      },
+      {
+        "question": "项目通常需要多长时间？",
+        "answer": "项目时间取决于复杂度。简单项目约2-3个月，复杂项目可能需要6-12个月。"
+      },
+      {
+        "question": "是否提供上线后的支持？",
+        "answer": "是的，我们提供维护、优化和技术支持服务。"
+      },
+      {
+        "question": "可以与现有系统集成吗？",
+        "answer": "可以，我们支持API开发和数据迁移，实现无缝集成。"
+      },
+      {
+        "question": "你们如何管理项目？",
+        "answer": "我们采用敏捷开发模式，并提供透明沟通和进度跟踪。"
+      },
+      {
+        "question": "如何保证代码质量？",
+        "answer": "我们采用代码审查、自动测试和持续集成来确保质量。"
+      }
+    ]
+  },
+
+  "contact_page": {
+    "section": {
+      "title": "联系我们",
+      "description": "与我们的团队取得联系，让我们一起探索如何将您的愿景变为现实。"
+    },
+    "info": {
+      "title": "取得联系",
+      "description": "有问题或准备开始项目？我们很乐意听取您的意见。请通过以下任一方式联系我们。"
+    },
+    "contactDetails": {
+      "address": {
+        "title": "地址",
+        "value": "巴基斯坦拉合尔，Johar Town 二期 M 区，Main Blvd，靠近 Khokhar Chowk，156 号，LG-05 室，地下层，邮编 54000"
+      },
+      "phone": {
+        "title": "电话",
+        "value": "+92 (323) 4784400"
+      },
+      "email": {
+        "title": "电子邮箱",
+        "value": "info@progronics.com"
+      }
+    },
+    "responseTime": "回复时间：24小时内"
+  },
+  "contact_form": {
+    "firstnameLabel": "名字",
+    "firstnamePlaceholder": "泰勒",
+
+    "lastnameLabel": "姓氏",
+    "lastnamePlaceholder": "德登",
+
+    "emailLabel": "电子邮箱地址",
+    "emailPlaceholder": "projectmayhem@fc.com",
+
+    "numberLabel": "电话号码",
+    "numberPlaceholder": "+xxxxxxxx",
+
+    "messageLabel": "留言",
+    "messagePlaceholder": "请输入您的留言....",
+
+    "submit": "提交",
+    "submitting": "提交中...",
+
+    "successMessage": "消息已发送"
+  }
+}

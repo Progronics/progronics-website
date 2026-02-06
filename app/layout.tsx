@@ -78,7 +78,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html className="dark">
       <head>
         <script
           type="application/ld+json"
@@ -162,9 +162,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased bg-background text-foreground`}>
         <HolyLoader />
-        <Navigation />
         {children}
-        <Footer />
       </body>
     </html>
   )

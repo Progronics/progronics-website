@@ -1,15 +1,21 @@
 "use client"
 
-import CTA from "@/components/landing/cta"
 import MainContainer from "@/components/main-container"
 import Masonry from "@/components/Masonry"
-import { TextEffect } from "@/components/ui/text-effect"
 import { projects } from "@/data/constants"
+import { useLocale } from "@/store/LocaleContext"
 
 export function PortfolioClient() {
 
+  const {dict} = useLocale()
 
- 
+  const finalDict = projects.map((item)=>{
+    return {...item, ...dict.projects[item.id]}
+  })
+
+ if(!dict){
+  return (<div>Loading...</div>)
+ }
 
   return (
 
@@ -18,11 +24,9 @@ export function PortfolioClient() {
        <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-16 ">
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">Recent Projects</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">{dict.portfolio_section.title}</h2>
           <div className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
-            Explore case studies of projects we've delivered across various industries.
-            Discover how our innovative solutions have empowered businesses to overcome challenges, enhance efficiency, and achieve measurable results.
-
+            {dict.portfolio_section.description}
           </div>
         </div>
       </div>
@@ -31,7 +35,7 @@ export function PortfolioClient() {
       <div className="flex items-center justify-center w-[98vw]">
         <div className="h-[1700px] sm:h-[700px] w-[90vw] self-center">
           <Masonry
-            items={projects}
+            items={finalDict}
             ease="power3.out"
             duration={0.6}
             stagger={0.05}

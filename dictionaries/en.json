@@ -1,0 +1,577 @@
+{
+  "nav_bar": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "careers": "Careers"
+  },
+  "more_links": {
+    "contact": "Contact",
+    "careers": "Careers",
+    "privacy policy": "Privacy Policy"
+  },
+
+  "quick_links": "Quick Links",
+  "more": "More",
+  "all_rights_reserved": "Progronics Solutions LLP. All rights reserved.",
+  "get_in_touch": "Get In Touch",
+  "next_gen_solutions": "Next-gen solutions for",
+  "hero_header": "Transofrm Your Enterprise",
+  "hero_description": "Leverage intelligent AI and machine learning to automate, optimize, and innovate your business operations.",
+  "explore_services": "Explore Services",
+  "digital_product_dev": "Digital Product Development",
+  "digital_product_description": "We build complete digital products from concept to launch. From MVPs to full-scale platforms, our team ensures your product is secure, scalable, and ready for market impact.",
+
+  "digital_products_list": [
+    { "end": "End-to-end product development for web and mobile" },
+    { "build": "Build MVPs with rapid iteration cycles" },
+    { "high": "High-performance, secure app architecture" },
+    { "third": "Third-party API, cloud, and payment integrations" },
+    { "continous": "Continuous improvements based on user feedback" }
+  ],
+
+  "Intelligent_Apps": "Intelligent Apps",
+  "Modern_Interfaces": "Modern Interfaces",
+  "Smart_Businesses": "Smart_Businesses",
+  "Automated_Systems": "Automated Systems",
+  "Data_driven_Solutions": "Data-driven Solutions",
+
+  "features_section": {
+    "title": "AI-Powered Capabilities",
+    "description": "Next-generation features for modern enterprises, designed to accelerate productivity, streamline operations, and drive innovation across teams and departments. Built for scalability and reliability, our solutions evolve with your business needs and future growth."
+  },
+
+  "performance_files": [
+    {
+      "name": "Blazing Fast",
+      "body": "Experience ultra-fast load times and smooth interactions for your web and mobile apps."
+    },
+    {
+      "name": "Optimized Rendering",
+      "body": "Efficient rendering ensures minimal lag, even with complex UI and large datasets."
+    },
+    {
+      "name": "Scalable Architecture",
+      "body": "Our systems can handle thousands of users simultaneously without compromising performance."
+    },
+    {
+      "name": "Low Latency",
+      "body": "Optimized backend and network communication for real-time responses."
+    },
+    {
+      "name": "Resource Efficient",
+      "body": "High performance without overloading memory or CPU, ensuring stability across devices."
+    }
+  ],
+
+  "features_cards": {
+    "ai_powered": {
+      "name": "AI-Powered",
+      "description": "Machine learning at the core of every solution — enabling smarter decision-making, predictive analytics, and adaptive systems that continuously learn and improve over time."
+    },
+    "high_performance": {
+      "name": "High Performance",
+      "description": "Lightning-fast processing with optimized algorithms that handle complex computations efficiently, ensuring seamless user experiences and minimal latency under any load."
+    },
+    "automation": {
+      "name": "Automation",
+      "description": "Streamline complex workflows, reduce manual effort, and boost productivity through intelligent automation powered by AI-driven logic and process orchestration."
+    },
+    "scalable": {
+      "name": "Scalable",
+      "description": "Built to grow with your business — effortlessly handle increasing traffic, data, and users without compromising reliability or performance, thanks to our modular architecture."
+    }
+  },
+  "why_section": {
+    "title": "Why Progronics",
+    "description": "Partner with industry-leading developers to build scalable, high-performance digital solutions that empower your business to grow. Our expertise spans web, mobile, and enterprise software tailored to your unique goals. From concept to launch, we ensure reliability, innovation, and lasting value in every project."
+  },
+  "why_cards": [
+    {
+      "title": "Cutting-edge Expertise",
+      "description": "Our team excels in leveraging modern technologies, AI, and machine learning to deliver innovative and scalable digital solutions that set your business apart."
+    },
+    {
+      "title": "Customized Solutions",
+      "description": "We design and build fully tailored solutions based on your unique business needs, ensuring flexibility, performance, and long-term sustainability."
+    },
+    {
+      "title": "End-to-End Services",
+      "description": "From initial concept to full deployment and post-launch support, we manage every stage of the process to ensure seamless execution and exceptional results."
+    },
+    {
+      "title": "Proven Track Record",
+      "description": "With over 100 successful projects delivered globally, our consistent results speak to our reliability, efficiency, and commitment to client satisfaction."
+    },
+    {
+      "title": "Collaborative Partnership",
+      "description": "We work closely with our clients as strategic partners, maintaining transparency and continuous communication throughout every phase of the project."
+    },
+    {
+      "title": "Security & Reliability",
+      "description": "Our solutions are built with industry-leading security practices, ensuring your data, systems, and users are protected at all times with robust performance guarantees."
+    }
+  ],
+
+  "process_section": {
+    "title": "Development Process",
+    "description": "From concept to deployment, we deliver end-to-end solutions that transform ideas into fully functional, scalable, and innovative digital products tailored to your business needs. Our agile approach ensures timely delivery, seamless user experiences, and long-term value for your organization."
+  },
+  "process_steps": [
+    {
+      "text": "Discovery",
+      "description": "Understanding requirements and project scope"
+    },
+    {
+      "text": "Planning",
+      "description": "Defining architecture, tech stack, and timelines"
+    },
+    {
+      "text": "Design",
+      "description": "Creating UI/UX and system design prototypes"
+    },
+    {
+      "text": "Development",
+      "description": "Coding and implementing features iteratively"
+    },
+    {
+      "text": "Testing",
+      "description": "Quality assurance, bug fixing, and optimization"
+    },
+    {
+      "text": "Deployment",
+      "description": "Launching the product to production"
+    },
+    {
+      "text": "Maintenance",
+      "description": "Ongoing support, updates, and performance monitoring"
+    }
+  ],
+  "technologies_section": {
+    "title": "Technologies & Stats"
+  },
+  "technologies_stats": [
+    { "number": 100, "label": "AI Projects", "additional": "+" },
+    { "number": 50, "label": "Enterprise Clients", "additional": "+" },
+    { "number": 100, "label": "Uptime", "additional": "%" },
+    { "number": 24, "label": "Support", "additional": "/7" }
+  ],
+  "cta_section": {
+    "title": "Ready to Transform?",
+    "description": "Start your journey with our experts",
+    "button_text": "Launch Your Project"
+  },
+
+  "services_section": {
+    "cards": [
+      {
+        "title": "Digital Product Development",
+        "description": "We build complete digital products from concept to launch. From MVPs to full-scale platforms, our team ensures your product is secure, scalable, and ready for market impact.",
+
+        "points": [
+          "End-to-end product development for web and mobile",
+          "Build MVPs with rapid iteration cycles",
+          "High-performance, secure app architecture",
+          "Third-party API, cloud, and payment integrations",
+          "Continuous improvements based on user feedback"
+        ]
+      },
+
+      {
+        "title": "Enterprise Software & Web Applications",
+        "description": "Powerful enterprise-grade web systems built for large-scale operations, performance, and security. We streamline workflows and enable data-driven decision-making.",
+
+        "points": [
+          "Enterprise dashboards, portals, and internal systems",
+          "Scalable backend architectures & database optimization",
+          "Advanced access control and security layers",
+          "Cloud deployment and infrastructure optimization",
+          "Long-term maintenance and performance monitoring"
+        ]
+      },
+
+      {
+        "title": "Mobile App Engineering",
+        "description": "High-quality Android and iOS applications that deliver fast performance and intuitive user experiences across all devices.",
+
+        "points": [
+          "Cross-platform development (React Native / Flutter)",
+          "Native module development",
+          "Push notifications & real-time features",
+          "Performance tuning & UX optimization",
+          "App Store / Play Store deployment support"
+        ]
+      },
+
+      {
+        "title": "AI Automation & Strategy Consulting",
+        "description": "AI-driven automation and expert technology consulting to help you choose the right systems, optimize workflows, and build future-ready digital solutions.",
+
+        "points": [
+          "Custom AI chatbots and business AI agents",
+          "Process automation using LLMs and RPA",
+          "Tech stack & architecture consulting",
+          "System audits, blueprints, and roadmaps",
+          "NLP, vision, and recommendation model integration"
+        ]
+      },
+
+      {
+        "title": "UI/UX, Branding & Creative Design",
+        "description": "Beautiful, user-focused designs that strengthen your brand identity and provide seamless digital experiences across all platforms.",
+
+        "points": [
+          "UI/UX design for apps and web platforms",
+          "Complete brand identity systems",
+          "Prototyping and interactive mockups",
+          "Marketing visuals and creatives",
+          "Consistent design language across all assets"
+        ]
+      },
+
+      {
+        "title": "Dedicated Teams, DevOps & IoT Engineering",
+        "description": "Scalable development teams, modern DevOps pipelines, and hardware/IoT engineering for advanced software-hardware ecosystems.",
+
+        "points": [
+          "Skilled remote developers, designers & QA engineers",
+          "CI/CD pipelines and cloud deployments",
+          "Monitoring, backups & server optimization",
+          "Firmware development (ESP32, STM32, Arduino)",
+          "IoT systems with sensors, PCB design, and automation"
+        ]
+      }
+    ]
+  },
+
+  "learn_more": "Learn More",
+  "about_section": {
+    "title": "Empowering Innovation",
+    "description": "Progronics is a forward-thinking IT company dedicated to helping businesses achieve digital excellence. We specialize in crafting innovative web, mobile, and enterprise solutions that empower organizations to scale and succeed in the digital era. With a commitment to quality, performance, and long-term partnerships, we turn technology into a catalyst for sustainable growth.",
+    "who": "Who We Are",
+    "who_title": "With a diverse team of engineers, designers, and strategists, we bring ideas to life throughcutting-edge solutions.",
+    "who_description": "Our mission is to simplify technology and make it a powerful tool for growth. We believe in building long-term partnerships with our clients, growing together as we help them succeed in the digital world.",
+    "who_vision": "Vision & Values"
+  },
+  "about_values": [
+    {
+      "title": "Vision",
+      "description": "To become a global leader in digital innovation, empowering businesses worldwide to achieve their digital transformation goals through cutting-edge technology and world-class talent."
+    },
+    {
+      "title": "Mission",
+      "description": "To simplify technology and make it a powerful tool for growth. We're committed to delivering exceptional solutions that drive real business value for our clients."
+    },
+    {
+      "title": "Integrity",
+      "description": "We uphold the highest ethical standards in every action and decision. Transparency, honesty, and accountability form the foundation of our relationships with clients, partners, and team members."
+    },
+    {
+      "title": "Innovation",
+      "description": "We continuously challenge the status quo, embracing emerging technologies and creative thinking to craft smarter, faster, and more efficient solutions for tomorrow’s challenges."
+    },
+    {
+      "title": "Collaboration",
+      "description": "We believe success is built through teamwork. By working hand-in-hand with our clients, we create lasting partnerships that foster trust, communication, and mutual growth."
+    },
+    {
+      "title": "Excellence",
+      "description": "We strive for perfection in every project. Our dedication to quality and continuous improvement ensures that we deliver outstanding results that exceed expectations every time."
+    }
+  ],
+
+  "portfolio_section": {
+    "title": "Recent Projects",
+    "description": "Explore case studies of projects we've delivered across various industries. Discover how our innovative solutions have empowered businesses to overcome challenges, enhance efficiency, and achieve measurable results."
+  },
+  "projects": {
+    "1": {
+      "title": "SENFENG Pakistan CRM",
+      "description": "A full-stack business management web app streamlining team management, customer handling, payments, and task tracking in one platform.",
+      "features": [
+        "Google login",
+        "Firebase authentication",
+        "Google maps",
+        "Team tracking",
+        "Customers & payments",
+        "Real-time progress",
+        "Role-based dashboards"
+      ]
+    },
+    "2": {
+      "title": "SENFENG Mobile",
+      "description": "Manage customers, complaints, commissions, team messaging, site visits, attendance and live location — all in one powerful mobile app.",
+      "features": [
+        "Attendance",
+        "Live location",
+        "Google login",
+        "Real-time messaging",
+        "Site visits",
+        "Complaints"
+      ]
+    },
+    "3": {
+      "title": "TMS Blink Sales",
+      "description": "A web platform tailored for immigration consultants to manage leads, assign tasks, send emails, and track business operations efficiently.",
+      "features": [
+        "CRM",
+        "Immigration services",
+        "Leads management",
+        "Facebook leads",
+        "Payment tracking"
+      ]
+    },
+    "4": {
+      "title": "SaaS Hospital Management System",
+      "description": "A scalable SaaS-based hospital management system that automates staff onboarding, patient management, appointments, and insurance workflows.",
+      "features": [
+        "Consultations",
+        "Records",
+        "Scheduling",
+        "Insurance",
+        "Role-based dashboards",
+        "AI",
+        "SaaS architecture"
+      ]
+    },
+    "5": {
+      "title": "Quiz Master",
+      "description": "A thrilling trivia game featuring multiple-choice quizzes, image puzzles, and a spin wheel of fortune — making learning fun and rewarding.",
+      "features": [
+        "Quiz",
+        "Trivia",
+        "Daily Rewards",
+        "Google Ads",
+        "Wheel of fortune",
+        "Image match puzzles"
+      ]
+    },
+    "6": {
+      "title": "Chess Game",
+      "description": "A real-time online multiplayer chess game powered by Firebase and Socket.io, designed for competitive and fun play.",
+      "features": ["Chess game", "Multiplayer", "Modern stripes", "Animation"]
+    },
+    "7": {
+      "title": "UNO Game",
+      "description": "An online multiplayer UNO card game built using HTML5 and Socket.io, allowing real-time 2–4 player gameplay with modern animations.",
+      "features": [
+        "UNO game",
+        "Multiplayer",
+        "Modern UI",
+        "Animations",
+        "2–4 players"
+      ]
+    },
+    "8": {
+      "title": "Sathee",
+      "description": "Sathee is a compassionate platform designed for elderly care, offering video and chat-based companionship, reminders, and real-time alerts for caregivers.",
+      "features": [
+        "Health care",
+        "Medical records",
+        "Reminders",
+        "Realtime notification",
+        "Emergency alert system"
+      ]
+    },
+    "9": {
+      "title": "Soccer Game",
+      "description": "A fast-paced online multiplayer soccer game powered by Socket.io, featuring smooth animations and responsive real-time controls.",
+      "features": [
+        "Soccer game",
+        "Multiplayer",
+        "Smooth animations",
+        "Realtime gameplay"
+      ]
+    },
+    "10": {
+      "title": "Soccer Head Game",
+      "description": "An entertaining online multiplayer soccer head game built in Construct 3D with Socket.io integration for real-time sessions.",
+      "features": ["Soccer head game", "Multiplayer", "Construct 3D physics"]
+    }
+  },
+
+  "careersDict": {
+    "section": {
+      "title": "Careers",
+      "description": "Join our passionate team of innovators shaping the future of technology. We value creativity, dedication, and the drive to make an impact through meaningful digital experiences."
+    },
+    "form": {
+      "fullname": {
+        "label": "Full name",
+        "placeholder": "Tyler"
+      },
+      "designation": {
+        "label": "Designation",
+        "placeholder": "Software Engineer"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "you@example.com"
+      },
+      "number": {
+        "label": "Number",
+        "placeholder": "+1234567890"
+      },
+      "resume": {
+        "label": "Resume",
+        "acceptFormats": ".pdf,.doc,.docx",
+        "fileNote": "Supported formats: PDF, DOC, DOCX. Max size: 5MB."
+      },
+      "submitButton": {
+        "submitting": "Submitting...",
+        "idle": "Submit"
+      }
+    }
+  },
+
+  "services_page": {
+    "title": "A Complete Spectrum of IT Services",
+    "description": "From building modern applications to scaling your brand — Progronics covers every aspect of digital transformation. Our expert teams blend creativity, strategy, and technology to deliver solutions that drive measurable impact. Whether you’re a startup or an enterprise, we help you innovate faster, operate smarter, and stay ahead in a competitive digital world.",
+    "cards": [
+      {
+        "title": "Digital Product Development",
+        "paragraphs": [
+          "Our digital product development service helps you transform ideas into fully functional, scalable, and market-ready digital solutions. We begin by understanding your business goals, user needs, and technical constraints, ensuring every feature aligns with long-term growth. From MVPs to enterprise-level platforms, our team builds reliable products with clean architecture and future-ready ecosystems.",
+          "Whether launching a new startup product or modernizing an existing digital system, we handle everything—from UI/UX design and system planning to development, testing, and post-launch iterations. We ensure your product is secure, optimized, and built with the technologies best suited for long-term success."
+        ]
+      },
+      {
+        "title": "Enterprise Web Applications",
+        "paragraphs": [
+          "We develop powerful, enterprise-grade web applications tailored for scalability, performance, and security. Our approach focuses on crafting robust backend architectures, intuitive frontends, and workflows that support large organizations with complex operational needs.",
+          "From dashboards and internal tools to multi-tenant systems and cloud-native platforms, we ensure your application remains stable under heavy usage. Every solution is optimized for long-term growth, seamless user experience, and efficient maintenance."
+        ]
+      },
+      {
+        "title": "Mobile App Engineering",
+        "paragraphs": [
+          "Our mobile app engineering team builds high-quality Android, iOS, and cross-platform applications with exceptional performance and user experience. We focus on clean code, optimized architectures, and smooth interactions that keep users engaged.",
+          "From prototype to deployment, we handle UI/UX design, feature development, API integration, security, testing, and publishing. Your mobile app is delivered fully optimized, scalable, and ready for continuous evolution as your business grows."
+        ]
+      },
+      {
+        "title": "Staff Augmentation & Dedicated Teams",
+        "paragraphs": [
+          "Scale your development capacity instantly with our staff augmentation services. We provide highly skilled developers, designers, QA engineers, project managers, and technical experts who integrate seamlessly with your existing teams.",
+          "Whether you need short-term support or a long-term dedicated team, we ensure reliable talent, smooth onboarding, flexible engagement, and consistent delivery. Get the benefits of an expanded team without the overhead of traditional hiring."
+        ]
+      },
+      {
+        "title": "UI/UX & Creative Design",
+        "paragraphs": [
+          "Design is the heart of every successful digital experience. Our UI/UX team creates intuitive, user-friendly, and visually engaging interfaces that elevate your brand and enhance usability. From wireframes and prototypes to complete design systems, we ensure every interaction feels natural and purposeful.",
+          "Alongside UI/UX, our creative designers craft brand identities, logos, and visual assets that communicate your story and captivate your audience. We blend creativity with strategy to deliver designs that are timeless, unique, and perfectly aligned with your business goals."
+        ]
+      },
+      {
+        "title": "DevOps & Cloud Infrastructure",
+        "paragraphs": [
+          "Our DevOps and cloud engineering services ensure your applications run smoothly, securely, and efficiently in the cloud. We implement CI/CD pipelines, automate deployments, and manage scalable infrastructures across AWS, Azure, GCP, and DigitalOcean.",
+          "From optimizing server performance to enhancing security, monitoring uptime, and reducing cloud costs, we ensure your systems stay reliable 24/7. Our DevOps approach improves delivery speed, reduces downtime, and guarantees operational excellence."
+        ]
+      },
+      {
+        "title": "AI Automation & Custom AI Agents",
+        "paragraphs": [
+          "Harness the power of AI with intelligent automation solutions tailored to your business. We build custom AI agents for customer support, sales, analytics, internal operations, and workflow automation using OpenAI, Gemini, and local LLMs.",
+          "Our AI team develops chatbots, RPA systems, NLP models, and data-driven solutions that eliminate repetitive work and enhance decision-making. We integrate AI seamlessly into your existing systems, giving your business a competitive edge through innovation."
+        ]
+      },
+      {
+        "title": "Digital Marketing & Social Media Growth",
+        "paragraphs": [
+          "Our digital marketing services help your brand grow online through targeted strategies and high-impact content. We manage social media, ads, SEO, and content campaigns that boost visibility and engagement.",
+          "Whether you're aiming for brand awareness, lead generation, or performance marketing, we build tailored campaigns backed by analytics and consistent optimization to deliver measurable results."
+        ]
+      },
+      {
+        "title": "IoT, Embedded Systems & R&D",
+        "paragraphs": [
+          "Our embedded systems and IoT services bring hardware and software together to create intelligent, connected solutions. We work with microcontrollers like ESP32, STM32, Raspberry Pi, and more to develop firmware and hardware prototypes.",
+          "From sensor integration and PCB design to cloud connectivity and industrial automation, we support businesses looking to innovate with next-generation hardware technology. Our R&D team builds custom solutions tailored for real-world applications."
+        ]
+      }
+    ]
+  },
+
+  "faq_section": {
+    "title": "Frequently Asked Questions",
+    "description": "Everything you need to know about our services",
+    "cards": [
+      {
+        "question": "What types of applications do you develop?",
+        "answer": "We develop a wide range of applications including web applications, mobile apps (iOS & Android), enterprise software, AI/ML solutions, and cloud-based platforms. Our expertise spans various industries and tech stacks."
+      },
+      {
+        "question": "How long does a typical project take?",
+        "answer": "Project timelines vary based on complexity and scope. Simple projects may take 2-3 months, while complex enterprise solutions can take 6-12 months or more. We provide detailed timelines during the discovery phase."
+      },
+      {
+        "question": "Do you offer post-launch support?",
+        "answer": "We provide comprehensive post-launch support including maintenance, bug fixes, performance optimization, feature updates, and technical assistance to ensure your application runs smoothly."
+      },
+      {
+        "question": "Can you integrate with existing systems?",
+        "answer": "Yes, we specialize in integrating new solutions with your existing systems and tech stack. Our team handles API development, data migration, and ensures seamless integration with minimal disruption."
+      },
+      {
+        "question": "What is your approach to project management?",
+        "answer": "We use Agile methodology with regular sprint cycles, transparent communication, and frequent progress updates. You'll have a dedicated project manager and clear visibility into development progress."
+      },
+      {
+        "question": "How do you ensure code quality?",
+        "answer": "We implement rigorous quality assurance processes including code reviews, automated testing, continuous integration, and comprehensive testing phases before deployment to ensure production-ready code."
+      }
+    ]
+  },
+
+
+  "contact_page" : {
+    "section": {
+      "title": "Let's Talk",
+      "description": "Get in touch with our team and let's explore how we can help transform your vision into reality."
+    },
+    "info": {
+      "title": "Get In Touch",
+      "description": "Have a question or ready to start a project? We'd love to hear from you. Reach out using any of the methods below."
+    },
+    "contactDetails": {
+      "address": {
+        "title": "Address",
+        "value": "Room LG-05 Basement Floor, 156, m block, Main Blvd, near khokhar Chowk, Block M Phase 2 Johar Town, Lahore, 54000, Pakistan"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+92 (323) 4784400"
+      },
+      "email": {
+        "title": "Email",
+        "value": "info@progronics.com"
+      }
+    },
+    "responseTime": "Response time: Within 24 hours"
+  },
+
+  "contact_form" : {
+    "firstnameLabel": "First name",
+  "firstnamePlaceholder": "Tyler",
+
+  "lastnameLabel": "Last name",
+  "lastnamePlaceholder": "Durden",
+
+  "emailLabel": "Email Address",
+  "emailPlaceholder": "projectmayhem@fc.com",
+
+  "numberLabel": "Number",
+  "numberPlaceholder": "+xxxxxxxx",
+
+  "messageLabel": "Message",
+  "messagePlaceholder": "Type your message....",
+
+  "submit": "Submit",
+  "submitting": "Submitting...",
+
+  "successMessage": "Message sent"
+  }
+}

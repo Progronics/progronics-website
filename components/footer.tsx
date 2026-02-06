@@ -1,4 +1,6 @@
 "use client"
+import { useLocale } from "@/store/LocaleContext"
+import { DictionatiesTypes } from "@/types/types"
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -6,21 +8,26 @@ import { usePathname } from "next/navigation"
 export function Footer() {
   const currentYear = new Date().getFullYear()
   const pathname = usePathname()
+  const { dict, lang } = useLocale()
 
-  const quickLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
-    { name: "Portfolio", href: "/portfolio" },
+  if (!dict) {
+    return (<div>Loading...</div>)
+  }
+
+  const quickLinks: { name: keyof DictionatiesTypes["nav_bar"], href: string }[] = [
+    { name: "home", href: "/" },
+    { name: "about", href: "/about" },
+    { name: "services", href: "/services" },
+    { name: "portfolio", href: "/portfolio" },
   ]
 
-  const moreLinks = [
-    // { name: "Blog", href: "/blog" },
-    // { name: "Careers", href: "/careers" },
-    { name: "Contact", href: "/contact" },
-    { name: "Careers", href: "/careers" },
-    { name: "Privacy Policy", href: "/privacy" },
+  const moreLinks: { name: keyof DictionatiesTypes["more_links"], href: string }[] = [
+    { name: "contact", href: "/contact" },
+    { name: "careers", href: "/careers" },
+    { name: "privacy policy", href: "/privacy" },
   ]
+
+  
 
   return (
     pathname.includes("portfolio") ? null :
@@ -32,29 +39,29 @@ export function Footer() {
             {/* Brand */}
 
             <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start">
-               <Link href="/" className="hover:opacity-80 transition-opacity">
-              <Image
-                src="/combined.png"
-                width={160}
-                height={160}
-                alt="Progronics Solutions"
-              />
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <Image
+                  src="/combined.png"
+                  width={160}
+                  height={160}
+                  alt="Progronics Solutions"
+                />
               </Link>
             </div>
 
             {/* Quick Links */}
             <div className="text-center md:text-left">
               <h3 className="font-medium text-sm text-secondary mb-1">
-                Quick Links
+                {dict.quick_links}
               </h3>
               <ul className="space-y-0.5">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.href}
+                      href={`/${lang}${link.href}`}
                       className="text-sm text-secondary hover:text-primary transition-all"
                     >
-                      {link.name}
+                      {dict.nav_bar[link.name]}
                     </Link>
                   </li>
                 ))}
@@ -64,16 +71,16 @@ export function Footer() {
             {/* More Links */}
             <div className="text-center md:text-left">
               <h3 className="font-medium text-sm text-secondary mb-1">
-                More
+                {dict.more}
               </h3>
               <ul className="space-y-0.5">
                 {moreLinks.map((link) => (
                   <li key={link.href}>
                     <Link
-                      href={link.href}
+                     href={`/${lang}${link.href}`}
                       className="text-sm text-secondary hover:text-primary transition-all"
                     >
-                      {link.name}
+                      {dict.more_links[link.name]}
                     </Link>
                   </li>
                 ))}
@@ -83,7 +90,7 @@ export function Footer() {
 
           <div className="border-t border-primary/40 pt-2">
             <p className="text-center text-xs text-muted-foreground">
-              © {currentYear} Progronics Solutions LLP. All rights reserved.
+              © {currentYear} {dict.all_rights_reserved}
             </p>
           </div>
         </div>

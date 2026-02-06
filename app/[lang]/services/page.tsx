@@ -1,4 +1,4 @@
-import { ServicesClient } from "./ServicesClient"
+import ServicesClient  from "./ServicesClient";
 
 export const metadata = {
   title: "Our Services - Progronics | IT Solutions & Development",
