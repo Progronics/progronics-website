@@ -3,8 +3,6 @@ import { Inter, Poppins } from "next/font/google";
 import type React from "react";
 
 
-import { Footer } from "@/components/footer";
-import { Navigation } from "@/components/navigation";
 import HolyLoader from "holy-loader";
 import "./globals.css";
 
@@ -78,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className="dark">
+    <html className="dark" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -160,7 +158,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-background text-foreground`}>
+      <body className={`${inter.className} antialiased bg-background text-foreground`} suppressHydrationWarning>
         <HolyLoader />
         {children}
       </body>

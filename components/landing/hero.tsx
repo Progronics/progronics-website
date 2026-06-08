@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useLocale } from "@/store/LocaleContext";
-import { Brain } from "lucide-react";
+import { Brain, Dices } from "lucide-react";
 import Link from "next/link";
 import DecryptedText from "../DecryptedText";
 import MainContainer from "../main-container";
@@ -72,7 +72,7 @@ export default function Hero() {
         </div>
 
         <div className="space-y-4">
-          <DecryptedText
+          {/* <DecryptedText
             text={dict?.hero_header}
             animateOn="view"
             revealDirection="center"
@@ -80,7 +80,8 @@ export default function Hero() {
             speed={50}
             maxIterations={10}
             sequential
-          />
+          /> */}
+          <p className="text-6xl font-bold">{dict?.hero_header}</p>
 
           <p className="text-lg sm:text-xl text-white leading-relaxed">
             {dict?.hero_description}

@@ -87,19 +87,26 @@ export const projects = [
     },
     {
         id: "5",
-        title: "Quiz Master",
+        title: "N0Render Smart Box",
         description:
-            "A thrilling trivia game featuring multiple-choice quizzes, image puzzles, and a spin wheel of fortune — making learning fun and rewarding.",
-        img: "/images/portfolio/quiz.png",
+            "A premium product website for N0Render Smart Box, a compact entertainment device that turns any TV into an ultra-fast hub for IP TV, 4K media, retro gaming, e-learning, and fitness, starting from $125.",
+        img: "/images/portfolio/n0render.png",
         height: 560,
-        category: "Mobile App Development",
-        year: "2024",
-        technologies: ["React Native", "Supabase", "Firebase", "Typescript"],
-        url: "https://play.google.com/store/apps/details?id=com.octasoft.quiz",
-        demoCredentials: {
-            signup: { email: "youremail@domain.com", password: "yourpassword" },
-        },
-        features: ["Quiz", "Trivia", "Daily Rewards", "Google Ads", "Wheel of fortune", "Image match puzzles"],
+        category: "Web Development",
+        year: "2025",
+        technologies: ["Next.js", "Tailwind CSS", "Stripe", "Firebase"],
+        url: "https://sp-n0render-smart-box.vercel.app/",
+        scope:
+            "Public product website with Stripe checkout, Firebase order storage, and an internal admin portal to access and manage all customer orders.",
+        features: [
+            "Product landing page",
+            "Stripe checkout",
+            "Firebase order storage",
+            "Orders admin portal",
+            "4K media positioning",
+            "IP TV product flow",
+            "Responsive UI",
+        ],
     },
     {
         id: "6",
@@ -112,14 +119,17 @@ export const projects = [
         year: "2024",
         technologies: ["HTML5", "Node.js", "Firebase", "Socket.io"],
         url: "https://chess-game-f1pi.onrender.com",
-        demoCredentials: {
-            player1: {
-                link: `https://chess-game-f1pi.onrender.com/?roomID=${randomNumber}&playerID=1&isHost=true&time=1`,
-            },
-            player2: {
-                link: `https://chess-game-f1pi.onrender.com/?roomID=${randomNumber}&playerID=2&time=1`,
-            },
-        },
+       demoCredentials: {
+  player1: {
+    type: "chess",
+    playerID: "1",
+    isHost: true,
+  },
+  player2: {
+    type: "chess",
+    playerID: "2",
+  },
+},
         features: ["Chess game", "Multiplayer", "Modern stripes", "Animation"],
     },
     {
@@ -134,13 +144,19 @@ export const projects = [
         technologies: ["HTML5", "Node.js", "MongoDB", "Socket.io"],
         url: "https://uno-game-d3oe.onrender.com/",
         demoCredentials: {
-            player1: {
-                link: `https://uno-game-d3oe.onrender.com/?roomID=${randomNumber}&playerID=1&playerName=Player1&numOfPlayers=2&isHost=true`,
-            },
-            player2: {
-                link: `https://uno-game-d3oe.onrender.com/?roomID=${randomNumber}&playerID=2&playerName=Player2`,
-            },
-        },
+  player1: {
+    type: "uno",
+    playerID: "1",
+    playerName: "Player1",
+    numOfPlayers: "2",
+    isHost: true,
+  },
+  player2: {
+    type: "uno",
+    playerID: "2",
+    playerName: "Player2",
+  },
+},
         features: ["UNO game", "Multiplayer", "Modern UI", "Animations", "2–4 players"],
     },
     {
@@ -171,14 +187,20 @@ export const projects = [
         year: "2023",
         technologies: ["HTML5", "Node.js", "Firebase", "Socket.io"],
         url: "https://soccer-game.onrender.com/",
-        demoCredentials: {
-            player1: {
-                link: `https://soccer-game.onrender.com/?roomID=${randomNumber}&playerID=1&playerName=Player1&numOfPlayers=2&isHost=true`,
-            },
-            player2: {
-                link: `https://soccer-game.onrender.com/?roomID=${randomNumber}&playerID=2&playerName=Player2`,
-            },
-        },
+       demoCredentials: {
+  player1: {
+    type: "soccer",
+    playerID: "1",
+    playerName: "Player1",
+    numOfPlayers: "2",
+    isHost: true,
+  },
+  player2: {
+    type: "soccer",
+    playerID: "2",
+    playerName: "Player2",
+  },
+},
         features: ["Soccer game", "Multiplayer", "Smooth animations", "Realtime gameplay"],
     },
     {
@@ -192,104 +214,110 @@ export const projects = [
         year: "2023",
         technologies: ["Construct 3D", "HTML5", "Node.js", "Socket.io"],
         url: "https://soccer-head-game.onrender.com",
-        demoCredentials: {
-            player1: { link: `https://soccer-head-game.onrender.com/?roomname=${randomNumber}&playerid=1` },
-            player2: { link: `https://soccer-head-game.onrender.com/?roomname=${randomNumber}&playerid=2` },
-        },
+       demoCredentials: {
+  player1: {
+    type: "soccer_head",
+    playerID: "1",
+  },
+  player2: {
+    type: "soccer_head",
+    playerID: "2",
+  },
+},
         features: ["Soccer head game", "Multiplayer", "Construct 3D physics"],
     },
 ];
 
 export const services = [
-  {
-    title: "Digital Product Development",
-    description:
-      "We build complete digital products from concept to launch. From MVPs to full-scale platforms, our team ensures your product is secure, scalable, and ready for market impact.",
-    link: "/services",
-    points: [
-      "End-to-end product development for web and mobile",
-      "Build MVPs with rapid iteration cycles",
-      "High-performance, secure app architecture",
-      "Third-party API, cloud, and payment integrations",
-      "Continuous improvements based on user feedback"
-    ],
-    content: "/videos/product_vid.mp4"
-  },
+    {
+        title: "Digital Product Development",
+        description:
+            "We build complete digital products from concept to launch. From MVPs to full-scale platforms, our team ensures your product is secure, scalable, and ready for market impact.",
+        link: "/services",
+        points: [
+            "End-to-end product development for web and mobile",
+            "Build MVPs with rapid iteration cycles",
+            "High-performance, secure app architecture",
+            "Third-party API, cloud, and payment integrations",
+            "Continuous improvements based on user feedback"
+        ],
+        content: "/videos/product_vid.mp4"
+    },
 
-  {
-    title: "Enterprise Software & Web Applications",
-    description:
-      "Powerful enterprise-grade web systems built for large-scale operations, performance, and security. We streamline workflows and enable data-driven decision-making.",
-    link: "/services",
-    points: [
-      "Enterprise dashboards, portals, and internal systems",
-      "Scalable backend architectures & database optimization",
-      "Advanced access control and security layers",
-      "Cloud deployment and infrastructure optimization",
-      "Long-term maintenance and performance monitoring"
-    ],
-    content: "/videos/web_vid.mp4"
-  },
+    {
+        title: "Enterprise Software & Web Applications",
+        description:
+            "Powerful enterprise-grade web systems built for large-scale operations, performance, and security. We streamline workflows and enable data-driven decision-making.",
+        link: "/services",
+        points: [
+            "Enterprise dashboards, portals, and internal systems",
+            "Scalable backend architectures & database optimization",
+            "Advanced access control and security layers",
+            "Cloud deployment and infrastructure optimization",
+            "Long-term maintenance and performance monitoring"
+        ],
+        content: "/videos/web_vid.mp4"
+    },
 
-  {
-    title: "Mobile App Engineering",
-    description:
-      "High-quality Android and iOS applications that deliver fast performance and intuitive user experiences across all devices.",
-    link: "/services",
-    points: [
-      "Cross-platform development (React Native / Flutter)",
-      "Native module development",
-      "Push notifications & real-time features",
-      "Performance tuning & UX optimization",
-      "App Store / Play Store deployment support"
-    ],
-    content: "/videos/mob_vid.mp4"
-  },
+    {
+        title: "Mobile App Engineering",
+        description:
+            "High-quality Android and iOS applications that deliver fast performance and intuitive user experiences across all devices.",
+        link: "/services",
+        points: [
+            "Cross-platform development (React Native / Flutter)",
+            "Native module development",
+            "Push notifications & real-time features",
+            "Performance tuning & UX optimization",
+            "App Store / Play Store deployment support"
+        ],
+        content: "/videos/mob_vid.mp4"
+    },
 
-  {
-    title: "AI Automation & Strategy Consulting",
-    description:
-      "AI-driven automation and expert technology consulting to help you choose the right systems, optimize workflows, and build future-ready digital solutions.",
-    link: "/services",
-    points: [
-      "Custom AI chatbots and business AI agents",
-      "Process automation using LLMs and RPA",
-      "Tech stack & architecture consulting",
-      "System audits, blueprints, and roadmaps",
-      "NLP, vision, and recommendation model integration"
-    ],
-    content: "/videos/ai_vid.mp4"
-  },
+    {
+        title: "AI Automation & Strategy Consulting",
+        description:
+            "AI-driven automation and expert technology consulting to help you choose the right systems, optimize workflows, and build future-ready digital solutions.",
+        link: "/services",
+        points: [
+            "Custom AI chatbots and business AI agents",
+            "Process automation using LLMs and RPA",
+            "Tech stack & architecture consulting",
+            "System audits, blueprints, and roadmaps",
+            "NLP, vision, and recommendation model integration"
+        ],
+        content: "/videos/ai_vid.mp4"
+    },
 
-  {
-    title: "UI/UX, Branding & Creative Design",
-    description:
-      "Beautiful, user-focused designs that strengthen your brand identity and provide seamless digital experiences across all platforms.",
-    link: "/services",
-    points: [
-      "UI/UX design for apps and web platforms",
-      "Complete brand identity systems",
-      "Prototyping and interactive mockups",
-      "Marketing visuals and creatives",
-      "Consistent design language across all assets"
-    ],
-    content: "/videos/ui_vid.mp4"
-  },
+    {
+        title: "UI/UX, Branding & Creative Design",
+        description:
+            "Beautiful, user-focused designs that strengthen your brand identity and provide seamless digital experiences across all platforms.",
+        link: "/services",
+        points: [
+            "UI/UX design for apps and web platforms",
+            "Complete brand identity systems",
+            "Prototyping and interactive mockups",
+            "Marketing visuals and creatives",
+            "Consistent design language across all assets"
+        ],
+        content: "/videos/ui_vid.mp4"
+    },
 
-  {
-    title: "Dedicated Teams, DevOps & IoT Engineering",
-    description:
-      "Scalable development teams, modern DevOps pipelines, and hardware/IoT engineering for advanced software-hardware ecosystems.",
-    link: "/services",
-    points: [
-      "Skilled remote developers, designers & QA engineers",
-      "CI/CD pipelines and cloud deployments",
-      "Monitoring, backups & server optimization",
-      "Firmware development (ESP32, STM32, Arduino)",
-      "IoT systems with sensors, PCB design, and automation"
-    ],
-    content: "/videos/staff_vid.mp4"
-  }
+    {
+        title: "Dedicated Teams, DevOps & IoT Engineering",
+        description:
+            "Scalable development teams, modern DevOps pipelines, and hardware/IoT engineering for advanced software-hardware ecosystems.",
+        link: "/services",
+        points: [
+            "Skilled remote developers, designers & QA engineers",
+            "CI/CD pipelines and cloud deployments",
+            "Monitoring, backups & server optimization",
+            "Firmware development (ESP32, STM32, Arduino)",
+            "IoT systems with sensors, PCB design, and automation"
+        ],
+        content: "/videos/staff_vid.mp4"
+    }
 ];
 
 
@@ -304,42 +332,42 @@ export const mainLinks = [
     { label: "Careers", link: "/careers", ariaLabel: "Go to careers page" },
     { label: "Contact", link: "/contact", ariaLabel: "Go to contact page" },
 
-  ]
+]
 
-  export   const faqs = [
+export const faqs = [
     {
-      question: "What types of applications do you develop?",
-      answer:
-        "We develop a wide range of applications including web applications, mobile apps (iOS & Android), enterprise software, AI/ML solutions, and cloud-based platforms. Our expertise spans various industries and tech stacks.",
+        question: "What types of applications do you develop?",
+        answer:
+            "We develop a wide range of applications including web applications, mobile apps (iOS & Android), enterprise software, AI/ML solutions, and cloud-based platforms. Our expertise spans various industries and tech stacks.",
     },
     {
-      question: "How long does a typical project take?",
-      answer:
-        "Project timelines vary based on complexity and scope. Simple projects may take 2-3 months, while complex enterprise solutions can take 6-12 months or more. We provide detailed timelines during the discovery phase.",
+        question: "How long does a typical project take?",
+        answer:
+            "Project timelines vary based on complexity and scope. Simple projects may take 2-3 months, while complex enterprise solutions can take 6-12 months or more. We provide detailed timelines during the discovery phase.",
     },
     {
-      question: "Do you offer post-launch support?",
-      answer:
-        "We provide comprehensive post-launch support including maintenance, bug fixes, performance optimization, feature updates, and technical assistance to ensure your application runs smoothly.",
+        question: "Do you offer post-launch support?",
+        answer:
+            "We provide comprehensive post-launch support including maintenance, bug fixes, performance optimization, feature updates, and technical assistance to ensure your application runs smoothly.",
     },
     {
-      question: "Can you integrate with existing systems?",
-      answer:
-        "Yes, we specialize in integrating new solutions with your existing systems and tech stack. Our team handles API development, data migration, and ensures seamless integration with minimal disruption.",
+        question: "Can you integrate with existing systems?",
+        answer:
+            "Yes, we specialize in integrating new solutions with your existing systems and tech stack. Our team handles API development, data migration, and ensures seamless integration with minimal disruption.",
     },
     {
-      question: "What is your approach to project management?",
-      answer:
-        "We use Agile methodology with regular sprint cycles, transparent communication, and frequent progress updates. You'll have a dedicated project manager and clear visibility into development progress.",
+        question: "What is your approach to project management?",
+        answer:
+            "We use Agile methodology with regular sprint cycles, transparent communication, and frequent progress updates. You'll have a dedicated project manager and clear visibility into development progress.",
     },
     {
-      question: "How do you ensure code quality?",
-      answer:
-        "We implement rigorous quality assurance processes including code reviews, automated testing, continuous integration, and comprehensive testing phases before deployment to ensure production-ready code.",
+        question: "How do you ensure code quality?",
+        answer:
+            "We implement rigorous quality assurance processes including code reviews, automated testing, continuous integration, and comprehensive testing phases before deployment to ensure production-ready code.",
     },
-  ]
+]
 
-  export const THEME = {
-    color_primary : "#2c9aaa",
-    color_secondary : "#1b2f44"
-  }
+export const THEME = {
+    color_primary: "#2c9aaa",
+    color_secondary: "#1b2f44"
+}

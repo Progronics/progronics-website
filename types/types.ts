@@ -22,7 +22,7 @@ export type DictionatiesTypes = {
   "explore_services": string
   "digital_product_dev": string
   "digital_product_description": string
-  "digital_products_list": Record<string, string>[],
+  "digital_products_list": Record<any, any>[],
   "Intelligent_Apps": string
   "Modern_Interfaces": string
   "Smart_Businesses": string
@@ -163,48 +163,126 @@ export type DictionatiesTypes = {
 
   contact_page: {
     "section": {
-      "title": "Let's Talk",
-      "description": "Get in touch with our team and let's explore how we can help transform your vision into reality."
+      "title": string,
+      "description": string
     },
     "info": {
-      "title": "Get In Touch",
-      "description": "Have a question or ready to start a project? We'd love to hear from you. Reach out using any of the methods below."
+      "title": string
+      "description": string
     },
     "contactDetails": {
       "address": {
-        "title": "Address",
-        "value": "Room LG-05 Basement Floor, 156, m block, Main Blvd, near khokhar Chowk, Block M Phase 2 Johar Town, Lahore, 54000, Pakistan"
+        "title": string
+        "value": string
       },
       "phone": {
-        "title": "Phone",
-        "value": "+92 (323) 4784400"
+        "title": string
+        "value": string
       },
       "email": {
-        "title": "Email",
-        "value": "info@progronics.com"
+        "title": string
+        "value": string
       }
     },
-    "responseTime": "Response time: Within 24 hours"
+    "responseTime": string
   },
 
-  contact_form : {
+  contact_form: {
     firstnameLabel: string
-  firstnamePlaceholder: string
+    firstnamePlaceholder: string
 
-  lastnameLabel: string
-  lastnamePlaceholder:string
+    lastnameLabel: string
+    lastnamePlaceholder: string
 
-  emailLabel: string
-  emailPlaceholder: string
+    emailLabel: string
+    emailPlaceholder: string
 
-  numberLabel: string
-  numberPlaceholder: string
+    numberLabel: string
+    numberPlaceholder: string
 
-  messageLabel: string
-  messagePlaceholder:string
+    messageLabel: string
+    messagePlaceholder: string
 
-  submit: string
-  submitting: string
-  successMessage:string
+    submit: string
+    submitting: string
+    successMessage: string
+  },
+  privacy_page: PrivacyPageDict
+}
+
+
+export type PrivacyPageDict = {
+  title: string
+  last_updated: string
+
+  intro: {
+    p1: string
+    p2: string
   }
+
+  interpretation_definitions: {
+    title: string
+    interpretation_title: string
+    interpretation_text: string
+    definitions_title: string
+    definitions: {
+      account: DefinitionItem
+      affiliate: DefinitionItem
+      company: DefinitionItem
+      cookies: DefinitionItem
+      country: DefinitionItem
+      device: DefinitionItem
+      personal_data: DefinitionItem
+      service: DefinitionItem
+      website: DefinitionItem
+      you: DefinitionItem
+    }
+  }
+
+  collecting_data: {
+    title: string
+    types_title: string
+    types_text: string
+    usage_title: string
+    usage_text: string
+  }
+
+  cookies_section: {
+    title: string
+    text: string
+    items: {
+      essential: DefinitionItem
+      notice: DefinitionItem
+      functionality: DefinitionItem
+    }
+  }
+
+  use_data: {
+    title: string
+    text: string
+    items: string[]
+  }
+
+  retention_transfer: TextSection
+  delete_data: TextSection
+  disclosure: TextSection
+  security: TextSection
+  children: TextSection
+  external_links: TextSection
+  changes: TextSection
+
+  contact: {
+    title: string
+    text: string
+  },
+}
+
+export type DefinitionItem = {
+  label: string
+  text: string
+}
+
+export type TextSection = {
+  title: string
+  text: string
 }

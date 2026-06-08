@@ -336,15 +336,16 @@
       ]
     },
     "5": {
-      "title": "Quiz Master",
-      "description": "A thrilling trivia game featuring multiple-choice quizzes, image puzzles, and a spin wheel of fortune — making learning fun and rewarding.",
+      "title": "N0Render Smart Box",
+      "description": "A premium product website for N0Render Smart Box, a compact entertainment device that turns any TV into an ultra-fast hub for IP TV, 4K media, retro gaming, e-learning, and fitness, starting from $125.",
       "features": [
-        "Quiz",
-        "Trivia",
-        "Daily Rewards",
-        "Google Ads",
-        "Wheel of fortune",
-        "Image match puzzles"
+        "Product landing page",
+        "Stripe checkout",
+        "Firebase order storage",
+        "Orders admin portal",
+        "4K media positioning",
+        "IP TV product flow",
+        "Responsive UI"
       ]
     },
     "6": {
@@ -526,8 +527,7 @@
     ]
   },
 
-
-  "contact_page" : {
+  "contact_page": {
     "section": {
       "title": "Let's Talk",
       "description": "Get in touch with our team and let's explore how we can help transform your vision into reality."
@@ -553,25 +553,152 @@
     "responseTime": "Response time: Within 24 hours"
   },
 
-  "contact_form" : {
+  "contact_form": {
     "firstnameLabel": "First name",
-  "firstnamePlaceholder": "Tyler",
+    "firstnamePlaceholder": "Tyler",
 
-  "lastnameLabel": "Last name",
-  "lastnamePlaceholder": "Durden",
+    "lastnameLabel": "Last name",
+    "lastnamePlaceholder": "Durden",
 
-  "emailLabel": "Email Address",
-  "emailPlaceholder": "projectmayhem@fc.com",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "projectmayhem@fc.com",
 
-  "numberLabel": "Number",
-  "numberPlaceholder": "+xxxxxxxx",
+    "numberLabel": "Number",
+    "numberPlaceholder": "+xxxxxxxx",
 
-  "messageLabel": "Message",
-  "messagePlaceholder": "Type your message....",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Type your message....",
 
-  "submit": "Submit",
-  "submitting": "Submitting...",
+    "submit": "Submit",
+    "submitting": "Submitting...",
 
-  "successMessage": "Message sent"
+    "successMessage": "Message sent"
+  },
+  "privacy_page": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: June 08, 2026",
+    "intro": {
+      "p1": "This Privacy Policy describes our policies and procedures on the collection, use and disclosure of your information when you use our Service and tells you about your privacy rights and how the law protects you.",
+      "p2": "By using our Service, you agree to the collection and use of information in accordance with this Privacy Policy."
+    },
+    "interpretation_definitions": {
+      "title": "Interpretation and Definitions",
+      "interpretation_title": "Interpretation",
+      "interpretation_text": "Words with initial capital letters have meanings defined under the following conditions. These definitions shall have the same meaning regardless of singular or plural usage.",
+      "definitions_title": "Definitions",
+      "definitions": {
+        "account": {
+          "label": "Account",
+          "text": "A unique account created for you to access our Service."
+        },
+        "affiliate": {
+          "label": "Affiliate",
+          "text": "An entity that controls, is controlled by, or is under common control with us."
+        },
+        "company": {
+          "label": "Company",
+          "text": "Refers to Progronics (\"the Company\", \"We\", \"Us\", or \"Our\")."
+        },
+        "cookies": {
+          "label": "Cookies",
+          "text": "Small files placed on your device to store browsing data."
+        },
+        "country": {
+          "label": "Country",
+          "text": "Refers to Pakistan."
+        },
+        "device": {
+          "label": "Device",
+          "text": "Any device that can access the Service, such as a computer, phone, or tablet."
+        },
+        "personal_data": {
+          "label": "Personal Data",
+          "text": "Any information that relates to an identifiable individual."
+        },
+        "service": {
+          "label": "Service",
+          "text": "Refers to the Website."
+        },
+        "website": {
+          "label": "Website",
+          "text": "Refers to Progronics, accessible at"
+        },
+        "you": {
+          "label": "You",
+          "text": "The individual accessing or using the Service, or a company or legal entity represented by such individual."
+        }
+      }
+    },
+    "collecting_data": {
+      "title": "Collecting and Using Your Personal Data",
+      "types_title": "Types of Data Collected",
+      "types_text": "We may collect Personal Data such as your email address, first and last name, and Usage Data.",
+      "usage_title": "Usage Data",
+      "usage_text": "Usage Data includes details like IP address, browser type, visited pages, and time spent on those pages. It may also include information from your mobile device."
+    },
+    "cookies_section": {
+      "title": "Tracking Technologies and Cookies",
+      "text": "We use Cookies and similar technologies like web beacons and tags to analyze and improve our Service.",
+      "items": {
+        "essential": {
+          "label": "Essential Cookies",
+          "text": "Needed to provide access and prevent fraudulent use."
+        },
+        "notice": {
+          "label": "Notice Acceptance Cookies",
+          "text": "Remember your cookie preferences."
+        },
+        "functionality": {
+          "label": "Functionality Cookies",
+          "text": "Remember your login details and preferences."
+        }
+      }
+    },
+    "use_data": {
+      "title": "Use of Your Personal Data",
+      "text": "The Company may use your data for the following purposes:",
+      "items": [
+        "To provide and maintain our Service.",
+        "To manage your account and registration.",
+        "To contact you about updates or inquiries.",
+        "To provide offers, news, and promotions.",
+        "To manage your requests or customer support cases.",
+        "For business transfers such as mergers or acquisitions.",
+        "For analytics, performance evaluation, and service improvement."
+      ]
+    },
+    "retention_transfer": {
+      "title": "Retention and Transfer of Data",
+      "text": "We retain Personal Data as long as necessary to comply with legal obligations and improve our services. Your information may be transferred across jurisdictions under secure conditions."
+    },
+    "delete_data": {
+      "title": "Delete Your Personal Data",
+      "text": "You may request deletion of your Personal Data or manage it through your account settings. Some information may be retained as required by law."
+    },
+    "disclosure": {
+      "title": "Disclosure of Data",
+      "text": "We may disclose data to comply with legal obligations, defend Company rights, prevent fraud, or protect public safety."
+    },
+    "security": {
+      "title": "Security",
+      "text": "While we strive to use commercially reasonable means to protect your Personal Data, no method of transmission over the Internet is 100% secure."
+    },
+    "children": {
+      "title": "Children’s Privacy",
+      "text": "We do not knowingly collect information from anyone under the age of 13. If you believe your child has provided us data, contact us for removal."
+    },
+    "external_links": {
+      "title": "Links to Other Websites",
+      "text": "Our Service may contain external links. We are not responsible for the content or privacy practices of third-party websites."
+    },
+    "changes": {
+      "title": "Changes to This Policy",
+      "text": "We may update this Privacy Policy periodically. Updates will be posted on this page with the revised “Last updated” date."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "text": "If you have any questions about this Privacy Policy, contact us at"
+    }
   }
+
 }
