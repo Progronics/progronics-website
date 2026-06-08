@@ -37,12 +37,12 @@ export function Footer() {
           {/* Brand */}
 
           <div className="col-span-2 md:col-span-1 flex justify-center md:justify-start">
-            <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Link href={`/${lang}`} className="hover:opacity-80 transition-opacity">
               <Image
                 src="/images/combined.png"
                 width={160}
                 height={160}
-                alt="Progronics Solutions"
+                alt="Progronics Solutions - IT solutions and software development company"
               />
             </Link>
           </div>
