@@ -180,7 +180,7 @@ export default function ServicesClient() {
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="mb-16 ">
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">{dict.services_page.title}</h2>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold text-white mb-4 leading-h2 tracking-tighter break-words">{dict.services_page.title}</h1>
           <div className="text-[18px] text-slate-300 leading-tight tracking-tight max-w-4xl">
             {dict.services_page.description}
           </div>

@@ -102,9 +102,9 @@ function HeaderSection({ dict }: { dict: any }) {
         Premium project case studies
       </div>
 
-      <h2 className="max-w-4xl text-4xl font-bold leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl">
+      <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl">
         {dict.portfolio_section.title}
-      </h2>
+      </h1>
 
       <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
         {dict.portfolio_section.description}
@@ -139,7 +139,7 @@ function ProjectPreview({
           <Image
             key={project.img}
             src={project.img}
-            alt={project.title}
+            alt={`${project.title} — ${project.category} project screenshot by Progronics`}
             width={900}
             height={700}
             className="h-[320px] w-full object-cover transition-all duration-700"
@@ -217,7 +217,7 @@ function ProjectCard({
           <div className="mb-5 overflow-hidden rounded-2xl border border-white/10 bg-black/30">
             <Image
               src={project.img}
-              alt={project.title}
+              alt={`${project.title} — ${project.category} project screenshot by Progronics`}
               width={900}
               height={650}
               className="h-auto w-full object-cover"

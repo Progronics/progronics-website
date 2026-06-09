@@ -21,10 +21,10 @@ export function AboutPageClient() {
 
           {/* Top Section */}
           <div className="mb-20">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold 
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[80px] font-bold 
       text-white mb-6 leading-[1.1] tracking-tight break-words">
              {dict.about_section.title}
-            </h2>
+            </h1>
 
             <div
               className="text-[18px] sm:text-[20px] text-slate-300 leading-relaxed tracking-tight max-w-4xl"

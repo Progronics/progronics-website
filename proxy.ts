@@ -28,12 +28,18 @@ export function proxy(request: NextRequest) {
   }
   
   // Check if pathname already has locale
-  const pathnameHasLocale = locales.some(
+  const currentLocale = locales.find(
     (locale) =>
       pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return;
+  // Expose the active locale to Server Components (used by the root layout to
+  // set <html lang> and dir) via a forwarded request header.
+  if (currentLocale) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set("x-next-locale", currentLocale);
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
 
   // Detect locale
   const locale = getLocale(request);
