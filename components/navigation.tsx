@@ -1,7 +1,7 @@
 "use client"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
-import { useLocale } from "@/store/LocaleContext"
+import { dict } from "@/lib/constants";
 import { DictionatiesTypes } from "@/types/types"
 import { AlignJustify, X } from "lucide-react"
 import type { Variants } from "motion/react"
@@ -15,7 +15,7 @@ import GradientBorderButton from "./gradient-border-button"
 import LanguageSwitcher from "./language-switcher"
 
 export function Navigation() {
-  const { dict, lang } = useLocale();
+
   const isMobile = useMediaQuery("(max-width: 992px)");
   const [isOpen, setIsOpen] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
@@ -63,14 +63,14 @@ export function Navigation() {
         {!isMobile ? (
           <nav className="flex items-center justify-between">
             <div className="flex gap-10 items-center">
-              <Link href={`/${lang}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <Link href={`/`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <Image src={"/images/logo.png"} height={55} width={55} alt="Progronics home" />
               </Link>
               <div className="hidden md:flex items-center space-x-8">
                 {mainLinks.map((item, i) => (
                   <a
                     key={i}
-                    href={`/${lang}${item.href}`}
+                    href={`${item.href}`}
                     className="text-gray-50 hover:text-white hover:bg-white/10 backdrop-blur-lg p-1 px-2 inline-block rounded-lg transition-colors duration-200"
                   >
                     {dict.nav_bar[item.name]}
@@ -80,10 +80,9 @@ export function Navigation() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <Link href={`/${lang}/contact`} className="cursor-pointer">
+              <Link href={`/contact`} className="cursor-pointer">
                 <GradientBorderButton text={dict.get_in_touch} />
               </Link>
-              <LanguageSwitcher setIsOpen={setIsOpen} />
             </div>
           </nav>
         ) : (
@@ -122,7 +121,7 @@ export function Navigation() {
         {/* Header */}
         <div className="relative flex w-full items-center justify-between border-b border-white/10 pb-4">
           <Link
-            href={`/${lang}`}
+            href={`/`}
             onClick={() => setIsOpen(false)}
             className="group flex items-center gap-3"
           >
@@ -154,7 +153,7 @@ export function Navigation() {
               <Link
                 onClick={() => setIsOpen(false)}
                 key={i}
-                href={`/${lang}${item.href}`}
+                href={`${item.href}`}
                 className="group flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.04] px-4 py-3.5 text-sm font-medium text-slate-300 transition-all duration-300 hover:border-cyan-300/30 hover:bg-white/[0.09] hover:text-white"
               >
                 <span>{dict?.nav_bar[item.name]}</span>
@@ -168,19 +167,11 @@ export function Navigation() {
           <div className="space-y-4 border-t border-white/10 pt-5">
             <Link
               onClick={() => setIsOpen(false)}
-              href={`/${lang}/contact`}
+              href={`/contact`}
               className="block cursor-pointer"
             >
               <GradientBorderButton text={dict.get_in_touch} />
             </Link>
-
-            <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3">
-              <span className="text-sm text-slate-400">
-                Language
-              </span>
-
-              <LanguageSwitcher setIsOpen={setIsOpen} />
-            </div>
           </div>
         </div>
       </div>

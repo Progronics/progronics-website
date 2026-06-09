@@ -1,24 +1,23 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
-import { headers } from "next/headers";
 import type React from "react";
 
 import HolyLoader from "holy-loader";
 import "./globals.css";
 
+import { Footer } from "@/components/footer";
+import { Navigation } from "@/components/navigation";
 import {
-  SITE_URL,
-  SITE_NAME,
-  TWITTER_HANDLE,
   OG_IMAGE,
   OG_LOCALE,
-  RTL_LOCALES,
-  normalizeLocale,
+  SITE_NAME,
+  SITE_URL,
+  TWITTER_HANDLE
 } from "@/lib/seo";
 import {
+  jsonLdString,
   organizationSchema,
   websiteSchema,
-  jsonLdString,
 } from "@/lib/structured-data";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -90,12 +89,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headerList = await headers();
-  const locale = normalizeLocale(headerList.get("x-next-locale") ?? undefined);
-  const dir = RTL_LOCALES.includes(locale) ? "rtl" : "ltr";
 
   return (
-    <html lang={locale} dir={dir} className="dark" suppressHydrationWarning>
+    <html className="dark" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -109,7 +105,9 @@ export default async function RootLayout({
         suppressHydrationWarning
       >
         <HolyLoader />
+        <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

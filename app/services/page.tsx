@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import ServicesClient from "./ServicesClient"
 import { buildMetadata, normalizeLocale } from "@/lib/seo"
-import { getDictionary } from "../dictionaries"
 import {
   webPageSchema,
   breadcrumbSchema,
@@ -9,14 +8,10 @@ import {
   faqSchema,
   jsonLdString,
 } from "@/lib/structured-data"
+import { dict } from "@/lib/constants"
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>
-}): Promise<Metadata> {
-  const { lang } = await params
-  return buildMetadata("services", lang)
+export async function generateMetadata(): Promise<Metadata> {
+  return buildMetadata("services")
 }
 
 export default async function ServicesPage({
@@ -26,7 +21,7 @@ export default async function ServicesPage({
 }) {
   const { lang } = await params
   const locale = normalizeLocale(lang)
-  const dict = await getDictionary(locale)
+ 
 
   const services = (dict?.services_page?.cards ?? []).map(
     (card: { title: string; paragraphs?: string[] }) => ({

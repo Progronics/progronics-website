@@ -1,4 +1,5 @@
-import { useLocale } from '@/store/LocaleContext';
+
+import { dict } from '@/lib/constants';
 import { FaBrain, FaCogs, FaProjectDiagram, FaShieldAlt, FaTrophy } from 'react-icons/fa';
 import { FaUsers } from "react-icons/fa6";
 import MainContainer from "../main-container";
@@ -6,7 +7,7 @@ import MainContainer from "../main-container";
 
 export default function Why() {
 
-    const { dict } = useLocale()
+
 
 
     const why_icons = [

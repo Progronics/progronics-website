@@ -1,16 +1,16 @@
-import { useLocale } from "@/store/LocaleContext";
+import { dict } from "@/lib/constants";
 import CountUp from "../CountUp";
 import MainContainer from "../main-container";
 import Integrations from "../ui/integrations";
 
 
 export default function Technologies() {
-    const { dict } = useLocale()
-     if (!dict) {
-    return (
-      <div>Loading...</div>
-    )
-  }
+
+    if (!dict) {
+        return (
+            <div>Loading...</div>
+        )
+    }
 
     return (
         <MainContainer id="technologies" className="pt-20 relative">
@@ -45,7 +45,7 @@ export default function Technologies() {
                 </div>
             </div>
             <div style={{ position: 'relative', overflow: 'hidden', width: '100%', }} className="mt-10">
-                 <Integrations />
+                <Integrations />
             </div>
 
         </MainContainer>

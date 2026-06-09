@@ -2,7 +2,7 @@
 
 import MainContainer from "@/components/main-container"
 import { projects } from "@/data/constants"
-import { useLocale } from "@/store/LocaleContext"
+import { dict } from "@/lib/constants";
 import {
   ArrowUpRight,
   Calendar,
@@ -15,7 +15,7 @@ import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
 export function PortfolioClient() {
-  const { dict } = useLocale()
+
   const [activeIndex, setActiveIndex] = useState(0)
   const cardRefs = useRef<(HTMLElement | null)[]>([])
 

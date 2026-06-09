@@ -1,16 +1,15 @@
 
 import { Button } from "@/components/ui/button";
-import { useLocale } from "@/store/LocaleContext";
-import { Brain, Dices } from "lucide-react";
+import { dict } from "@/lib/constants";
+import { Brain } from "lucide-react";
 import Link from "next/link";
-import DecryptedText from "../DecryptedText";
 import MainContainer from "../main-container";
 import { TextLoop } from "../ui/text-loop";
 
 
 export default function Hero() {
 
-  const { dict, lang } = useLocale()
+
   const variable = [
     dict.Intelligent_Apps,
     dict.Modern_Interfaces,
@@ -93,7 +92,7 @@ export default function Hero() {
             size="lg"
             className="hover:shadow-2xl hover:scale-105 transition-all text-white rounded-xl font-semibold group"
           >
-            <Link href={`/${lang}/services`} className="flex items-center gap-2">
+            <Link href={`/services`} className="flex items-center gap-2">
               {dict?.explore_services}
 
             </Link>

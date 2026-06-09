@@ -1,7 +1,8 @@
 'use client';
 
 import { services } from '@/data/constants';
-import { useLocale } from '@/store/LocaleContext';
+
+import { dict } from '@/lib/constants';
 import { DictionatiesTypes } from '@/types/types';
 import { ReactLenis } from 'lenis/react';
 import { motion, MotionValue, useScroll, useTransform } from 'motion/react';
@@ -11,7 +12,7 @@ import GradientBorderButton from '../gradient-border-button';
 
 export default function Page() {
 
-  const { dict } = useLocale()
+
 
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -31,7 +32,7 @@ export default function Page() {
 
   ]
 
-   if (!dict) {
+  if (!dict) {
     return (
       <div>Loading...</div>
     )
@@ -76,7 +77,7 @@ interface CardProps {
   targetScale: number;
   content: string;
   points: string[]
-  dict : DictionatiesTypes
+  dict: DictionatiesTypes
 }
 const Card: React.FC<CardProps> = ({
   i,

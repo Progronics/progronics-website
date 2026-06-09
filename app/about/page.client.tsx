@@ -2,11 +2,11 @@
 
 import World from "@/components/landing/world";
 import MainContainer from "@/components/main-container";
-import { useLocale } from "@/store/LocaleContext";
+import { dict } from "@/lib/constants";
 
 export function AboutPageClient() {
 
-  const { dict } = useLocale();
+  
   if (!dict) return (
     <div>Loading...</div>
   )

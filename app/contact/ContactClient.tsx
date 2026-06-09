@@ -5,11 +5,11 @@ import { PhoneCall } from "@/components/animate-ui/icons/phone-call"
 import { Send } from "@/components/animate-ui/icons/send"
 import ContactForm from "@/components/contact-form"
 import MainContainer from "@/components/main-container"
-import { useLocale } from "@/store/LocaleContext"
+import { dict } from "@/lib/constants";
 
 export default function ContactPage() {
 
-  const {dict} = useLocale()
+  
 
   if(!dict){
     return (

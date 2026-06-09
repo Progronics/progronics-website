@@ -5,7 +5,7 @@ import { sendSingleEmail } from "@/lib/notification-service";
 import React, { useState } from "react";
 import BottomGradient from "./bottom-gradient";
 import LabelInputContainer from "./label-input-container";
-import { useLocale } from "@/store/LocaleContext";
+import { dict } from "@/lib/constants";
 
 interface DataProps {
   firstname: string;
@@ -16,7 +16,7 @@ interface DataProps {
 }
 
 export default function ContactForm() {
-  const { dict } = useLocale()
+
   const [loading, setLoading] = useState(false)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { TextEffect } from "@/components/ui/text-effect";
 import { db, storage } from "@/lib/firebase";
-import { useLocale } from "@/store/LocaleContext";
+import { dict } from "@/lib/constants";
 import { addDoc, collection } from "firebase/firestore";
 import { ref, uploadBytesResumable } from "firebase/storage";
 import { useState } from "react";
@@ -25,7 +25,7 @@ const SUPPORTED_EXTENSIONS = ["pdf", "doc", "docx"];
 const MAX_FILE_SIZE_MB = 5;
 
 export default function Page() {
-  const {dict} = useLocale()
+  
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState<DataProps>({
     fullname: "",

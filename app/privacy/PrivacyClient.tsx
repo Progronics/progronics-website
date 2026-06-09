@@ -1,11 +1,11 @@
 "use client"
 import { Separator } from "@/components/ui/separator";
-import { useLocale } from "@/store/LocaleContext";
+import { dict } from "@/lib/constants";
 
 
 export default function Page() {
 
-  const { dict } = useLocale()
+
 
   if (!dict) {
     return (

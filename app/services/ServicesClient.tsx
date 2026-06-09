@@ -3,8 +3,7 @@
 import MainContainer from "@/components/main-container"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Timeline } from "@/components/ui/timeline"
-import { faqs } from "@/data/constants"
-import { useLocale } from "@/store/LocaleContext"
+import { dict } from "@/lib/constants"
 import { ChevronRight } from "lucide-react"
 import {
   SiAdobexd,
@@ -39,7 +38,7 @@ import { VscAzure } from "react-icons/vsc"
 
 export default function ServicesClient() {
 
-  const { dict } = useLocale()
+
 
   const data = [
     {
@@ -167,11 +166,11 @@ export default function ServicesClient() {
           })()}
         </div>
       ),
-      tags : data[i].tags
+      tags: data[i].tags
     })
   })
 
-  
+
 
   return (
 
