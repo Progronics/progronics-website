@@ -21,7 +21,7 @@ export default function MainPages() {
                     parallax={true}
                 />
             </div>
-            <Hero/>
+            <Hero />
             <Services />
             <Feature />
             <Why />

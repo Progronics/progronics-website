@@ -1,6 +1,8 @@
 "use client"
 
 import { useMediaQuery } from "@/hooks/use-media-query"
+import { useLocale } from "@/store/LocaleContext"
+import { DictionatiesTypes } from "@/types/types"
 import { AlignJustify, X } from "lucide-react"
 import type { Variants } from "motion/react"
 import { type HTMLMotionProps, motion, useInView } from "motion/react"
@@ -10,8 +12,6 @@ import type React from "react"
 import { useRef, useState } from "react"
 import { Drawer } from "vaul"
 import GradientBorderButton from "./gradient-border-button"
-import { DictionatiesTypes } from "@/types/types"
-import { useLocale } from "@/store/LocaleContext"
 import LanguageSwitcher from "./language-switcher"
 
 export function Navigation() {
@@ -64,7 +64,7 @@ export function Navigation() {
           <nav className="flex items-center justify-between">
             <div className="flex gap-10 items-center">
               <Link href={`/${lang}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                          <Image src={"/images/logo.png"} height={55} width={55} alt="Progronics home" />
+                <Image src={"/images/logo.png"} height={55} width={55} alt="Progronics home" />
               </Link>
               <div className="hidden md:flex items-center space-x-8">
                 {mainLinks.map((item, i) => (
@@ -89,123 +89,108 @@ export function Navigation() {
         ) : (
           <>
             <Drawer.Root
-              direction="left"
-              open={isOpen}
-              onOpenChange={setIsOpen}
+  direction="left"
+  open={isOpen}
+  onOpenChange={setIsOpen}
+>
+  <Drawer.Trigger className="group grid h-11 w-11 place-content-center rounded-2xl border border-white/10 bg-white/[0.08] text-white shadow-lg shadow-black/20 backdrop-blur-xl transition-all duration-300 hover:border-cyan-300/30 hover:bg-white/[0.14]">
+    <AlignJustify className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+  </Drawer.Trigger>
+
+  <Drawer.Portal>
+    <Drawer.Overlay className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm" />
+
+    <Drawer.Content
+      className="fixed bottom-3 left-3 top-3 z-50 flex w-[310px] outline-none sm:w-[340px]"
+      style={
+        {
+          "--initial-transform": "calc(100% + 12px)",
+        } as React.CSSProperties
+      }
+    >
+      <div className="relative flex h-full w-full grow flex-col overflow-hidden rounded-[26px] border border-white/10 bg-[#050712]/95 p-4 text-white shadow-2xl shadow-black/50 backdrop-blur-2xl">
+        {/* Required for accessibility */}
+        <Drawer.Title className="sr-only">
+          Navigation menu
+        </Drawer.Title>
+
+        {/* Premium background glow */}
+        <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-cyan-400/15 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-28 -right-24 h-72 w-72 rounded-full bg-violet-500/15 blur-3xl" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_35%)]" />
+
+        {/* Header */}
+        <div className="relative flex w-full items-center justify-between border-b border-white/10 pb-4">
+          <Link
+            href={`/${lang}`}
+            onClick={() => setIsOpen(false)}
+            className="group flex items-center gap-3"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 rounded-full bg-cyan-400/20 blur-xl transition group-hover:bg-cyan-400/30" />
+              <Image
+                src="/images/logo.png"
+                height={54}
+                width={54}
+                alt="Progronics home"
+                className="relative"
+              />
+            </div>
+          </Link>
+
+          <button
+            className="grid h-10 w-10 place-content-center rounded-2xl border border-white/10 bg-white/[0.08] text-white transition-all duration-300 hover:border-red-300/30 hover:bg-white/[0.14]"
+            onClick={() => setIsOpen(false)}
+            aria-label="Close navigation menu"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        {/* Links */}
+        <div className="relative flex flex-1 flex-col justify-between pt-6">
+          <ul className="flex flex-col gap-2">
+            {mainLinks.map((item, i) => (
+              <Link
+                onClick={() => setIsOpen(false)}
+                key={i}
+                href={`/${lang}${item.href}`}
+                className="group flex items-center justify-between rounded-2xl border border-white/5 bg-white/[0.04] px-4 py-3.5 text-sm font-medium text-slate-300 transition-all duration-300 hover:border-cyan-300/30 hover:bg-white/[0.09] hover:text-white"
+              >
+                <span>{dict?.nav_bar[item.name]}</span>
+
+                <span className="h-1.5 w-1.5 rounded-full bg-cyan-300 opacity-0 shadow-[0_0_16px_rgba(34,211,238,0.9)] transition-opacity duration-300 group-hover:opacity-100" />
+              </Link>
+            ))}
+          </ul>
+
+          {/* Bottom actions */}
+          <div className="space-y-4 border-t border-white/10 pt-5">
+            <Link
+              onClick={() => setIsOpen(false)}
+              href={`/${lang}/contact`}
+              className="block cursor-pointer"
             >
-              <Drawer.Trigger className="px-2 text-white h-9 grid place-content-center bg-neutral-800 w-fit rounded-lg">
-                <AlignJustify />
-              </Drawer.Trigger>
-              <Drawer.Portal>
-                <Drawer.Overlay className="fixed inset-0 bg-black/40 z-50" />
-                <Drawer.Content
-                  className="left-2 top-2 bottom-2 fixed z-50 outline-none w-72 flex"
-                  style={
-                    {
-                      "--initial-transform": "calc(100% + 8px)",
-                    } as React.CSSProperties
-                  }
-                >
-                  <div className="bg-linear-to-t from-black via-neutral-800 to-neutral-950 border border-neutral-700 text-white p-2 h-full w-full grow flex flex-col rounded-[16px]">
-                    <div className="w-full flex justify-between">
-                      <div className="flex gap-2 px-4 shrink-0 items-center text-2xl font-semibold  ">
-                        <Link href={`/${lang}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <Image src={"/images/logo.png"} height={55} width={55} alt="Progronics home" />
-                        </Link>
-                      </div>
-                      <button
-                        className="rounded-md w-fit bg-neutral-800 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-neutral-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
-                        onClick={() => setIsOpen(false)}
-                      >
-                        <X />
-                      </button>
-                    </div>
-                    <div className="rounded-b-md py-2 px-3 flex flex-1 flex-col justify-between">
-                      <ul className="space-y-2 flex flex-col mt-4">
-                        {mainLinks.map((item, i) => (
-                          <a
-                            onClick={() => setIsOpen(false)}
-                            key={i}
-                            href={`/${lang}${item.href}`}
-                            className="hover:bg-neutral-800 cursor-pointer p-1.5 px-2 rounded-md" >
-                            {dict?.nav_bar[item.name]}
-                          </a>
-                        ))}
+              <GradientBorderButton text={dict.get_in_touch} />
+            </Link>
 
-                      </ul>
-                      <div className="flex items-center space-x-4 pt-4">
+            <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3">
+              <span className="text-sm text-slate-400">
+                Language
+              </span>
 
-                        <Link onClick={() => setIsOpen(false)} href={`/${lang}/contact`} className="cursor-pointer">
-                          <GradientBorderButton text={dict.get_in_touch} />
-                        </Link>
-                        <LanguageSwitcher setIsOpen={setIsOpen} />
-                      </div>
-                    </div>
-                  </div>
-                </Drawer.Content>
-              </Drawer.Portal>
-            </Drawer.Root>
+              <LanguageSwitcher setIsOpen={setIsOpen} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Drawer.Content>
+  </Drawer.Portal>
+</Drawer.Root>
           </>
         )}
       </TimelineContent>
     </section>
-
-    // <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-background/50 border-b border-border/20 w-full">
-    //   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    //     <div className="flex justify-between items-center h-16">
-    //       {/* Logo */}
-    //       <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-    //         <div className="w-10 h-10 bg-linear-to-br from-primary via-secondary to-accent rounded-xl flex items-center justify-center shadow-lg">
-    //           <span className="text-white font-bold">Ⓟ</span>
-    //         </div>
-    //         <span className="font-bold text-lg hidden sm:inline text-foreground">Progronics</span>
-    //       </Link>
-
-    //       {/* Desktop Menu */}
-    //       <div className="hidden md:flex items-center gap-8">
-    //         {mainLinks.map((link) => (
-    //           <Link
-    //             key={link.href}
-    //             href={link.href}
-    //             className="text-sm font-medium text-foreground hover:text-primary transition-all duration-300 relative group"
-    //           >
-    //             {link.name}
-    //             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-primary to-secondary group-hover:w-full transition-all duration-300" />
-    //           </Link>
-    //         ))}
-
-
-    //       </div>
-
-    //       {/* Mobile Menu Button */}
-    //       <button
-    //         className="md:hidden p-2 hover:bg-muted rounded-lg transition-colors"
-    //         onClick={() => setIsOpen(!isOpen)}
-    //         aria-label="Toggle menu"
-    //       >
-    //         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-    //       </button>
-    //     </div>
-
-    //     {/* Mobile Menu */}
-    //     {isOpen && (
-    //       <div className="md:hidden pb-4 space-y-2 border-t border-border/30 pt-4 animate-slide-in-left">
-    //         {mainLinks.map((link) => (
-    //           <Link
-    //             key={link.href}
-    //             href={link.href}
-    //             className="block px-4 py-2 text-sm font-medium text-foreground hover:bg-muted rounded-lg transition-colors"
-    //             onClick={() => setIsOpen(false)}
-    //           >
-    //             {link.name}
-    //           </Link>
-    //         ))}
-
-
-    //       </div>
-    //     )}
-    //   </div>
-    // </nav>
   )
 }
 

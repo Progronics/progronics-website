@@ -119,35 +119,31 @@
     "description": "From concept to deployment, we deliver end-to-end solutions that transform ideas into fully functional, scalable, and innovative digital products tailored to your business needs. Our agile approach ensures timely delivery, seamless user experiences, and long-term value for your organization."
   },
   "process_steps": [
-    {
-      "text": "Discovery",
-      "description": "Understanding requirements and project scope"
-    },
-    {
-      "text": "Planning",
-      "description": "Defining architecture, tech stack, and timelines"
-    },
-    {
-      "text": "Design",
-      "description": "Creating UI/UX and system design prototypes"
-    },
-    {
-      "text": "Development",
-      "description": "Coding and implementing features iteratively"
-    },
-    {
-      "text": "Testing",
-      "description": "Quality assurance, bug fixing, and optimization"
-    },
-    {
-      "text": "Deployment",
-      "description": "Launching the product to production"
-    },
-    {
-      "text": "Maintenance",
-      "description": "Ongoing support, updates, and performance monitoring"
-    }
-  ],
+  {
+    "text": "Strategic Discovery",
+    "description": "We begin with deep research into your business goals, target audience, challenges, and market positioning to establish a clear foundation for success."
+  },
+  {
+    "text": "Architecture & Roadmapping",
+    "description": "A scalable technical strategy is defined, including system architecture, technology selection, project milestones, timelines, and risk assessment."
+  },
+  {
+    "text": "Experience Design",
+    "description": "User journeys, wireframes, and high-fidelity interfaces are crafted to create intuitive, engaging, and conversion-focused digital experiences."
+  },
+  {
+    "text": "Product Engineering",
+    "description": "Our team develops robust, secure, and scalable solutions using modern technologies, with continuous collaboration and iterative improvements throughout the process."
+  },
+  {
+    "text": "Quality Validation",
+    "description": "Comprehensive testing, performance optimization, security reviews, and quality assurance ensure a polished and reliable product before launch."
+  },
+  {
+    "text": "Launch & Growth",
+    "description": "Following deployment, we provide ongoing monitoring, enhancements, maintenance, and strategic support to help your product evolve and scale successfully."
+  }
+],
   "technologies_section": {
     "title": "Technologies & Stats"
   },
