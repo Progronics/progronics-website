@@ -102,9 +102,9 @@ function HeaderSection({ dict }: { dict: any }) {
         Premium project case studies
       </div>
 
-      <h2 className="max-w-4xl text-4xl font-bold leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl">
+      <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tighter text-white sm:text-5xl md:text-6xl">
         {dict.portfolio_section.title}
-      </h2>
+      </h1>
 
       <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-300 sm:text-lg">
         {dict.portfolio_section.description}

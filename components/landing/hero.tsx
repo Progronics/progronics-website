@@ -10,7 +10,7 @@ import { TextLoop } from "../ui/text-loop";
 
 export default function Hero() {
 
-  const { dict } = useLocale()
+  const { dict, lang } = useLocale()
   const variable = [
     dict.Intelligent_Apps,
     dict.Modern_Interfaces,
@@ -81,7 +81,7 @@ export default function Hero() {
             maxIterations={10}
             sequential
           /> */}
-          <p className="text-6xl font-bold">{dict?.hero_header}</p>
+          <h1 className="text-6xl font-bold">{dict?.hero_header}</h1>
 
           <p className="text-lg sm:text-xl text-white leading-relaxed">
             {dict?.hero_description}
@@ -93,7 +93,7 @@ export default function Hero() {
             size="lg"
             className="hover:shadow-2xl hover:scale-105 transition-all text-white rounded-xl font-semibold group"
           >
-            <Link href="/services" className="flex items-center gap-2">
+            <Link href={`/${lang}/services`} className="flex items-center gap-2">
               {dict?.explore_services}
 
             </Link>

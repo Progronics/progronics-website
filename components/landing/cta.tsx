@@ -7,7 +7,7 @@ import MainContainer from "../main-container"
 import { DottedGlowBackground } from "../ui/dotted-glow-background"
 export default function CTA() {
 
-  const { dict } = useLocale()
+  const { dict, lang } = useLocale()
   if (!dict) {
     return (
       <div>Loading...</div>
@@ -46,7 +46,7 @@ export default function CTA() {
               size="lg"
               className="bg-primary hover:shadow-2xl text-white rounded-xl font-semibold"
             >
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href={`/${lang}/contact`} className="flex items-center gap-2">
                 {dict.cta_section.button_text}
                 <ArrowRight className="w-4 h-4" />
               </Link>

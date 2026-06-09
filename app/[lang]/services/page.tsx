@@ -1,73 +1,62 @@
-import ServicesClient  from "./ServicesClient";
+import type { Metadata } from "next"
+import ServicesClient from "./ServicesClient"
+import { buildMetadata, normalizeLocale } from "@/lib/seo"
+import { getDictionary } from "../dictionaries"
+import {
+  webPageSchema,
+  breadcrumbSchema,
+  serviceListSchema,
+  faqSchema,
+  jsonLdString,
+} from "@/lib/structured-data"
 
-export const metadata = {
-  title: "Our Services - Progronics | IT Solutions & Development",
-  description:
-    "Explore our comprehensive IT solutions including web and mobile app development, custom software engineering, UI/UX design, branding, embedded systems, staff augmentation, and digital transformation services.",
-  keywords: [
-    "IT services",
-    "IT solutions company",
-    "software development services",
-    "custom software development",
-    "web development services",
-    "mobile app development services",
-    "android app development",
-    "iOS app development",
-    "cross platform app development",
-    "React development",
-    "Next.js development",
-    "Node.js development",
-    "full stack development",
-    "frontend development",
-    "backend development",
-    "API development",
-    "SaaS development",
-    "startup development",
-    "enterprise software",
-    "software consultancy",
-    "technology consulting",
-    "IT consulting services",
-    "digital transformation services",
-    "UI UX design",
-    "user interface design",
-    "user experience design",
-    "brand identity design",
-    "branding services",
-    "logo design",
-    "social media branding",
-    "social media marketing",
-    "digital marketing services",
-    "embedded systems development",
-    "IoT development",
-    "hardware programming",
-    "microcontroller programming",
-    "firmware development",
-    "staff augmentation",
-    "IT staffing solutions",
-    "remote developers",
-    "hire dedicated developers",
-    "dedicated development team",
-    "IT outsourcing",
-    "offshore development",
-    "nearshore development",
-    "software maintenance",
-    "software optimization",
-    "performance optimization",
-    "technical support",
-    "IT support services",
-    "technology agency",
-    "IT company",
-    "software house",
-    "IT solutions provider",
-    "custom IT solutions",
-    "Progronics",
-    "IT services Pakistan",
-    "software company Pakistan",
-    "development agency Pakistan",
-  ],
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+  return buildMetadata("services", lang)
+}
 
+export default async function ServicesPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}) {
+  const { lang } = await params
+  const locale = normalizeLocale(lang)
+  const dict = await getDictionary(locale)
 
-export default function ServicesPage() {
-  return <ServicesClient />
+  const services = (dict?.services_page?.cards ?? []).map(
+    (card: { title: string; paragraphs?: string[] }) => ({
+      title: card.title,
+      description: Array.isArray(card.paragraphs) ? card.paragraphs[0] ?? "" : "",
+    }),
+  )
+
+  const faqs = (dict?.faq_section?.cards ?? []) as {
+    question: string
+    answer: string
+  }[]
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: jsonLdString(
+            webPageSchema("services", locale),
+            breadcrumbSchema(locale, [
+              { name: "Home", path: "" },
+              { name: "Services", path: "/services" },
+            ]),
+            serviceListSchema(locale, services),
+            faqSchema(faqs),
+          ),
+        }}
+      />
+      <ServicesClient />
+    </>
+  )
 }

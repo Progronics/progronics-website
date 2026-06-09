@@ -1,35 +1,49 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
+import { headers } from "next/headers";
 import type React from "react";
-
 
 import HolyLoader from "holy-loader";
 import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const poppins = Poppins({ weight: ['400', '600', '700'], subsets: ['latin'], variable: '--font-poppins' });
+import {
+  SITE_URL,
+  SITE_NAME,
+  TWITTER_HANDLE,
+  OG_IMAGE,
+  OG_LOCALE,
+  RTL_LOCALES,
+  normalizeLocale,
+} from "@/lib/seo";
+import {
+  organizationSchema,
+  websiteSchema,
+  jsonLdString,
+} from "@/lib/structured-data";
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const poppins = Poppins({
+  weight: ["400", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
-  title: "Progronics - IT Solutions & Technology Innovation",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Progronics | IT Solutions & Custom Software Development",
+    template: "%s | Progronics",
+  },
   description:
-    "Transform your business with Progronics. We deliver enterprise software development, staff augmentation, branding & design, and optimization services for digital innovation.",
+    "Progronics builds intelligent web and mobile apps, custom software, UI/UX design, and AI automation. Partner with our engineering team to scale your business.",
+  applicationName: SITE_NAME,
   generator: "v0.app",
-  keywords: [
-    "IT solutions",
-    "software development",
-    "staff augmentation",
-    "web development",
-    "app development",
-    "digital transformation",
-    "technology consulting",
-    "cloud solutions",
-    "UI/UX design",
-    "software engineering",
-  ],
-  authors: [{ name: "Progronics" }],
-  creator: "Progronics",
-  publisher: "Progronics",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  alternates: {
+    canonical: "/",
+  },
   robots: {
     index: true,
     follow: true,
@@ -43,125 +57,60 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "en_US",
-    url: "https://progronics.com",
-    siteName: "Progronics",
-    title: "Progronics - IT Solutions & Technology Innovation",
+    locale: OG_LOCALE.en,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: "Progronics | IT Solutions & Custom Software Development",
     description:
-      "Transform your business with Progronics. Enterprise software development, staff augmentation, branding & design, and optimization services.",
-    images: [
-      {
-        url: "/placeholder.svg?height=1200&width=1200",
-        width: 1200,
-        height: 1200,
-        alt: "Progronics - Technology Innovation",
-      },
-    ],
+      "Progronics builds intelligent web and mobile apps, custom software, UI/UX design, and AI automation for businesses worldwide.",
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Progronics - IT Solutions & Technology Innovation",
+    title: "Progronics | IT Solutions & Custom Software Development",
     description:
-      "Transform your business with Progronics. Enterprise software development, staff augmentation, branding & design.",
-    creator: "@progronics",
+      "Progronics builds intelligent web and mobile apps, custom software, UI/UX design, and AI automation for businesses worldwide.",
+    creator: TWITTER_HANDLE,
+    images: [OG_IMAGE.url],
   },
-  verification: {
-    google: "google-site-verification-code",
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
   },
-}
+};
 
-export default function RootLayout({
+export const viewport: Viewport = {
+  themeColor: "#000000",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default async function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
+  const headerList = await headers();
+  const locale = normalizeLocale(headerList.get("x-next-locale") ?? undefined);
+  const dir = RTL_LOCALES.includes(locale) ? "rtl" : "ltr";
+
   return (
-    <html className="dark" suppressHydrationWarning>
+    <html lang={locale} dir={dir} className="dark" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": ["Organization", "LocalBusiness"],
-              name: "Progronics",
-              url: "https://progronics.com",
-              logo: "Progronics",
-              description:
-                "Progronics is a professional IT services company delivering end-to-end digital solutions including web and mobile app development, custom software engineering, UI/UX design, branding, embedded systems, and staff augmentation. We help businesses innovate, scale, and transform through modern technology.",
-              email: "info@progronics.com",
-              telephone: "+92-310-4735145",
-              priceRange: "$$",
-              hasOfferCatalog: {
-                "@type": "OfferCatalog",
-                name: "IT Services",
-                itemListElement: [
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Web Development",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Mobile App Development",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Custom Software Development",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Software Consultancy",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "UI/UX Design",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Staff Augmentation",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Embedded Systems Development",
-                    },
-                  },
-                  {
-                    "@type": "Offer",
-                    itemOffered: {
-                      "@type": "Service",
-                      name: "Branding and Marketing",
-                    },
-                  },
-                ],
-              },
-            }),
+            __html: jsonLdString(organizationSchema(), websiteSchema()),
           }}
         />
       </head>
-      <body className={`${inter.className} antialiased bg-background text-foreground`} suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${poppins.variable} ${inter.className} antialiased bg-background text-foreground`}
+        suppressHydrationWarning
+      >
         <HolyLoader />
         {children}
       </body>
     </html>
-  )
+  );
 }
