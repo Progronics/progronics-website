@@ -56,7 +56,7 @@ export function Footer() {
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={`/${link.href}`}
+                    href={`${link.href}`}
                     className="text-sm text-secondary hover:text-primary transition-all"
                   >
                     {dict.nav_bar[link.name]}
@@ -75,7 +75,7 @@ export function Footer() {
               {moreLinks.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={`/${link.href}`}
+                    href={`${link.href}`}
                     className="text-sm text-secondary hover:text-primary transition-all"
                   >
                     {dict.more_links[link.name]}
