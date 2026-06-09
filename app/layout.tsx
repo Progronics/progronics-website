@@ -100,6 +100,7 @@ export default async function RootLayout({
         />
       </head>
       <body
+      lang="en"
         className={`${inter.variable} ${poppins.variable} ${inter.className} antialiased bg-background text-foreground`}
         suppressHydrationWarning
       >
