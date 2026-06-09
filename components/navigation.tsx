@@ -12,7 +12,6 @@ import type React from "react"
 import { useRef, useState } from "react"
 import { Drawer } from "vaul"
 import GradientBorderButton from "./gradient-border-button"
-import LanguageSwitcher from "./language-switcher"
 
 export function Navigation() {
 
