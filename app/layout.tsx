@@ -9,7 +9,6 @@ import { Footer } from "@/components/footer";
 import { Navigation } from "@/components/navigation";
 import {
   OG_IMAGE,
-  OG_LOCALE,
   SITE_NAME,
   SITE_URL,
   TWITTER_HANDLE
@@ -56,7 +55,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: OG_LOCALE.en,
+    locale: "en_US",
     url: SITE_URL,
     siteName: SITE_NAME,
     title: "Progronics | IT Solutions & Custom Software Development",

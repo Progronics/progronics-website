@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import ServicesClient from "./ServicesClient"
-import { buildMetadata, normalizeLocale } from "@/lib/seo"
+import { buildMetadata } from "@/lib/seo"
 import {
   webPageSchema,
   breadcrumbSchema,
@@ -10,19 +10,11 @@ import {
 } from "@/lib/structured-data"
 import { dict } from "@/lib/constants"
 
-export async function generateMetadata(): Promise<Metadata> {
+export function generateMetadata(): Metadata {
   return buildMetadata("services")
 }
 
-export default async function ServicesPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>
-}) {
-  const { lang } = await params
-  const locale = normalizeLocale(lang)
- 
-
+export default function ServicesPage() {
   const services = (dict?.services_page?.cards ?? []).map(
     (card: { title: string; paragraphs?: string[] }) => ({
       title: card.title,
@@ -41,12 +33,12 @@ export default async function ServicesPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: jsonLdString(
-            webPageSchema("services", locale),
-            breadcrumbSchema(locale, [
+            webPageSchema("services"),
+            breadcrumbSchema([
               { name: "Home", path: "" },
               { name: "Services", path: "/services" },
             ]),
-            serviceListSchema(locale, services),
+            serviceListSchema(services),
             faqSchema(faqs),
           ),
         }}

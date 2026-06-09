@@ -6,9 +6,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      // Block API, admin, private routes and the noindex QR utility page
-      // (both the bare path and all locale-prefixed variants).
-      disallow: ["/admin", "/api", "/private", "/qr", "/*/qr"],
+      // Block API, admin, private routes and the noindex QR utility page.
+      disallow: ["/admin", "/api", "/private", "/qr"],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,

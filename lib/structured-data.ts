@@ -1,12 +1,4 @@
-import {
-  SITE_NAME,
-  SITE_URL,
-  buildUrl,
-  normalizeLocale,
-  PAGE_SEO,
-  type Locale,
-  type PageKey,
-} from "@/lib/seo"
+import { SITE_NAME, SITE_URL, buildUrl, PAGE_SEO, type PageKey } from "@/lib/seo"
 
 /**
  * Centralized JSON-LD (schema.org) builders. Each returns a plain object that
@@ -67,36 +59,35 @@ export function websiteSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     publisher: { "@id": ORGANIZATION_ID },
-    inLanguage: ["en", "zh", "ar"],
+    inLanguage: "en",
   }
 }
 
 /** WebPage schema tied back to the site WebSite + Organization graph nodes. */
-export function webPageSchema(page: PageKey, localeInput: string) {
-  const locale = normalizeLocale(localeInput)
+export function webPageSchema(page: PageKey) {
   const seo = PAGE_SEO[page]
-  const meta = seo.locales[locale]
-  const url = buildUrl(locale, seo.path)
+  const url = buildUrl(seo.path)
 
   return {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": `${url}#webpage`,
     url,
-    name: meta.title,
-    description: meta.description,
+    name: seo.title,
+    description: seo.description,
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORGANIZATION_ID },
-    inLanguage: locale,
+    inLanguage: "en",
   }
 }
 
 interface Crumb {
   name: string
+  /** Absolute path, e.g. "/services". Home is "". */
   path: string
 }
 
-export function breadcrumbSchema(locale: Locale, crumbs: Crumb[]) {
+export function breadcrumbSchema(crumbs: Crumb[]) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -104,7 +95,7 @@ export function breadcrumbSchema(locale: Locale, crumbs: Crumb[]) {
       "@type": "ListItem",
       position: index + 1,
       name: crumb.name,
-      item: buildUrl(locale, crumb.path),
+      item: buildUrl(crumb.path),
     })),
   }
 }
@@ -121,10 +112,7 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   }
 }
 
-export function serviceListSchema(
-  locale: Locale,
-  services: { title: string; description: string }[],
-) {
+export function serviceListSchema(services: { title: string; description: string }[]) {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
