@@ -19,7 +19,7 @@ export const dict : DictionatiesTypes = {
   "all_rights_reserved": "Progronics Solutions LLP. All rights reserved.",
   "get_in_touch": "Get In Touch",
   "next_gen_solutions": "Next-gen solutions for",
-  "hero_header": "Transofrm Your Enterprise",
+  "hero_header": "Transform Your Enterprise",
   "hero_description": "Leverage intelligent AI and machine learning to automate, optimize, and innovate your business operations.",
   "explore_services": "Explore Services",
   "digital_product_dev": "Digital Product Development",
