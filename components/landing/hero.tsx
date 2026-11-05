@@ -80,7 +80,7 @@ export default function Hero() {
             maxIterations={10}
             sequential
           /> */}
-          <h1 className="text-6xl font-bold">{dict?.hero_header}</h1>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold">{dict?.hero_header}</h1>
 
           <p className="text-lg sm:text-xl text-white leading-relaxed">
             {dict?.hero_description}

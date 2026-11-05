@@ -83,7 +83,7 @@ export default function Process() {
                 </div>
 
             </div>
-            <div className="px-0 sm:px-6">
+            <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
                 <SpotlightCards items={item} eyebrow="" heading="" className="dark:bg-black" />
             </div>
             {/* <div style={{ height: '500px', position: 'relative' }}>

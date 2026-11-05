@@ -36,9 +36,9 @@ export default function CTA() {
           />
 
 
-          <div className="p-12">
+          <div className="p-6 sm:p-12">
 
-            <h2 className="text-5xl font-bold text-foreground mb-6 ">{dict.cta_section.title}</h2>
+            <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-6 ">{dict.cta_section.title}</h2>
             <p className="text-xl text-muted-foreground mb-8 ">
               {dict.cta_section.description}
             </p>

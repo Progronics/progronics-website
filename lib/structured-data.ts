@@ -9,15 +9,17 @@ const ORGANIZATION_ID = `${SITE_URL}/#organization`
 const WEBSITE_ID = `${SITE_URL}/#website`
 
 const SERVICE_NAMES = [
+  "Digital Product and MVP Development",
   "Web Development",
   "Mobile App Development",
   "Custom Software Development",
   "UI/UX Design",
-  "AI Automation",
+  "AI Automation and Custom AI Agents",
   "DevOps Engineering",
   "Staff Augmentation",
   "Embedded Systems & IoT Development",
-  "Branding and Marketing",
+  "Branding and Creative Design",
+  "Digital Marketing and Social Media",
 ]
 
 export function organizationSchema() {

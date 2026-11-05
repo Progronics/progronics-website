@@ -53,7 +53,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="relative grid gap-8 py-12 pl-16 md:grid-cols-[340px_1fr] md:gap-14 md:pl-0 lg:grid-cols-[420px_1fr]"
+            id={`service-${index + 1}`}
+            className="relative grid scroll-mt-6 gap-8 py-12 pl-16 md:grid-cols-[340px_1fr] md:gap-14 md:pl-0 lg:grid-cols-[420px_1fr]"
           >
             {/* Dot */}
             {/* <div className="absolute left-8 top-14 z-30 flex h-10 w-10 -translate-x-1/2 items-center justify-center rounded-full border border-white/10 bg-[#030712] shadow-[0_0_35px_rgba(34,211,238,0.28)] md:left-[372px] lg:left-[452px]">

@@ -426,19 +426,19 @@ export const dict : DictionatiesTypes = {
 
   "services_page": {
     "title": "A Complete Spectrum of IT Services",
-    "description": "From building modern applications to scaling your brand — Progronics covers every aspect of digital transformation. Our expert teams blend creativity, strategy, and technology to deliver solutions that drive measurable impact. Whether you’re a startup or an enterprise, we help you innovate faster, operate smarter, and stay ahead in a competitive digital world.",
+    "description": "Progronics provides custom software development, web and mobile app development, AI automation, UI/UX design, cloud and DevOps, and dedicated development teams. We also offer digital marketing, branding, and embedded systems and IoT development for startups and enterprises.",
     "cards": [
       {
         "title": "Digital Product Development",
         "paragraphs": [
-          "Our digital product development service helps you transform ideas into fully functional, scalable, and market-ready digital solutions. We begin by understanding your business goals, user needs, and technical constraints, ensuring every feature aligns with long-term growth. From MVPs to enterprise-level platforms, our team builds reliable products with clean architecture and future-ready ecosystems.",
+          "Our digital product and custom software development service transforms ideas into scalable digital solutions. We begin by understanding your business goals, user needs, and technical constraints. From minimum viable product (MVP) development for startups to enterprise platforms, our team builds products designed for growth.",
           "Whether launching a new startup product or modernizing an existing digital system, we handle everything—from UI/UX design and system planning to development, testing, and post-launch iterations. We ensure your product is secure, optimized, and built with the technologies best suited for long-term success."
         ]
       },
       {
         "title": "Enterprise Web Applications",
         "paragraphs": [
-          "We develop powerful, enterprise-grade web applications tailored for scalability, performance, and security. Our approach focuses on crafting robust backend architectures, intuitive frontends, and workflows that support large organizations with complex operational needs.",
+          "Our web application development team builds enterprise web apps tailored for scalability, performance, and security. We create backend systems, intuitive frontends, and workflows for organizations with complex operational needs.",
           "From dashboards and internal tools to multi-tenant systems and cloud-native platforms, we ensure your application remains stable under heavy usage. Every solution is optimized for long-term growth, seamless user experience, and efficient maintenance."
         ]
       },
@@ -487,7 +487,7 @@ export const dict : DictionatiesTypes = {
       {
         "title": "IoT, Embedded Systems & R&D",
         "paragraphs": [
-          "Our embedded systems and IoT services bring hardware and software together to create intelligent, connected solutions. We work with microcontrollers like ESP32, STM32, Raspberry Pi, and more to develop firmware and hardware prototypes.",
+          "Our embedded software and Internet of Things (IoT) development services bring hardware and software together to create connected solutions. We work with platforms including ESP32, STM32, and Raspberry Pi to develop firmware and hardware prototypes.",
           "From sensor integration and PCB design to cloud connectivity and industrial automation, we support businesses looking to innovate with next-generation hardware technology. Our R&D team builds custom solutions tailored for real-world applications."
         ]
       }

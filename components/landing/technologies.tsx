@@ -44,7 +44,7 @@ export default function Technologies() {
                     ))}
                 </div>
             </div>
-            <div style={{ position: 'relative', overflow: 'hidden', width: '100%', }} className="mt-10">
+            <div className="relative overflow-hidden w-full max-w-7xl mx-auto mt-10 px-4 sm:px-6 lg:px-8">
                 <Integrations />
             </div>
 

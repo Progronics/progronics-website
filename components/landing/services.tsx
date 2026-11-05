@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <ReactLenis root>
       <main ref={container}>
-        <section className='text-white   w-full  '>
+        <section className='text-white '>
           {dict.services_section.cards.map((project, i) => {
             const targetScale = 1 - (services.length - i) * 0.02;
             const isDark = i % 2 !== 0;
@@ -113,7 +113,7 @@ const Card: React.FC<CardProps> = ({
           scale,
           top: `calc(-5vh + ${i * 25}px)`,
         }}
-        className={`flex flex-col relative -top-[25%] h-auto lg:h-[500px] overflow-hidden w-[90%]  origin-top rounded-2xl p-6 shadow-xl border border-neutral-700/20`}
+        className={`flex flex-col relative -top-[25%] h-auto lg:h-[500px] overflow-hidden w-[calc(100%-2rem)] sm:w-[calc(100%-3rem)] lg:w-[calc(100%-4rem)] max-w-7xl origin-top rounded-2xl p-6 shadow-xl border border-neutral-700/20`}
 
       >
         <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-10'>

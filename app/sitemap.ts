@@ -6,8 +6,6 @@ import { PAGE_SEO, buildUrl, type PageKey } from "@/lib/seo"
  * The /qr utility page is intentionally excluded (noindex).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date()
-
   const priorities: Record<PageKey, number> = {
     home: 1,
     services: 0.9,
@@ -33,7 +31,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return (Object.keys(PAGE_SEO) as PageKey[]).map((key) => ({
     url: buildUrl(PAGE_SEO[key].path),
-    lastModified,
     changeFrequency: changeFrequency[key],
     priority: priorities[key],
   }))

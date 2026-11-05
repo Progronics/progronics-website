@@ -12,7 +12,7 @@ export const SITE_NAME = "Progronics"
 export const TWITTER_HANDLE = "@progronics"
 
 export const OG_IMAGE = {
-  url: "/images/combined.png",
+  url: "/social-image",
   width: 1200,
   height: 630,
   alt: "Progronics - IT Solutions & Technology Innovation",
@@ -62,7 +62,7 @@ export const PAGE_SEO: Record<PageKey, PageSeo> = {
     path: "/services",
     title: "Our Services | Web, Mobile, AI & Software Development",
     description:
-      "Explore Progronics services: digital product development, enterprise web apps, mobile engineering, AI automation, UI/UX, branding, DevOps, and dedicated teams.",
+      "Explore web and mobile app development, custom software, AI agents and automation, UI/UX, cloud DevOps, dedicated teams, digital marketing and IoT.",
     keywords: [
       "IT services",
       "software development services",

@@ -18,6 +18,7 @@ import {
   organizationSchema,
   websiteSchema,
 } from "@/lib/structured-data";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const poppins = Poppins({
@@ -92,6 +93,7 @@ export default async function RootLayout({
   return (
     <html className="dark" suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -107,6 +109,7 @@ export default async function RootLayout({
         <HolyLoader />
         <Navigation />
         {children}
+          <WhatsAppButton />
         <Footer />
       </body>
     </html>
